@@ -1,0 +1,228 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+
+const kind =
+  id === "spider-man-2002" ? "raimi"
+  : id === "the-amazing-spider-man" ? "webb"
+  : id === "spider-man-homecoming" ? "mcu"
+  : id === "into-the-spider-verse" ? "into"
+  : id === "spider-man-no-way-home" ? "nwh"
+  : id === "across-the-spider-verse" ? "across"
+  : "raimi";
+---
+<div class:list={["reel", `reel--${kind}`]} aria-hidden="true">
+  <div class="reel__layer reel__sky" data-depth style="--depth: 0.22; --scroll-depth: 0.03"></div>
+
+  {kind === "raimi" && (
+    <>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.38; --scroll-depth: 0.05" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#2a3348" d="M0 900V640h28V520h22v120h18V470h46v170h24V560h34v80h40V430h26v210h32V500h22v140h48V390h30v250h36V470h28v170h40V360h24v280h38V520h30v120h34V440H600V900Z" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.55; --scroll-depth: 0.07" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#141a28" d="M0 900V520h46V340h34v180h20V280h52v240h18V400h40v120h70V250h28v270h36V360h24v160h60V220h32v300h40V330h26v190h48V200H600V900Z" />
+        <g fill="#f0c56a" opacity="0.85">
+          <rect x="58" y="390" width="6" height="10" /><rect x="70" y="390" width="6" height="10" />
+          <rect x="168" y="330" width="6" height="10" /><rect x="250" y="300" width="6" height="10" />
+          <rect x="340" y="270" width="6" height="10" /><rect x="430" y="250" width="6" height="10" />
+          <rect x="510" y="280" width="6" height="10" /><rect x="200" y="470" width="6" height="10" />
+        </g>
+        <g stroke="#d5deea" stroke-width="1.2" opacity="0.35">
+          <path d="M80 80l-14 36M140 120l-14 36M220 60l-14 36M300 140l-14 36M390 90l-14 36M480 150l-14 36" />
+        </g>
+      </svg>
+      <div class="reel__layer reel__haze" data-depth style="--depth: 0.48; --scroll-depth: 0.06"><span></span></div>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.72; --scroll-depth: 0.09" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke="#d5dbe6" stroke-width="1.4">
+          <path d="M430 20c-40 80-20 120-70 150-30 18-20 40 10 70" stroke-dasharray="3 7" />
+          <path d="M520 40C390 160 360 240 300 300" />
+          <path d="M80 160c70 20 90 70 60 120" opacity="0.7" />
+        </g>
+        <g fill="#f4f0e6">
+          <path d="M250 6c-18 70-46 110-28 168" fill="none" stroke="#f4f0e6" stroke-width="1.5" />
+          <ellipse cx="214" cy="196" rx="14" ry="16" />
+          <path d="M202 210c-8 40-6 78 4 112l16-2c-8-32-8-66 2-104z" />
+          <path d="M206 314c-28 22-48 52-40 86l14-2c-4-26 12-48 34-66z" />
+          <path d="M220 312c32 16 58 40 70 74l-14 6c-10-28-32-48-60-62z" />
+          <rect x="204" y="192" width="20" height="4" fill="#141018" />
+        </g>
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.95; --scroll-depth: 0.12" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#07080e" d="M0 900V640h70V470h40v170h26V560H0zM600 900V600h-64V430h-36v170h-28V520H600z" />
+      </svg>
+    </>
+  )}
+
+  {kind === "webb" && (
+    <>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.4; --scroll-depth: 0.05" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#16304f" d="M40 900V500h16V220h14v280h22V160h12v340h26V240h14v260h30V120h16v380h20V200h18v300h24V100h14v400h28V180h16v320h22V140h12v360h30V210H560V900Z" opacity="0.7" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.58; --scroll-depth: 0.07" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#07111c" d="M0 900V430h34V180h18v250h14V90h22v340h16V200h20v230h40V70h16v360h18V160h22v270h36V40h14v390h20V190h24v240h30V110h18v320H600V900Z" />
+        <g fill="#7ec8ff" opacity="0.8">
+          <rect x="48" y="220" width="4" height="16" /><rect x="120" y="140" width="4" height="18" />
+          <rect x="210" y="110" width="4" height="20" /><rect x="300" y="90" width="4" height="22" />
+          <rect x="390" y="130" width="4" height="18" /><rect x="480" y="160" width="4" height="16" />
+          <rect x="250" y="240" width="4" height="16" /><rect x="160" y="300" width="4" height="14" />
+        </g>
+        <g fill="none" stroke="#b9d7ff" stroke-width="1" opacity="0.4">
+          <path d="M34 300h18M120 160h16M214 120h14M300 90h16M392 150h14M480 200h18" />
+        </g>
+      </svg>
+      <div class="reel__layer reel__haze" data-depth style="--depth: 0.5; --scroll-depth: 0.06"><span></span></div>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.78; --scroll-depth: 0.09" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke="#e7eef8" stroke-width="1.1">
+          <path d="M300 40c8 120-30 180-10 280 14 70-20 120-8 200" />
+          <path d="M250 80c20 90 8 140 24 220" opacity="0.65" />
+          <path d="M360 120c-10 100 16 150-6 240" opacity="0.5" />
+        </g>
+        <g stroke="#9fb6cc" stroke-width="1" opacity="0.4">
+          <path d="M70 40l-16 46M130 70l-16 46M190 30l-16 46M430 50l-16 46M500 90l-16 46M250 20l-16 46" />
+        </g>
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.95; --scroll-depth: 0.12" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#05070c" d="M0 900V560h120V430h46v130H0zM600 900V540h-130V400h-40v140H600z" />
+      </svg>
+    </>
+  )}
+
+  {kind === "mcu" && (
+    <>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.36; --scroll-depth: 0.045" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#243656" d="M180 900V520h20V340h16v180h14V300h22v220h18V280h20v240h16V260h18v260h22V310h16v210h20V290h14V900Z" opacity="0.85" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.58; --scroll-depth: 0.07" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#6a2e32" d="M0 900V700h70V620h40v80h36V640h54v60h28V600h48v100h40V630h60v70h34V590h50v110h46V650h40v50H600V900Z" />
+        <path fill="#3d241c" d="M0 900V760h50V700h30v60h40V720h24v40h70V690h20v70h36V730h28v30h80V710h22v50h40V740h30v20H600V900Z" />
+        <g fill="#ffd7a1" opacity="0.75">
+          <rect x="20" y="730" width="7" height="8" /><rect x="40" y="748" width="7" height="8" />
+          <rect x="120" y="710" width="7" height="8" /><rect x="200" y="690" width="7" height="8" />
+          <rect x="300" y="720" width="7" height="8" /><rect x="390" y="700" width="7" height="8" />
+          <rect x="480" y="730" width="7" height="8" /><rect x="540" y="710" width="7" height="8" />
+        </g>
+        <g fill="none" stroke="#d5ddf0" stroke-width="1" opacity="0.45">
+          <circle cx="300" cy="180" r="46" />
+          <path d="M300 120v120M254 180h92" />
+        </g>
+      </svg>
+      <div class="reel__layer reel__haze" data-depth style="--depth: 0.46; --scroll-depth: 0.05"><span></span></div>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.8; --scroll-depth: 0.09" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path d="M120 620c80-40 140-30 200 10" fill="none" stroke="#f4f0e6" stroke-width="1.3" opacity="0.8" />
+        <path d="M80 40h16v28h28" fill="none" stroke="#f4f0e6" opacity="0.35" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.95; --scroll-depth: 0.11" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#120c10" d="M0 900V820h110V760h40v60H0zM600 900V800h-90V740h-36v80H600z" />
+      </svg>
+    </>
+  )}
+
+  {kind === "into" && (
+    <>
+      <div class="reel__layer reel__dots" data-depth style="--depth: 0.3; --scroll-depth: 0.04"></div>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.48; --scroll-depth: 0.06" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <g fill="#ff2f86" opacity="0.9" transform="translate(-12 8)">
+          <rect x="36" y="520" width="34" height="380" />
+          <rect x="92" y="430" width="26" height="470" />
+          <rect x="150" y="360" width="40" height="540" />
+          <rect x="230" y="470" width="22" height="430" />
+          <rect x="300" y="300" width="36" height="600" />
+          <rect x="370" y="410" width="28" height="490" />
+          <rect x="440" y="340" width="46" height="560" />
+          <rect x="520" y="460" width="30" height="440" />
+        </g>
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.66; --scroll-depth: 0.08" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <g fill="#37d0ff" opacity="0.82" transform="translate(18 -20)">
+          <rect x="48" y="560" width="28" height="280" />
+          <rect x="110" y="470" width="22" height="340" />
+          <rect x="176" y="400" width="34" height="390" />
+          <rect x="250" y="510" width="18" height="300" />
+          <rect x="320" y="360" width="30" height="420" />
+          <rect x="390" y="450" width="24" height="340" />
+          <rect x="460" y="390" width="38" height="400" />
+          <rect x="530" y="500" width="22" height="300" />
+        </g>
+        <g fill="none" stroke="#f4f0e6" stroke-width="3">
+          <rect x="70" y="120" width="150" height="110" transform="rotate(-8 145 175)" />
+          <rect x="360" y="200" width="130" height="90" transform="rotate(7 425 245)" />
+          <path d="M40 80h70M40 80v50" stroke-width="2" />
+        </g>
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.84; --scroll-depth: 0.1" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path d="M80 700c40-20 20-10 50 16M160 680c30 24 10 8 48-10M420 160c20 30-10 20 16 48" fill="none" stroke="#ff4d4d" stroke-width="6" stroke-linecap="round" opacity="0.8" />
+        <circle cx="300" cy="430" r="70" fill="none" stroke="#f4f0e6" stroke-width="2" />
+        <circle cx="318" cy="442" r="70" fill="none" stroke="#ff2f86" stroke-width="2" />
+        <circle cx="286" cy="418" r="46" fill="none" stroke="#37d0ff" stroke-dasharray="4 6" />
+      </svg>
+    </>
+  )}
+
+  {kind === "nwh" && (
+    <>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.36; --scroll-depth: 0.045" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#1a2436" d="M0 900V620h36V500h24v120h20V460h40v160h18V520h30v100h50V420h22v200h28V480h20v140h46V390h24v230h30V500h26v120h40V440H600V900Z" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.55; --scroll-depth: 0.07" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#0c1018" d="M0 900V540h50V360h30v180h22V300h46v240h20V400h36v140h64V260h26v280h34V380h22v160h58V240h30v300h40V340H600V900Z" />
+        <g fill="none" stroke="#ff4d4d" stroke-width="1.3" opacity="0.8">
+          <path d="M40 80C180 200 200 280 300 420" />
+          <path d="M560 60C420 190 400 300 300 430" />
+        </g>
+        <path d="M300 860C250 640 270 520 300 430" fill="none" stroke="#6ea2ff" stroke-width="1.3" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.74; --scroll-depth: 0.09" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <g fill="none">
+          <circle cx="300" cy="430" r="78" stroke="#ff4d4d" stroke-width="1.6" />
+          <circle cx="324" cy="446" r="78" stroke="#6ea2ff" stroke-width="1.4" />
+          <circle cx="286" cy="414" r="48" stroke="#f4f0e6" stroke-dasharray="3 6" />
+        </g>
+        <g fill="#121826" stroke="#f4f0e6" stroke-width="1">
+          <path d="M90 180l70-16 10 48-64 20z" transform="rotate(-12 130 196)" />
+          <path d="M430 240l80 10-16 46-70-18z" transform="rotate(8 470 268)" />
+          <path d="M180 640l90 8-8 40-86-14z" />
+        </g>
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.95; --scroll-depth: 0.12" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <path fill="#07080c" d="M0 900V760h100V640h34v120H0zM600 900V740h-90V620h-30v120H600z" />
+        <path d="M20 40h36M20 40v36M580 40h-36M580 40v36" fill="none" stroke="#f4f0e6" opacity="0.35" />
+      </svg>
+    </>
+  )}
+
+  {kind === "across" && (
+    <>
+      <div class="reel__layer reel__dots" data-depth style="--depth: 0.28; --scroll-depth: 0.04"></div>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.46; --scroll-depth: 0.055" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <circle cx="180" cy="240" r="110" fill="none" stroke="#ff4d9a" stroke-width="2" />
+        <circle cx="196" cy="252" r="110" fill="none" stroke="#3ec6ff" stroke-width="1.5" />
+        <path fill="#ff7a3c" opacity="0.8" d="M120 360V250h16V200h12v50h14V180h18v70h16V220h14v30H120z" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.64; --scroll-depth: 0.08" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <circle cx="420" cy="520" r="130" fill="none" stroke="#ffb057" stroke-width="2" />
+        <circle cx="400" cy="500" r="90" fill="none" stroke="#6ea2ff" stroke-dasharray="4 6" />
+        <g fill="#141820">
+          <path d="M300 500l16-40 8 18 20-6-10 28 16 8-30 6z" fill="#f4f0e6" opacity="0.8" />
+        </g>
+        <path fill="#ff2f6a" d="M40 700h180l-20 40H20z" opacity="0.85" transform="rotate(-6 120 720)" />
+        <path fill="#123a66" d="M360 140h150l-16 36H340z" transform="rotate(8 430 158)" />
+      </svg>
+      <svg class="reel__layer reel__draw" data-depth style="--depth: 0.86; --scroll-depth: 0.1" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+        <g fill="none" stroke-width="1.4">
+          <circle cx="300" cy="390" r="54" stroke="#f4f0e6" />
+          <circle cx="322" cy="404" r="54" stroke="#ff4d4d" />
+          <circle cx="278" cy="376" r="36" stroke="#37d0ff" stroke-dasharray="2 5" />
+        </g>
+        <path d="M70 120c40 10 30-16 70-6M430 760c30 16 20-20 64-4" fill="none" stroke="#f4f0e6" stroke-width="2" opacity="0.7" />
+        <path fill="#0c1018" d="M0 900V820h80v-40h24V900zM600 900V800h-70v-36h-20V900z" />
+      </svg>
+    </>
+  )}
+
+  <div class="reel__layer reel__light" data-depth style="--depth: 0.3; --scroll-depth: 0.03"></div>
+  <div class="reel__grain"></div>
+  <span class="reel__marks"></span>
+</div>

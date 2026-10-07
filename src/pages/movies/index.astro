@@ -1,13 +1,52 @@
 ---
-import ArchivePage from "../../components/ArchivePage.astro";
-import { movieCards } from "../../lib/cards";
+import MovieCard from "../../components/movies/MovieCard.astro";
+import CityArt from "../../components/art/CityArt.astro";
+import WebArt from "../../components/art/WebArt.astro";
+import { getCatalog, hrefFor } from "../../lib/catalog";
 import Base from "../../layouts/Base.astro";
+import "../../styles/films.css";
+
+const catalog = getCatalog();
+const films = catalog.movies.map((movie) => ({
+  id: movie.id,
+  href: hrefFor("movie", movie.id),
+  year: movie.year,
+  title: movie.title,
+  universe: catalog.universe(movie.universeId).name,
+  summary: movie.tagline,
+  poster: movie.media?.poster ?? movie.image,
+}));
 ---
 <Base title="Movies — Spidey" description="Spider-Man films in the Spidey archive, from the 2002 movie to the Spider-Verse.">
-  <ArchivePage
-    kicker="Films"
-    title="Movies"
-    lede="A founding shelf of Spider-Man films. Each record can connect an actor, a villain, a suit, a universe, and the comics underneath."
-    cards={movieCards()}
-  />
+  <div class="films">
+    <div class="films__atmo" aria-hidden="true">
+      <CityArt variant="night" layer="far" />
+      <WebArt variant="subtle" />
+    </div>
+    <header class="films-hero" data-parallax data-parallax-pointer>
+      <div class="films-hero__sky" data-depth style="--depth: 0.16; --scroll-depth: 0.03" aria-hidden="true"></div>
+      <div class="films-hero__city films-hero__city--far" data-depth style="--depth: 0.28; --scroll-depth: 0.05" aria-hidden="true">
+        <CityArt variant="night" layer="far" />
+      </div>
+      <div class="films-hero__web" data-depth style="--depth: 0.46; --scroll-depth: 0.07" aria-hidden="true">
+        <WebArt variant="broken" />
+      </div>
+      <p class="films-hero__ghost" data-depth style="--depth: 0.2; --scroll-depth: 0.04" aria-hidden="true">Movies</p>
+      <div class="films-hero__city films-hero__city--near" data-depth style="--depth: 0.7; --scroll-depth: 0.09" aria-hidden="true">
+        <CityArt variant="night" layer="near" />
+      </div>
+      <div class="films-hero__copy">
+        <p class="kicker">Films</p>
+        <h1 class="display-title">Movies</h1>
+        <p class="lede">A founding shelf of Spider-Man films. Each record can connect an actor, a villain, a suit, a universe, and the comics underneath.</p>
+      </div>
+    </header>
+    <ul class="films-grid">
+      {films.map((film, index) => (
+        <li>
+          <MovieCard delay={`${(index % 3) * 70}ms`} {...film} />
+        </li>
+      ))}
+    </ul>
+  </div>
 </Base>

@@ -1,0 +1,42 @@
+---
+import { href } from "../../lib/paths";
+import type { MediaImage } from "../../lib/types";
+import MovieArtwork from "./MovieArtwork.astro";
+
+interface Props {
+  id: string;
+  href: string;
+  year: number;
+  title: string;
+  universe: string;
+  summary: string;
+  poster?: MediaImage;
+  delay?: string;
+}
+
+const { id, href: filmHref, year, title, universe, summary, poster, delay = "0ms" } = Astro.props;
+---
+<a class="film" href={filmHref} data-parallax data-parallax-pointer data-reveal style={`--delay: ${delay}`}>
+  <span class="film__window">
+    {poster ? (
+      <img
+        class="film__poster"
+        src={href(poster.src)}
+        alt={poster.alt}
+        width={poster.width}
+        height={poster.height}
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <MovieArtwork id={id} />
+    )}
+  </span>
+  <span class="film__body">
+    <span class="film__year">{year}</span>
+    <span class="film__title">{title}</span>
+    <span class="film__universe">{universe}</span>
+    <span class="film__summary">{summary}</span>
+    <span class="film__go">Explore film</span>
+  </span>
+</a>

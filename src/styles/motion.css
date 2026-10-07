@@ -4,7 +4,7 @@
 [data-depth] {
   transform: translate3d(
     calc(var(--mx, 0px) * var(--depth, 0)),
-    calc(var(--shift, 0px) * var(--depth, 0) * -1 + var(--my, 0px) * var(--depth, 0)),
+    calc(var(--shift, 0px) * var(--scroll-depth, var(--depth, 0)) * -1 + var(--my, 0px) * var(--depth, 0)),
     0
   );
 }

@@ -81,26 +81,27 @@ if (reduced) {
     update();
   }).catch(() => undefined);
 
-  const hero = document.querySelector<HTMLElement>("[data-parallax-pointer]");
-  if (hero && finePointer && !mobileQuery.matches) {
-    let px = 0;
-    let py = 0;
-    let pointerFrame = 0;
-    hero.addEventListener("pointermove", (event) => {
-      const rect = hero.getBoundingClientRect();
-      px = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
-      py = ((event.clientY - rect.top) / rect.height - 0.5) * 12;
-      if (!pointerFrame) {
-        pointerFrame = requestAnimationFrame(() => {
-          pointerFrame = 0;
-          hero.style.setProperty("--mx", `${px.toFixed(2)}px`);
-          hero.style.setProperty("--my", `${py.toFixed(2)}px`);
-        });
-      }
-    });
-    hero.addEventListener("pointerleave", () => {
-      hero.style.setProperty("--mx", "0px");
-      hero.style.setProperty("--my", "0px");
+  if (finePointer && !mobileQuery.matches) {
+    document.querySelectorAll<HTMLElement>("[data-parallax-pointer]").forEach((stage) => {
+      let px = 0;
+      let py = 0;
+      let pointerFrame = 0;
+      stage.addEventListener("pointermove", (event) => {
+        const rect = stage.getBoundingClientRect();
+        px = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
+        py = ((event.clientY - rect.top) / rect.height - 0.5) * 12;
+        if (!pointerFrame) {
+          pointerFrame = requestAnimationFrame(() => {
+            pointerFrame = 0;
+            stage.style.setProperty("--mx", `${px.toFixed(2)}px`);
+            stage.style.setProperty("--my", `${py.toFixed(2)}px`);
+          });
+        }
+      });
+      stage.addEventListener("pointerleave", () => {
+        stage.style.setProperty("--mx", "0px");
+        stage.style.setProperty("--my", "0px");
+      });
     });
   }
 
