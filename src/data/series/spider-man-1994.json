@@ -1,0 +1,20 @@
+{
+  "id": "spider-man-1994",
+  "title": "Spider-Man: The Animated Series",
+  "years": "1994–1998",
+  "yearStart": 1994,
+  "yearEnd": 1998,
+  "medium": "animated",
+  "network": "Fox Kids",
+  "summary": "The 1990s animated series gave a generation its Spider-Man, adapting classic villains and a long-form story that ran across five seasons.",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "christopher-daniel-barnes",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ]
+}

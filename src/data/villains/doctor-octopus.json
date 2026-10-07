@@ -1,0 +1,13 @@
+{
+  "id": "doctor-octopus",
+  "name": "Doctor Octopus",
+  "alterEgo": "Otto Octavius",
+  "summary": "Otto Octavius fuses with four mechanical arms and becomes a villain who sometimes believes he could wear the mask better than Peter. He is a pillar of the rogues’ gallery from the early comics onward.",
+  "universeIds": [
+    "earth-616",
+    "raimi",
+    "mcu"
+  ],
+  "accent": "gold",
+  "firstAppearance": "The Amazing Spider-Man #3 (1963)"
+}

@@ -1,0 +1,16 @@
+{
+  "id": "classic",
+  "name": "Classic Suit",
+  "summary": "Red and blue, web pattern, mask with wide white eyes. The suit designed so a teenager could be seen and still stay unknown. It is the default image of Spider-Man.",
+  "era": "1962–",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "universeIds": [
+    "earth-616",
+    "raimi",
+    "webb",
+    "mcu"
+  ],
+  "accent": "red"
+}

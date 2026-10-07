@@ -1,0 +1,11 @@
+{
+  "id": "christopher-daniel-barnes",
+  "name": "Christopher Daniel Barnes",
+  "performance": "voice",
+  "summary": "Christopher Daniel Barnes voiced Peter Parker across Spider-Man: The Animated Series, the five-season run that defined the character on 1990s television.",
+  "primary": {
+    "identity": "Spider-Man",
+    "characterId": "peter-parker",
+    "years": "1994–1998"
+  }
+}

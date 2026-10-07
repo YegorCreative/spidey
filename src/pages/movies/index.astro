@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { movieCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Movies — Spidey" description="Spider-Man films in the Spidey archive, from the 2002 movie to the Spider-Verse.">
+  <ArchivePage
+    kicker="Films"
+    title="Movies"
+    lede="A founding shelf of Spider-Man films. Each record can connect an actor, a villain, a suit, a universe, and the comics underneath."
+    cards={movieCards()}
+  />
+</Base>

@@ -1,0 +1,76 @@
+---
+import { getCatalog, hrefFor } from "../lib/catalog";
+import { href } from "../lib/paths";
+
+interface Props {
+  mode?: "preview" | "full";
+}
+const { mode = "full" } = Astro.props;
+const catalog = getCatalog();
+const events = catalog.timeline;
+
+function labelFor(type: string, id: string): string {
+  if (type === "movie") return catalog.movie(id).title;
+  if (type === "series") return catalog.seriesById(id).title;
+  if (type === "comic") {
+    const comic = catalog.comic(id);
+    return `${comic.title} ${comic.issue}`;
+  }
+  if (type === "actor") return catalog.actor(id).name;
+  if (type === "character") return catalog.character(id).name;
+  if (type === "villain") return catalog.villain(id).name;
+  if (type === "universe") return catalog.universe(id).name;
+  if (type === "suit") return catalog.suit(id).name;
+  if (type === "creator") return catalog.creator(id).name;
+  return catalog.event(id).title;
+}
+---
+{mode === "preview" ? (
+  <section class="section" aria-labelledby="years-title">
+    <div class="section__head section__head--split">
+      <div>
+        <p class="kicker">03 — History</p>
+        <h2 id="years-title">Through the Years</h2>
+      </div>
+      <a class="text-link" href={href("/timeline/")}>Open the full timeline</a>
+    </div>
+    <ol class="years">
+      {events.map((event) => {
+        const primary = event.refs[0];
+        const destination = primary ? hrefFor(primary.type, primary.id) : href(`/timeline/#${event.id}`);
+        return (
+          <li class="years__item">
+            <a class="years__card" href={destination}>
+              <span class="years__year">{event.year}</span>
+              <span>
+                <span class="years__title">{event.title}</span>
+                <span class="years__summary">{event.summary}</span>
+              </span>
+            </a>
+          </li>
+        );
+      })}
+    </ol>
+  </section>
+) : (
+  <ol class="years">
+    {events.map((event) => (
+      <li class="years__item" id={event.id}>
+        <article class="years__card years__card--static">
+          <span class="years__year">{event.year}</span>
+          <div>
+            <h2 class="years__title">{event.title}</h2>
+            <p class="years__summary">{event.summary}</p>
+            {event.refs.length > 0 && (
+              <ul class="inline-links">
+                {event.refs.map((ref) => (
+                  <li><a href={hrefFor(ref.type, ref.id)}>{labelFor(ref.type, ref.id)}</a></li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </article>
+      </li>
+    ))}
+  </ol>
+)}

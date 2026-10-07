@@ -1,0 +1,11 @@
+{
+  "id": "paul-soles",
+  "name": "Paul Soles",
+  "performance": "voice",
+  "summary": "Paul Soles voiced Peter Parker in the 1967 Spider-Man animated series, the first television Spider-Man many viewers ever heard.",
+  "primary": {
+    "identity": "Spider-Man",
+    "characterId": "peter-parker",
+    "years": "1967–1970"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "carnage",
+  "name": "Carnage",
+  "alterEgo": "Cletus Kasady",
+  "summary": "Carnage is the offspring of Venom’s symbiote bonded to Cletus Kasady. The result is louder, crueler, and harder to reason with than the villain it came from.",
+  "universeIds": [
+    "earth-616"
+  ],
+  "accent": "red",
+  "firstAppearance": "The Amazing Spider-Man #361 (1992)"
+}

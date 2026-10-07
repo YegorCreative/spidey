@@ -1,0 +1,12 @@
+{
+  "id": "andrew-garfield",
+  "name": "Andrew Garfield",
+  "performance": "live-action",
+  "summary": "Andrew Garfield played Peter Parker in The Amazing Spider-Man films, a quicker, more awkward hero whose story resumed in Spider-Man: No Way Home.",
+  "primary": {
+    "identity": "Spider-Man",
+    "characterId": "peter-parker",
+    "universeId": "webb",
+    "years": "2012–2014"
+  }
+}

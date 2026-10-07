@@ -1,0 +1,19 @@
+{
+  "id": "ultimate-spider-man-1",
+  "title": "Ultimate Spider-Man",
+  "issue": "#1",
+  "year": 2000,
+  "coverDate": "October 2000",
+  "summary": "Brian Michael Bendis and Mark Bagley restart Peter Parker for a new century in the Ultimate Universe, with a contemporary pace and a younger hero.",
+  "universeId": "ultimate",
+  "writerIds": [
+    "brian-michael-bendis"
+  ],
+  "artistIds": [
+    "mark-bagley"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": []
+}

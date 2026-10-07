@@ -1,0 +1,20 @@
+{
+  "id": "amazing-spider-man-1977",
+  "title": "The Amazing Spider-Man",
+  "years": "1977–1979",
+  "yearStart": 1977,
+  "yearEnd": 1979,
+  "medium": "live-action",
+  "network": "CBS",
+  "summary": "Nicholas Hammond played Peter Parker in the first live-action Spider-Man television series, a short-lived CBS drama that proved the character could exist outside comics and cartoons.",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "nicholas-hammond",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ]
+}

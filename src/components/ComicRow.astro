@@ -1,0 +1,45 @@
+---
+import { featuredComicIds } from "../config/curation";
+import { getCatalog, hrefFor } from "../lib/catalog";
+import { href } from "../lib/paths";
+
+const catalog = getCatalog();
+const comics = featuredComicIds.map((id) => catalog.comic(id));
+---
+<section class="section" aria-labelledby="comics-title">
+  <div class="section__head section__head--split">
+    <div>
+      <p class="kicker">04 — Print</p>
+      <h2 id="comics-title">From the Comics</h2>
+      <p class="section__lede">
+        Spider-Man begins on the page. These founding issues show the shape of a record: cover, title, issue, year, creators, universe, and story.
+      </p>
+    </div>
+    <a class="text-link" href={href("/comics/")}>Browse comics</a>
+  </div>
+  <ul class="comic-grid">
+    {comics.map((comic) => {
+      const universe = catalog.universe(comic.universeId);
+      const writers = comic.writerIds.map((id) => catalog.creator(id).name).join(", ");
+      const artists = comic.artistIds.map((id) => catalog.creator(id).name).join(", ");
+      return (
+        <li>
+          <a class="comic-card" href={hrefFor("comic", comic.id)}>
+            <span class:list={["poster", `accent-${universe.accent}`]} aria-hidden="true">
+              <span class="poster__issue">{comic.issue}</span>
+              <span class="poster__name">{comic.title}</span>
+              <span class="poster__year">{comic.year}</span>
+            </span>
+            <span class="comic-card__body">
+              <span class="comic-card__title">{comic.title} {comic.issue}</span>
+              <span class="comic-card__meta">{comic.year} · {universe.name}</span>
+              <span class="comic-card__meta">Writer {writers}</span>
+              <span class="comic-card__meta">Artist {artists}</span>
+              <span class="comic-card__summary">{comic.summary}</span>
+            </span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</section>

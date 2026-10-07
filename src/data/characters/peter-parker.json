@@ -1,0 +1,18 @@
+{
+  "id": "peter-parker",
+  "name": "Peter Parker",
+  "aliases": [
+    "Spider-Man"
+  ],
+  "kind": "spider-person",
+  "summary": "A Queens student whose life splits in two after a spider bite. Peter Parker is the original Spider-Man, and nearly every later version is in conversation with him.",
+  "universeIds": [
+    "earth-616",
+    "ultimate",
+    "raimi",
+    "webb",
+    "mcu",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Amazing Fantasy #15 (1962)"
+}

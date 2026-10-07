@@ -1,0 +1,29 @@
+{
+  "id": "spider-man-homecoming",
+  "title": "Spider-Man: Homecoming",
+  "year": 2017,
+  "releaseDate": "2017-07-07",
+  "tagline": "A Queens teenager tries to be a friendly neighborhood hero inside a larger universe.",
+  "summary": "Jon Watts’s film places Tom Holland’s Peter Parker in the Marvel Cinematic Universe, balancing high school with a conflict against Adrian Toomes, the Vulture.",
+  "universeId": "mcu",
+  "directorIds": [
+    "jon-watts"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tom-holland",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "vulture"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [],
+  "runtimeMinutes": 133
+}

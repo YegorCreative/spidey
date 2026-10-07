@@ -1,0 +1,46 @@
+{
+  "id": "spider-man-no-way-home",
+  "title": "Spider-Man: No Way Home",
+  "year": 2021,
+  "releaseDate": "2021-12-17",
+  "tagline": "A broken spell pulls other Spider-Men, and their enemies, into one world.",
+  "summary": "Tom Holland’s Peter Parker asks to be forgotten, and the spell tears open a path for visitors from other Spider-Man films — including Tobey Maguire, Andrew Garfield, and villains who already know his name.",
+  "universeId": "mcu",
+  "directorIds": [
+    "jon-watts"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tom-holland",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    },
+    {
+      "actorId": "tobey-maguire",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    },
+    {
+      "actorId": "andrew-garfield",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "green-goblin",
+      "actorId": "willem-dafoe"
+    },
+    {
+      "villainId": "doctor-octopus"
+    },
+    {
+      "villainId": "electro"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [],
+  "runtimeMinutes": 148
+}

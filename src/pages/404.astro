@@ -1,0 +1,27 @@
+---
+import { href } from "../lib/paths";
+import Base from "../layouts/Base.astro";
+
+const links = [
+  ["/", "Home"],
+  ["/movies/", "Movies"],
+  ["/comics/", "Comics"],
+  ["/series/", "Series"],
+  ["/spider-people/", "Spider-People"],
+  ["/villains/", "Villains"],
+  ["/timeline/", "Timeline"],
+  ["/explore/", "Explore"],
+] as const;
+---
+<Base title="Page not found — Spidey" description="This page is not in the Spidey archive." noindex>
+  <section class="missing">
+    <p class="kicker">404</p>
+    <h1>Looks like this page slipped out of the Spider-Verse.</h1>
+    <p class="lede">The thread ends here. Pick a shelf and swing back in.</p>
+    <ul class="missing__links">
+      {links.map(([path, label]) => (
+        <li><a class="btn btn--ghost" href={href(path)}>{label}</a></li>
+      ))}
+    </ul>
+  </section>
+</Base>

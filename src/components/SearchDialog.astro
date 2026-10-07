@@ -1,0 +1,24 @@
+---
+import Icon from "./Icon.astro";
+import { href } from "../lib/paths";
+---
+<dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <div class="search-dialog__bar">
+    <Icon name="search" />
+    <input
+      id="search-input"
+      type="search"
+      name="q"
+      placeholder="Search Venom, 1962, Miles…"
+      aria-label="Search the archive"
+      autocomplete="off"
+      enterkeyhint="search"
+    />
+    <button type="button" class="icon-btn" data-close-search aria-label="Close search">
+      <Icon name="close" />
+    </button>
+  </div>
+  <p id="search-dialog-title" class="sr-only">Search the archive</p>
+  <div id="search-results" class="search-results" aria-live="polite"></div>
+  <a class="search-dialog__all" href={href("/search/")}>Browse the full index</a>
+</dialog>

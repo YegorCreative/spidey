@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { universeCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Universes — Spidey" description="Earth-616, the film universes, Spider-Man 2099, Noir, and the animated Spider-Verse.">
+  <ArchivePage
+    kicker="Realities"
+    title="Universes"
+    lede="Each reality has its own color in the archive so a film Peter and a comics Peter are never the same shelf."
+    cards={universeCards()}
+  />
+</Base>

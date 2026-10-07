@@ -1,0 +1,17 @@
+{
+  "id": "1962-amazing-fantasy-15",
+  "year": 1962,
+  "title": "Amazing Fantasy #15",
+  "summary": "Peter Parker debuts as Spider-Man.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-fantasy-15"
+    },
+    {
+      "type": "character",
+      "id": "peter-parker"
+    }
+  ]
+}

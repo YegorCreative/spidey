@@ -1,0 +1,13 @@
+{
+  "id": "1967-animated-series",
+  "year": 1967,
+  "title": "Spider-Man animated television series",
+  "summary": "The first Spider-Man cartoon premieres on ABC.",
+  "kind": "series",
+  "refs": [
+    {
+      "type": "series",
+      "id": "spider-man-1967"
+    }
+  ]
+}

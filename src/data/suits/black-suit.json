@@ -1,0 +1,13 @@
+{
+  "id": "black-suit",
+  "name": "Black Suit",
+  "summary": "A living costume that answers Peter’s strength and starts answering back. The black suit leads, in the comics, toward Venom.",
+  "era": "1984–",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "universeIds": [
+    "earth-616"
+  ],
+  "accent": "slate"
+}

@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { creatorCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Creators — Spidey" description="Writers, artists, and directors connected to the Spidey archive.">
+  <ArchivePage
+    kicker="Makers"
+    title="Creators"
+    lede="Writers, artists, and directors. A creator page collects the comics they made and the films they directed."
+    cards={creatorCards()}
+  />
+</Base>

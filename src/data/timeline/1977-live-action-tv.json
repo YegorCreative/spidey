@@ -1,0 +1,17 @@
+{
+  "id": "1977-live-action-tv",
+  "year": 1977,
+  "title": "Live-action Spider-Man television era",
+  "summary": "Nicholas Hammond plays Peter Parker on CBS.",
+  "kind": "series",
+  "refs": [
+    {
+      "type": "series",
+      "id": "amazing-spider-man-1977"
+    },
+    {
+      "type": "actor",
+      "id": "nicholas-hammond"
+    }
+  ]
+}

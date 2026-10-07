@@ -1,0 +1,13 @@
+{
+  "id": "electro",
+  "name": "Electro",
+  "alterEgo": "Max Dillon",
+  "summary": "Max Dillon absorbs and throws electricity. Electro is a working man turned living power line, dangerous in a city full of metal and elevated tracks.",
+  "universeIds": [
+    "earth-616",
+    "webb",
+    "mcu"
+  ],
+  "accent": "gold",
+  "firstAppearance": "The Amazing Spider-Man #9 (1964)"
+}

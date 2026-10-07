@@ -1,0 +1,12 @@
+{
+  "id": "shameik-moore",
+  "name": "Shameik Moore",
+  "performance": "voice",
+  "summary": "Shameik Moore voices Miles Morales in the Spider-Verse films, carrying the character from a nervous first day in the suit into a story about choosing his own path.",
+  "primary": {
+    "identity": "Spider-Man",
+    "characterId": "miles-morales",
+    "universeId": "spider-verse-animated",
+    "years": "2018–"
+  }
+}

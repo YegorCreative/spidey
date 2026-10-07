@@ -1,0 +1,13 @@
+{
+  "id": "2002-spider-man",
+  "year": 2002,
+  "title": "Spider-Man",
+  "summary": "Sam Raimi’s film opens, starring Tobey Maguire.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-2002"
+    }
+  ]
+}

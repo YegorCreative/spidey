@@ -1,0 +1,39 @@
+---
+import { searchDocuments } from "../../lib/catalog";
+import Base from "../../layouts/Base.astro";
+
+const docs = searchDocuments();
+const order = ["Movies", "Comics", "Series", "Spider-People", "Characters", "Villains", "Actors", "Universes", "Suits", "Creators", "Timeline"];
+const groups = order
+  .map((label) => ({ label, items: docs.filter((doc) => doc.typeLabel === label) }))
+  .filter((group) => group.items.length > 0);
+---
+<Base title="Search — Spidey" description="Search the Spidey archive across movies, comics, series, characters, villains, and universes.">
+  <section class="page-hero">
+    <p class="kicker">Index</p>
+    <h1>Search</h1>
+    <p class="lede">One index for the whole archive. Try a name, a year, or a villain.</p>
+    <form class="search-page__form" action="" role="search">
+      <label class="sr-only" for="archive-filter">Filter the archive</label>
+      <input id="archive-filter" type="search" name="q" placeholder="Venom, Miles, 1962…" autocomplete="off" />
+    </form>
+  </section>
+  <div id="search-groups" class="search-groups">
+    {groups.map((group) => (
+      <section class="search-group" data-search-group aria-labelledby={`search-${group.label}`}>
+        <h2 id={`search-${group.label}`}>{group.label}</h2>
+        <ul>
+          {group.items.map((item) => (
+            <li data-search-item data-keywords={`${item.title} ${item.summary} ${item.keywords}`.toLowerCase()}>
+              <a href={item.href}>
+                <span>{item.title}</span>
+                <span>{item.summary}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    ))}
+  </div>
+  <p id="search-empty" class="search-empty" hidden>Nothing in the archive matches that yet.</p>
+</Base>

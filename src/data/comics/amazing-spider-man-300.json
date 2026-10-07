@@ -1,0 +1,22 @@
+{
+  "id": "amazing-spider-man-300",
+  "title": "The Amazing Spider-Man",
+  "issue": "#300",
+  "year": 1988,
+  "coverDate": "May 1988",
+  "summary": "A landmark issue in which Eddie Brock and the alien symbiote step into the spotlight as Venom, turning Peter’s black suit into a rival with his own voice.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "david-michelinie"
+  ],
+  "artistIds": [
+    "todd-mcfarlane"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "venom"
+  ],
+  "arc": "Venom"
+}

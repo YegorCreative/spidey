@@ -1,0 +1,14 @@
+{
+  "id": "miguel-ohara",
+  "name": "Miguel O’Hara",
+  "aliases": [
+    "Spider-Man 2099"
+  ],
+  "kind": "spider-person",
+  "summary": "Miguel O’Hara is Spider-Man 2099, a geneticist in a corporate future who becomes a spider-hero on his own terms. The animated films cast him as a guardian of the wider Spider-Verse.",
+  "universeIds": [
+    "earth-928",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Spider-Man 2099 #1 (1992)"
+}

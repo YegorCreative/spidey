@@ -1,0 +1,14 @@
+{
+  "id": "mary-jane-watson",
+  "name": "Mary Jane Watson",
+  "aliases": [
+    "MJ"
+  ],
+  "kind": "supporting",
+  "summary": "Mary Jane Watson is one of the defining people in Peter Parker’s life, a presence across decades of comics and in the Raimi films.",
+  "universeIds": [
+    "earth-616",
+    "raimi"
+  ],
+  "firstAppearance": "The Amazing Spider-Man #42 (1966)"
+}

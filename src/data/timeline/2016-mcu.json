@@ -1,0 +1,21 @@
+{
+  "id": "2016-mcu",
+  "year": 2016,
+  "title": "Spider-Man enters the MCU",
+  "summary": "Tom Holland’s Peter Parker appears in Captain America: Civil War.",
+  "kind": "milestone",
+  "refs": [
+    {
+      "type": "actor",
+      "id": "tom-holland"
+    },
+    {
+      "type": "universe",
+      "id": "mcu"
+    },
+    {
+      "type": "character",
+      "id": "peter-parker"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "tom-holland",
+  "name": "Tom Holland",
+  "performance": "live-action",
+  "summary": "Tom Holland’s Peter Parker entered the Marvel Cinematic Universe in 2016 and headlined Spider-Man: Homecoming, Far From Home, and No Way Home.",
+  "primary": {
+    "identity": "Spider-Man",
+    "characterId": "peter-parker",
+    "universeId": "mcu",
+    "years": "2016–"
+  }
+}

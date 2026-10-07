@@ -1,0 +1,39 @@
+---
+import { exploreItems } from "../../config/curation";
+import Icon from "../../components/Icon.astro";
+import { href } from "../../lib/paths";
+import Base from "../../layouts/Base.astro";
+
+const more = [
+  { href: "/actors/", title: "Actors", description: "Live-action and voice performers." },
+  { href: "/creators/", title: "Creators", description: "Writers, artists, and directors." },
+  { href: "/characters/", title: "Characters", description: "Spider-heroes and the people beside them." },
+  { href: "/search/", title: "Search", description: "Look across every shelf at once." },
+];
+---
+<Base title="Explore — Spidey" description="Every shelf in the Spidey archive: movies, comics, series, people, villains, universes, and suits.">
+  <section class="page-hero">
+    <p class="kicker">Directory</p>
+    <h1>Explore</h1>
+    <p class="lede">The whole archive is a set of shelves. Start anywhere. The links between records are the point.</p>
+  </section>
+  <ul class="explore-grid explore-grid--page">
+    {exploreItems.map((item) => (
+      <li>
+        <a class:list={["explore-card", "panel", `accent-${item.accent}`]} href={href(item.href)}>
+          <span class="explore-card__icon"><Icon name={item.icon} /></span>
+          <span class="explore-card__title">{item.title}</span>
+          <span class="explore-card__text">{item.description}</span>
+        </a>
+      </li>
+    ))}
+    {more.map((item) => (
+      <li>
+        <a class="explore-card panel accent-blue" href={href(item.href)}>
+          <span class="explore-card__title">{item.title}</span>
+          <span class="explore-card__text">{item.description}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>

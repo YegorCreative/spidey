@@ -1,0 +1,40 @@
+---
+import type { ArchiveCard } from "../lib/cards";
+import { href } from "../lib/paths";
+
+interface Props {
+  kicker: string;
+  title: string;
+  lede: string;
+  cards: ArchiveCard[];
+}
+const { kicker, title, lede, cards } = Astro.props;
+---
+<section class="page-hero">
+  <p class="kicker">{kicker}</p>
+  <h1>{title}</h1>
+  <p class="lede">{lede}</p>
+</section>
+<ul class="archive-grid">
+  {cards.map((card) => (
+    <li>
+      <a class:list={["archive-card", "panel", `accent-${card.accent}`]} href={card.href}>
+        {card.image && (
+          <img
+            class="archive-card__image"
+            src={href(card.image.src)}
+            alt={card.image.alt}
+            width={card.image.width}
+            height={card.image.height}
+            loading="lazy"
+            decoding="async"
+          />
+        )}
+        <span class="archive-card__eyebrow">{card.eyebrow}</span>
+        <span class="archive-card__title">{card.title}</span>
+        {card.meta && <span class="archive-card__meta">{card.meta}</span>}
+        <span class="archive-card__summary">{card.summary}</span>
+      </a>
+    </li>
+  ))}
+</ul>

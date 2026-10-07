@@ -1,0 +1,20 @@
+{
+  "id": "spider-man-1967",
+  "title": "Spider-Man",
+  "years": "1967–1970",
+  "yearStart": 1967,
+  "yearEnd": 1970,
+  "medium": "animated",
+  "network": "ABC",
+  "summary": "The first Spider-Man animated series brought Peter Parker to Saturday television, with a theme song and a web-slinging pose that outlasted the show itself.",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "paul-soles",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ]
+}

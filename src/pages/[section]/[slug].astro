@@ -1,0 +1,66 @@
+---
+import Profile from "../../components/Profile.astro";
+import { getCatalog } from "../../lib/catalog";
+import { profiles } from "../../lib/profiles";
+import type { MediaImage } from "../../lib/types";
+import Base from "../../layouts/Base.astro";
+
+export function getStaticPaths() {
+  const catalog = getCatalog();
+  return [
+    ...catalog.movies.map((item) => ({
+      params: { section: "movies", slug: item.id },
+      props: { profile: profiles.movie(item), image: item.image },
+    })),
+    ...catalog.series.map((item) => ({
+      params: { section: "series", slug: item.id },
+      props: { profile: profiles.series(item), image: item.image },
+    })),
+    ...catalog.comics.map((item) => ({
+      params: { section: "comics", slug: item.id },
+      props: { profile: profiles.comic(item), image: item.image },
+    })),
+    ...catalog.actors.map((item) => ({
+      params: { section: "actors", slug: item.id },
+      props: { profile: profiles.actor(item), image: item.image },
+    })),
+    ...catalog.characters
+      .filter((item) => item.kind === "spider-person")
+      .map((item) => ({
+        params: { section: "spider-people", slug: item.id },
+        props: { profile: profiles.character(item), image: item.image },
+      })),
+    ...catalog.characters
+      .filter((item) => item.kind === "supporting")
+      .map((item) => ({
+        params: { section: "characters", slug: item.id },
+        props: { profile: profiles.character(item), image: item.image },
+      })),
+    ...catalog.villains.map((item) => ({
+      params: { section: "villains", slug: item.id },
+      props: { profile: profiles.villain(item), image: item.image },
+    })),
+    ...catalog.universes.map((item) => ({
+      params: { section: "universes", slug: item.id },
+      props: { profile: profiles.universe(item), image: item.image },
+    })),
+    ...catalog.suits.map((item) => ({
+      params: { section: "suits", slug: item.id },
+      props: { profile: profiles.suit(item), image: item.image },
+    })),
+    ...catalog.creators.map((item) => ({
+      params: { section: "creators", slug: item.id },
+      props: { profile: profiles.creator(item), image: item.image },
+    })),
+  ];
+}
+
+interface Props {
+  profile: ReturnType<typeof profiles.movie>;
+  image?: MediaImage;
+}
+const { profile, image } = Astro.props;
+---
+<Base title={`${profile.title} — Spidey`} description={profile.lede}>
+  <Profile profile={profile} image={image} />
+</Base>

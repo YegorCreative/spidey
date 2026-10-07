@@ -1,0 +1,13 @@
+{
+  "id": "2018-into-the-spider-verse",
+  "year": 2018,
+  "title": "Into the Spider-Verse",
+  "summary": "Miles Morales headlines an animated multiverse.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "into-the-spider-verse"
+    }
+  ]
+}

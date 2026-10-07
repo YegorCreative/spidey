@@ -1,0 +1,12 @@
+{
+  "id": "lizard",
+  "name": "Lizard",
+  "alterEgo": "Curt Connors",
+  "summary": "Dr. Curt Connors wants to regrow what he lost and instead becomes the Lizard. He is often a friend of Peter’s, which makes the transformation a personal disaster.",
+  "universeIds": [
+    "earth-616",
+    "webb"
+  ],
+  "accent": "teal",
+  "firstAppearance": "The Amazing Spider-Man #6 (1963)"
+}

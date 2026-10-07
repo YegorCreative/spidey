@@ -1,0 +1,16 @@
+{
+  "id": "gwen-stacy",
+  "name": "Gwen Stacy",
+  "aliases": [
+    "Spider-Gwen",
+    "Ghost-Spider"
+  ],
+  "kind": "spider-person",
+  "summary": "On Earth-616 Gwen Stacy is central to Peter Parker’s story. On Earth-65, and in the Spider-Verse films, Gwen is the one who wears the mask.",
+  "universeIds": [
+    "earth-616",
+    "earth-65",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "The Amazing Spider-Man #31 (1965)"
+}

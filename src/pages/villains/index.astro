@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { villainCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Villains — Spidey" description="Spider-Man’s rogues’ gallery: Green Goblin, Doctor Octopus, Venom, and the rest.">
+  <ArchivePage
+    kicker="Rogues"
+    title="Villains"
+    lede="The founding rogues’ gallery. A profile can later gather every comic, actor, and universe a villain touches."
+    cards={villainCards()}
+  />
+</Base>

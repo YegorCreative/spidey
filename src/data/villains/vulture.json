@@ -1,0 +1,12 @@
+{
+  "id": "vulture",
+  "name": "Vulture",
+  "alterEgo": "Adrian Toomes",
+  "summary": "Adrian Toomes takes to the air on a winged harness. An early Spider-Man foe in the comics, he becomes the antagonist of Spider-Man: Homecoming.",
+  "universeIds": [
+    "earth-616",
+    "mcu"
+  ],
+  "accent": "amber",
+  "firstAppearance": "The Amazing Spider-Man #2 (1963)"
+}

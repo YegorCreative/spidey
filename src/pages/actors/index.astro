@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { actorCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Actors — Spidey" description="Live-action and voice actors in the Spidey archive.">
+  <ArchivePage
+    kicker="Performers"
+    title="Actors"
+    lede="Live-action leads and voice actors share one kind of record, so a television Peter and a film Peter can both be found from the character."
+    cards={actorCards()}
+  />
+</Base>

@@ -1,0 +1,22 @@
+---
+import { exploreItems } from "../config/curation";
+import { href } from "../lib/paths";
+import Icon from "./Icon.astro";
+---
+<section class="section" id="explore" aria-labelledby="explore-title">
+  <div class="section__head">
+    <p class="kicker">01 — The map</p>
+    <h2 id="explore-title">Explore the Spider-Verse</h2>
+  </div>
+  <ul class="explore-grid">
+    {exploreItems.map((item) => (
+      <li class:list={[{ "is-wide": item.title === "Movies", "is-full": item.title === "Timeline" }]}>
+        <a class:list={["explore-card", "panel", `accent-${item.accent}`]} href={href(item.href)}>
+          <span class="explore-card__icon"><Icon name={item.icon} /></span>
+          <span class="explore-card__title">{item.title}</span>
+          <span class="explore-card__text">{item.description}</span>
+        </a>
+      </li>
+    ))}
+  </ul>
+</section>

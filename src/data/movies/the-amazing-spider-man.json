@@ -1,0 +1,31 @@
+{
+  "id": "the-amazing-spider-man",
+  "title": "The Amazing Spider-Man",
+  "year": 2012,
+  "releaseDate": "2012-07-03",
+  "tagline": "A new Peter Parker, and a scientist who cannot control the lizard in him.",
+  "summary": "Marc Webb’s reboot follows Andrew Garfield’s Peter Parker as he investigates his parents and faces Dr. Curt Connors, whose experiment turns him into the Lizard.",
+  "universeId": "webb",
+  "directorIds": [
+    "marc-webb"
+  ],
+  "portrayals": [
+    {
+      "actorId": "andrew-garfield",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "lizard"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [
+    "amazing-fantasy-15"
+  ],
+  "runtimeMinutes": 136
+}

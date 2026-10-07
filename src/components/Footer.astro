@@ -1,0 +1,58 @@
+---
+import { href } from "../lib/paths";
+
+const columns = [
+  {
+    title: "Archive",
+    links: [
+      ["/", "Home"],
+      ["/movies/", "Movies"],
+      ["/comics/", "Comics"],
+      ["/series/", "Series"],
+      ["/timeline/", "Timeline"],
+    ],
+  },
+  {
+    title: "People",
+    links: [
+      ["/spider-people/", "Spider-People"],
+      ["/characters/", "Characters"],
+      ["/actors/", "Actors"],
+      ["/villains/", "Villains"],
+      ["/creators/", "Creators"],
+    ],
+  },
+  {
+    title: "World",
+    links: [
+      ["/universes/", "Universes"],
+      ["/suits/", "Suits"],
+      ["/explore/", "Explore"],
+      ["/search/", "Search"],
+    ],
+  },
+] as const;
+---
+<footer class="footer">
+  <div class="footer__brand">
+    <p class="logo__word">Spidey</p>
+    <p class="footer__tag">Everything Spider-Man. One place.</p>
+  </div>
+  <div class="footer__cols">
+    {columns.map((column) => (
+      <nav aria-label={column.title}>
+        <p class="footer__label">{column.title}</p>
+        <ul>
+          {column.links.map(([path, label]) => (
+            <li><a href={href(path)}>{label}</a></li>
+          ))}
+        </ul>
+      </nav>
+    ))}
+  </div>
+  <p class="footer__legal">
+    Spidey is an unofficial fan project created for informational purposes. It is not affiliated with,
+    endorsed by, or sponsored by Marvel, Sony, Disney, or other rights holders. Spider-Man and related
+    names, stories, and characters belong to their respective owners.
+  </p>
+</footer>

@@ -1,0 +1,11 @@
+{
+  "id": "nicholas-hammond",
+  "name": "Nicholas Hammond",
+  "performance": "live-action",
+  "summary": "Nicholas Hammond was the first actor to play Peter Parker in a live-action television series, The Amazing Spider-Man, in the late 1970s.",
+  "primary": {
+    "identity": "Spider-Man",
+    "characterId": "peter-parker",
+    "years": "1977–1979"
+  }
+}

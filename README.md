@@ -196,3 +196,30 @@ This project is not affiliated with, endorsed by, or sponsored by Marvel, Sony, 
 Movies. Comics. Series. Characters. Universes.
 
 Everything Spider-Man. One place.
+
+⸻
+
+🛠 Technical foundation
+
+Version 1 is a static site built with Astro. GitHub Pages serves the built files. There is no production server, database, or API.
+
+Planned project-site address, once GitHub Pages is set to deploy from GitHub Actions:
+
+https://yegorcreative.github.io/spidey/
+
+The repository name means the site is published under `/spidey`. Asset and page links use that prefix. A custom domain later is a config change, not a rewrite: set `origin` and `base` in `src/config/site.ts`, add `public/CNAME`, and rebuild.
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
+
+Archive records live in `src/data/` as one JSON file per entry. The filename is the id. Movies, series, comics, actors, characters, villains, suits, universes, creators, and timeline events reference each other by id. The build fails if a reference points at a missing record.
+
+Add an entry by creating a JSON file in the right folder and linking the ids that already exist. Profiles and search pick it up on the next build. Put an `image` object on a record (`src`, `alt`, optional `width` and `height`) when an authorized image is available. Until then, the interface uses original graphic placeholders. Do not commit scraped artwork.
+
+Search is a static index generated at build time (`search-index.json`) plus a search page. It runs in the browser. Nothing is sent to a server.
+
+Before the first deploy, open the repository on GitHub → Settings → Pages → Build and deployment → Source: GitHub Actions. Pushing to `main` runs `.github/workflows/deploy.yml`.

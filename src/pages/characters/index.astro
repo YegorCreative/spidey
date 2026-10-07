@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { characterCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Characters — Spidey" description="Spider-heroes and the people around them in the Spidey archive.">
+  <ArchivePage
+    kicker="People"
+    title="Characters"
+    lede="Spider-heroes and the people who make their stories hurt. Spider-People link to their own profiles. Everyone else is filed here."
+    cards={characterCards()}
+  />
+</Base>

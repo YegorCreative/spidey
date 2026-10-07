@@ -1,0 +1,45 @@
+---
+import { screenActorIds } from "../config/curation";
+import { getCatalog, hrefFor } from "../lib/catalog";
+
+const catalog = getCatalog();
+const actors = screenActorIds.map((id) => catalog.actor(id));
+
+function initials(name: string): string {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .slice(0, 2)
+    .join("");
+}
+---
+<section class="section" aria-labelledby="screen-title">
+  <div class="section__head">
+    <p class="kicker">02 — On screen</p>
+    <h2 id="screen-title">Spider-Man on Screen</h2>
+    <p class="section__lede">
+      Four portrayals that carry the mask into movies. Each profile is ready for the actors and voice actors still to come.
+    </p>
+  </div>
+  <ul class="screen-grid">
+    {actors.map((actor) => {
+      const character = actor.primary.characterId ? catalog.character(actor.primary.characterId) : undefined;
+      const universe = actor.primary.universeId ? catalog.universe(actor.primary.universeId) : undefined;
+      return (
+        <li>
+          <a class:list={["screen-card", "panel", `accent-${universe?.accent ?? "red"}`]} href={hrefFor("actor", actor.id)}>
+            <span class="screen-card__mark" aria-hidden="true">{initials(actor.name)}</span>
+            <span class="screen-card__kicker">{universe?.name ?? "Screen"}</span>
+            <span class="screen-card__label">Actor</span>
+            <span class="screen-card__name">{actor.name}</span>
+            <span class="screen-card__label">Spider-Man identity</span>
+            <span class="screen-card__identity">{actor.primary.identity}</span>
+            {character && <span class="screen-card__who">{character.name}</span>}
+            <span class="screen-card__label">Years active</span>
+            <span class="screen-card__years">{actor.primary.years}</span>
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</section>

@@ -1,0 +1,12 @@
+{
+  "id": "mysterio",
+  "name": "Mysterio",
+  "alterEgo": "Quentin Beck",
+  "summary": "Quentin Beck is a special-effects artist who fights Spider-Man with illusion. Mysterio’s power is not strength. It is convincing someone that the floor is gone.",
+  "universeIds": [
+    "earth-616",
+    "mcu"
+  ],
+  "accent": "magenta",
+  "firstAppearance": "The Amazing Spider-Man #13 (1964)"
+}

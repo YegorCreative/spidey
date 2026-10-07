@@ -1,0 +1,36 @@
+---
+import ComicRow from "../components/ComicRow.astro";
+import ExploreGrid from "../components/ExploreGrid.astro";
+import Hero from "../components/Hero.astro";
+import Rogues from "../components/Rogues.astro";
+import ScreenRow from "../components/ScreenRow.astro";
+import TimelineList from "../components/TimelineList.astro";
+import Verse from "../components/Verse.astro";
+import { site } from "../config/site";
+import { absoluteUrl } from "../lib/paths";
+import Base from "../layouts/Base.astro";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: site.name,
+  url: absoluteUrl("/"),
+  description: site.description,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${absoluteUrl("/search/")}?q={query}`,
+    "query-input": "required name=query",
+  },
+};
+const json = JSON.stringify(schema).replace(/</g, "\\u003c");
+---
+<Base>
+  <script slot="head" is:inline type="application/ld+json" set:html={json} />
+  <Hero />
+  <ExploreGrid />
+  <ScreenRow />
+  <TimelineList mode="preview" />
+  <ComicRow />
+  <Rogues />
+  <Verse />
+</Base>

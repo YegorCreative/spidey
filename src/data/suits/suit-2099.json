@@ -1,0 +1,14 @@
+{
+  "id": "suit-2099",
+  "name": "2099 Suit",
+  "summary": "Miguel O’Hara’s costume is a future redesign: a skull-like mask, a cape of light, and a blue that does not belong to 1962.",
+  "era": "1992–",
+  "characterIds": [
+    "miguel-ohara"
+  ],
+  "universeIds": [
+    "earth-928",
+    "spider-verse-animated"
+  ],
+  "accent": "cyan"
+}

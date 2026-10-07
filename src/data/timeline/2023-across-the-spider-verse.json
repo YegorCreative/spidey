@@ -1,0 +1,13 @@
+{
+  "id": "2023-across-the-spider-verse",
+  "year": 2023,
+  "title": "Across the Spider-Verse",
+  "summary": "Miles travels a larger animated Spider-Verse.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "across-the-spider-verse"
+    }
+  ]
+}

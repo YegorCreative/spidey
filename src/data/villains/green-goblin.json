@@ -1,0 +1,13 @@
+{
+  "id": "green-goblin",
+  "name": "Green Goblin",
+  "alterEgo": "Norman Osborn",
+  "summary": "Norman Osborn’s Goblin persona is Spider-Man’s most personal enemy: a father figure, an industrialist, and a grin that keeps coming back. Willem Dafoe plays him on screen.",
+  "universeIds": [
+    "earth-616",
+    "raimi",
+    "mcu"
+  ],
+  "accent": "green",
+  "firstAppearance": "The Amazing Spider-Man #14 (1964)"
+}

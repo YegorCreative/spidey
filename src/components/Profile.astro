@@ -1,0 +1,71 @@
+---
+import { href } from "../lib/paths";
+import type { MediaImage, ProfileModel } from "../lib/types";
+
+interface Props {
+  profile: ProfileModel;
+  image?: MediaImage;
+}
+const { profile, image } = Astro.props;
+---
+<article class:list={["profile", `accent-${profile.accent}`]}>
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <ol>
+      {profile.crumbs.map((crumb, index) => (
+        <li>
+          {crumb.href && index < profile.crumbs.length - 1 ? (
+            <a href={crumb.href}>{crumb.label}</a>
+          ) : (
+            <span aria-current="page">{crumb.label}</span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </nav>
+  <div class="profile__layout">
+    <header class="profile__intro">
+      <p class="kicker">{profile.kicker}</p>
+      <h1>{profile.title}</h1>
+      {image && (
+        <img
+          class="profile__image"
+          src={href(image.src)}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+          decoding="async"
+        />
+      )}
+      <p class="lede">{profile.lede}</p>
+    </header>
+    {profile.facts.length > 0 && (
+      <dl class="facts panel">
+        {profile.facts.map((fact) => (
+          <>
+            <dt>{fact.label}</dt>
+            <dd>{fact.value}</dd>
+          </>
+        ))}
+      </dl>
+    )}
+  </div>
+  {profile.groups.length > 0 && (
+    <div class="groups">
+      {profile.groups.map((group) => (
+        <section class="group" aria-labelledby={`group-${group.title.replace(/\s+/g, "-").toLowerCase()}`}>
+          <h2 id={`group-${group.title.replace(/\s+/g, "-").toLowerCase()}`}>{group.title}</h2>
+          <ul>
+            {group.links.map((link) => (
+              <li>
+                <a href={link.href}>
+                  <span>{link.label}</span>
+                  {link.meta && <span class="group__meta">{link.meta}</span>}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </div>
+  )}
+</article>

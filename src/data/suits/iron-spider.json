@@ -1,0 +1,14 @@
+{
+  "id": "iron-spider",
+  "name": "Iron Spider",
+  "summary": "An armored Spider-Man design, born in the comics and echoed by the high-tech suit Peter is handed in the Marvel Cinematic Universe.",
+  "era": "2006–",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "universeIds": [
+    "earth-616",
+    "mcu"
+  ],
+  "accent": "gold"
+}

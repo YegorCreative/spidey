@@ -1,0 +1,32 @@
+{
+  "id": "spider-man-2002",
+  "title": "Spider-Man",
+  "year": 2002,
+  "releaseDate": "2002-05-03",
+  "tagline": "Peter Parker’s comic-book origin, told as a widescreen coming-of-age story.",
+  "summary": "Sam Raimi’s Spider-Man introduced Tobey Maguire’s Peter Parker and Willem Dafoe’s Norman Osborn, and proved a Spider-Man film could carry both spectacle and the weight of responsibility.",
+  "universeId": "raimi",
+  "directorIds": [
+    "sam-raimi"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tobey-maguire",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "green-goblin",
+      "actorId": "willem-dafoe"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [
+    "amazing-fantasy-15"
+  ],
+  "runtimeMinutes": 121
+}

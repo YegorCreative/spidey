@@ -1,0 +1,12 @@
+{
+  "id": "sandman",
+  "name": "Sandman",
+  "alterEgo": "Flint Marko",
+  "summary": "Flint Marko’s body becomes living sand. He can be a bruiser, a tragic figure, or both, depending on the story — one of Spider-Man’s earliest and strangest enemies.",
+  "universeIds": [
+    "earth-616",
+    "raimi"
+  ],
+  "accent": "sand",
+  "firstAppearance": "The Amazing Spider-Man #4 (1963)"
+}

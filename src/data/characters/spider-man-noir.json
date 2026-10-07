@@ -1,0 +1,14 @@
+{
+  "id": "spider-man-noir",
+  "name": "Spider-Man Noir",
+  "aliases": [
+    "Peter Parker"
+  ],
+  "kind": "spider-person",
+  "summary": "A Depression-era Peter Parker whose Spider-Man operates in shadow, trench coat, and black-and-white moral weather. Noir is one of the clearest examples of the mask changing with its world.",
+  "universeIds": [
+    "earth-90214",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Spider-Man Noir #1 (2009)"
+}

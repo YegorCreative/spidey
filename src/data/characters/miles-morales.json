@@ -1,0 +1,14 @@
+{
+  "id": "miles-morales",
+  "name": "Miles Morales",
+  "aliases": [
+    "Spider-Man"
+  ],
+  "kind": "spider-person",
+  "summary": "Miles Morales became Spider-Man in the Ultimate comics and later reached a huge audience through the Spider-Verse films. He is a different person under the mask, not a replacement costume.",
+  "universeIds": [
+    "ultimate",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Ultimate Fallout #4 (2011)"
+}

@@ -1,0 +1,35 @@
+---
+import { nav } from "../config/curation";
+import { href, isCurrent } from "../lib/paths";
+import Icon from "./Icon.astro";
+
+const pathname = Astro.url.pathname;
+---
+<a class="skip" href="#content">Skip to content</a>
+<header class="header">
+  <a class="logo" href={href("/")}>
+    <span class="logo__mark" aria-hidden="true">
+      <Icon name="spider" />
+    </span>
+    <span class="logo__word">Spidey</span>
+  </a>
+  <a class="icon-btn search-btn" href={href("/search/")} data-open-search aria-label="Search the archive">
+    <Icon name="search" />
+  </a>
+  <input id="nav-toggle" class="nav-toggle" type="checkbox" />
+  <label id="nav-label" class="icon-btn burger" for="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+    <span class="sr-only">Menu</span>
+    <Icon name="menu" />
+  </label>
+  <nav id="site-nav" class="site-nav" aria-label="Primary">
+    <ul>
+      {nav.map((item) => (
+        <li>
+          <a href={href(item.href)} aria-current={isCurrent(pathname, item.href) ? "page" : undefined}>
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>

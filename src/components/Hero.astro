@@ -1,0 +1,70 @@
+---
+import { getCatalog, hrefFor } from "../lib/catalog";
+import { href } from "../lib/paths";
+
+const catalog = getCatalog();
+const plates = [
+  catalog.comic("amazing-fantasy-15"),
+  catalog.movie("spider-man-2002"),
+  catalog.movie("into-the-spider-verse"),
+  catalog.movie("across-the-spider-verse"),
+].map((entry) => {
+  if ("issue" in entry) {
+    return {
+      href: hrefFor("comic", entry.id),
+      year: String(entry.year),
+      kicker: "Comic",
+      title: `${entry.title} ${entry.issue}`,
+    };
+  }
+  return {
+    href: hrefFor("movie", entry.id),
+    year: String(entry.year),
+    kicker: "Film",
+    title: entry.title,
+  };
+});
+---
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero__web" aria-hidden="true">
+    <svg viewBox="0 0 800 800">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="640" cy="120" r="40" />
+        <circle cx="640" cy="120" r="110" />
+        <circle cx="640" cy="120" r="190" />
+        <circle cx="640" cy="120" r="280" />
+        <circle cx="640" cy="120" r="380" />
+        <path d="M640 0v800M240 120h800M360 0l560 480M920 0 360 480" />
+      </g>
+    </svg>
+  </div>
+  <div class="hero__halftone" aria-hidden="true"></div>
+  <div class="hero__layout">
+    <div class="hero__copy">
+      <p class="kicker">Fan archive · Since 1962</p>
+      <h1 id="hero-title" class="hero__title">
+        <span>Everything</span>
+        <span class="is-serif">Spider-Man.</span>
+        <span>One place.</span>
+      </h1>
+      <p class="lede">
+        Explore more than six decades of Spider-Man — from comics and television to movies, characters, villains, suits, creators, and the Spider-Verse.
+      </p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#explore">Explore the Spider-Verse</a>
+        <a class="btn btn--ghost" href={href("/timeline/")}>Start the Timeline</a>
+      </div>
+    </div>
+    <ul class="hero__stack">
+      {plates.map((plate) => (
+        <li>
+          <a class="plate" href={plate.href}>
+            <span class="plate__year">{plate.year}</span>
+            <span class="plate__kicker">{plate.kicker}</span>
+            <span class="plate__title">{plate.title}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

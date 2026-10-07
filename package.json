@@ -1,0 +1,27 @@
+{
+  "name": "spidey",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Spidey — an unofficial fan archive of Spider-Man movies, comics, series, and universes.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@astrojs/sitemap": "^3.7.4",
+    "@fontsource/bricolage-grotesque": "^5.2.0",
+    "@fontsource/outfit": "^5.2.0",
+    "@fontsource/source-serif-4": "^5.2.0",
+    "astro": "^7.3.6"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.5",
+    "typescript": "~5.9.3"
+  }
+}

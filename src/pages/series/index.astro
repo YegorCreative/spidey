@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { seriesCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Series — Spidey" description="Spider-Man television and animated series in the Spidey archive.">
+  <ArchivePage
+    kicker="Television"
+    title="Series"
+    lede="From the 1967 cartoon to the 1977 live-action series and the 1990s animated run. Voice actors and live-action leads sit on the same records."
+    cards={seriesCards()}
+  />
+</Base>

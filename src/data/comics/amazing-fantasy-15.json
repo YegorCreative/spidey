@@ -1,0 +1,20 @@
+{
+  "id": "amazing-fantasy-15",
+  "title": "Amazing Fantasy",
+  "issue": "#15",
+  "year": 1962,
+  "coverDate": "August 1962",
+  "summary": "Peter Parker gains his powers, loses Uncle Ben, and learns that great power comes with great responsibility. It is the issue the rest of the archive points back to.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "steve-ditko"
+  ],
+  "characterIds": [
+    "peter-parker",
+    "may-parker"
+  ],
+  "villainIds": []
+}

@@ -1,0 +1,29 @@
+{
+  "id": "into-the-spider-verse",
+  "title": "Spider-Man: Into the Spider-Verse",
+  "year": 2018,
+  "releaseDate": "2018-12-14",
+  "tagline": "Anyone can wear the mask.",
+  "summary": "Miles Morales becomes Spider-Man in an animated film that treats the multiverse as a comic book in motion, with Shameik Moore voicing a hero still learning the role.",
+  "universeId": "spider-verse-animated",
+  "directorIds": [
+    "bob-persichetti",
+    "peter-ramsey",
+    "rodney-rothman"
+  ],
+  "portrayals": [
+    {
+      "actorId": "shameik-moore",
+      "characterId": "miles-morales",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [],
+  "suitIds": [
+    "miles-suit"
+  ],
+  "comicIds": [
+    "ultimate-fallout-4"
+  ],
+  "runtimeMinutes": 117
+}

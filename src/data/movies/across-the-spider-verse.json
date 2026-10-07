@@ -1,0 +1,35 @@
+{
+  "id": "across-the-spider-verse",
+  "title": "Spider-Man: Across the Spider-Verse",
+  "year": 2023,
+  "releaseDate": "2023-06-02",
+  "tagline": "Miles goes looking for Gwen and finds a society of Spider-People.",
+  "summary": "The sequel widens the animated multiverse. Miles Morales meets other spider-heroes, including Gwen Stacy and Miguel O’Hara, and has to decide what kind of Spider-Man he will be.",
+  "universeId": "spider-verse-animated",
+  "directorIds": [
+    "joaquim-dos-santos",
+    "kemp-powers",
+    "justin-k-thompson"
+  ],
+  "portrayals": [
+    {
+      "actorId": "shameik-moore",
+      "characterId": "miles-morales",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [],
+  "suitIds": [
+    "miles-suit",
+    "spider-gwen-suit",
+    "suit-2099"
+  ],
+  "comicIds": [
+    "ultimate-fallout-4"
+  ],
+  "characterIds": [
+    "gwen-stacy",
+    "miguel-ohara"
+  ],
+  "runtimeMinutes": 140
+}

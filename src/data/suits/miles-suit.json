@@ -1,0 +1,14 @@
+{
+  "id": "miles-suit",
+  "name": "Miles Morales Suit",
+  "summary": "Black and red, with a looser silhouette than Peter’s classic suit. Miles’s suit reads as streetwear and comic art at the same time.",
+  "era": "2011–",
+  "characterIds": [
+    "miles-morales"
+  ],
+  "universeIds": [
+    "ultimate",
+    "spider-verse-animated"
+  ],
+  "accent": "red"
+}

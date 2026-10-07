@@ -1,0 +1,13 @@
+{
+  "id": "2012-amazing-spider-man",
+  "year": 2012,
+  "title": "The Amazing Spider-Man",
+  "summary": "Andrew Garfield’s Peter Parker arrives in a new film series.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "the-amazing-spider-man"
+    }
+  ]
+}

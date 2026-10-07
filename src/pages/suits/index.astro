@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { suitCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Suits — Spidey" description="Spider-Man suits in the archive, from the classic red and blue to 2099 and Spider-Gwen.">
+  <ArchivePage
+    kicker="Costume"
+    title="Suits"
+    lede="The suit is a character of its own. These records track who wears it, where, and which films already point at it."
+    cards={suitCards()}
+  />
+</Base>

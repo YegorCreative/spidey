@@ -1,0 +1,12 @@
+{
+  "id": "willem-dafoe",
+  "name": "Willem Dafoe",
+  "performance": "live-action",
+  "summary": "Willem Dafoe played Norman Osborn and the Green Goblin in Spider-Man (2002) and reprised the role when that villain crossed worlds in Spider-Man: No Way Home.",
+  "primary": {
+    "identity": "Green Goblin",
+    "villainId": "green-goblin",
+    "universeId": "raimi",
+    "years": "2002, 2021"
+  }
+}

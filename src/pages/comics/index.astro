@@ -1,0 +1,13 @@
+---
+import ArchivePage from "../../components/ArchivePage.astro";
+import { comicCards } from "../../lib/cards";
+import Base from "../../layouts/Base.astro";
+---
+<Base title="Comics — Spidey" description="Founding Spider-Man comic issues in the Spidey archive, starting with Amazing Fantasy #15.">
+  <ArchivePage
+    kicker="Print"
+    title="Comics"
+    lede="The archive starts with a handful of issues that changed the character. Covers can be added later. The fields — title, issue, year, writer, artist, universe — are already in place."
+    cards={comicCards()}
+  />
+</Base>

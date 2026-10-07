@@ -1,0 +1,14 @@
+{
+  "id": "spider-gwen-suit",
+  "name": "Spider-Gwen Suit",
+  "summary": "White, black, and pink hood. Gwen Stacy’s costume is immediate from a distance and one of the easiest suits in the archive to tell apart.",
+  "era": "2014–",
+  "characterIds": [
+    "gwen-stacy"
+  ],
+  "universeIds": [
+    "earth-65",
+    "spider-verse-animated"
+  ],
+  "accent": "pink"
+}
