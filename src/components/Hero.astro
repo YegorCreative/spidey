@@ -1,4 +1,7 @@
 ---
+import CityArt from "./art/CityArt.astro";
+import Swinger from "./art/Swinger.astro";
+import WebArt from "./art/WebArt.astro";
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
 
@@ -25,31 +28,23 @@ const plates = [
   };
 });
 ---
-<section class="hero" data-parallax data-parallax-pointer aria-labelledby="hero-title">
-  <div class="hero__sky" data-depth style="--depth: 0.1" aria-hidden="true"></div>
-  <div class="hero__city" data-depth style="--depth: 0.2" aria-hidden="true">
-    <svg viewBox="0 0 1200 420" preserveAspectRatio="xMidYMax slice">
-      <g fill="none" stroke="currentColor" stroke-width="1.4">
-        <path d="M0 340h1200" />
-        <path d="M40 340V210h70v130M140 340V150h46v190M210 340V240h90v100M330 340V120h38v220M390 340V180h80v160M500 340V90h52v250M570 340V200h64v140M660 340V140h40v200M730 340V230h110v110M870 340V160h48v180M940 340V70h36v270M1000 340V190h78v150M1100 340V130h60v210" />
-        <path d="M40 210l35-28 35 28M330 120l19-24 19 24M500 90l26-30 26 30M940 70l18-22 18 22" />
-      </g>
-    </svg>
+<section class="hero hero--scene" data-parallax data-parallax-pointer aria-labelledby="hero-title">
+  <div class="hero__sky" data-depth style="--depth: 0.08" aria-hidden="true"></div>
+  <div class="hero__layer hero__layer--far" data-depth style="--depth: 0.12" aria-hidden="true">
+    <CityArt variant="night" layer="far" />
   </div>
+  <div class="hero__layer hero__layer--mid" data-depth style="--depth: 0.24" aria-hidden="true">
+    <CityArt variant="night" layer="mid" />
+  </div>
+  <div class="hero__haze" data-depth style="--depth: 0.3" aria-hidden="true"><div class="hero__haze-drift"></div></div>
   <p class="hero__ghost" data-depth style="--depth: 0.16" aria-hidden="true">The Spider-Verse</p>
-  <div class="hero__web" data-depth style="--depth: 0.34" aria-hidden="true">
-    <svg viewBox="0 0 800 800">
-      <g fill="none" stroke="currentColor" stroke-width="1">
-        <circle cx="640" cy="120" r="40" />
-        <circle cx="640" cy="120" r="110" />
-        <circle cx="640" cy="120" r="190" />
-        <circle cx="640" cy="120" r="280" />
-        <circle cx="640" cy="120" r="380" />
-        <path d="M640 0v800M240 120h800M360 0l560 480M920 0 360 480" />
-      </g>
-    </svg>
+  <div class="hero__web" data-depth style="--depth: 0.38" aria-hidden="true">
+    <WebArt variant="broken" />
   </div>
-  <div class="hero__halftone" data-depth style="--depth: 0.26" aria-hidden="true"></div>
+  <div class="hero__halftone" data-depth style="--depth: 0.2" aria-hidden="true"></div>
+  <div class="hero__swinger" data-depth style="--depth: 0.62" aria-hidden="true">
+    <Swinger />
+  </div>
   <div class="hero__layout">
     <div class="hero__copy">
       <p class="kicker">Fan archive · Since 1962</p>
@@ -78,14 +73,10 @@ const plates = [
       ))}
     </ul>
   </div>
-  <div class="hero__fore" data-depth style="--depth: 0.7" aria-hidden="true">
-    <svg viewBox="0 0 1200 280" preserveAspectRatio="none">
-      <g fill="none" stroke="currentColor" stroke-width="1.2">
-        <path d="M0 220 C 180 80, 260 40, 420 120" />
-        <path d="M40 260 C 200 140, 300 90, 480 150" />
-        <path d="M1200 40 C 980 20, 860 120, 760 200" />
-        <path d="M1200 110 C 1000 90, 900 160, 800 230" />
-      </g>
-    </svg>
+  <div class="hero__layer hero__layer--near" data-depth style="--depth: 0.74" aria-hidden="true">
+    <CityArt variant="night" layer="near" />
+  </div>
+  <div class="hero__fore" data-depth style="--depth: 0.84" aria-hidden="true">
+    <WebArt variant="strand" />
   </div>
 </section>

@@ -2,6 +2,7 @@
 import { featuredComicIds } from "../config/curation";
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
+import ArchiveCover from "./art/ArchiveCover.astro";
 import Atmosphere from "./Atmosphere.astro";
 
 const catalog = getCatalog();
@@ -28,11 +29,7 @@ const comics = featuredComicIds.map((id) => catalog.comic(id));
       return (
         <li>
           <a class="comic-card" href={hrefFor("comic", comic.id)} data-reveal style={`--delay: ${(index % 4) * 70}ms`}>
-            <span class:list={["poster", `accent-${universe.accent}`]} aria-hidden="true">
-              <span class="poster__issue">{comic.issue}</span>
-              <span class="poster__name">{comic.title}</span>
-              <span class="poster__year">{comic.year}</span>
-            </span>
+            <ArchiveCover title={comic.title} issue={comic.issue} year={comic.year} tone={comic.id} />
             <span class="comic-card__body">
               <span class="comic-card__title">{comic.title} {comic.issue}</span>
               <span class="comic-card__meta">{comic.year} · {universe.name}</span>

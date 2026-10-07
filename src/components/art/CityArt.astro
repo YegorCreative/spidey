@@ -1,0 +1,45 @@
+---
+interface Props {
+  variant?: "night" | "sunset" | "noir" | "future" | "verse" | "rooftop" | "canyon";
+  layer?: "far" | "mid" | "near";
+}
+const { variant = "night", layer = "mid" } = Astro.props;
+const viewBox = layer === "far" ? "0 150 1200 210" : layer === "near" ? "0 0 1200 200" : "0 50 1200 230";
+const windows = [
+  [86, 250], [102, 250], [86, 268], [150, 210], [166, 210], [214, 180],
+  [300, 230], [316, 230], [300, 248], [390, 160], [406, 160], [470, 200],
+  [560, 140], [576, 140], [560, 158], [650, 190], [720, 150], [736, 168],
+  [810, 210], [860, 130], [876, 130], [940, 180], [1020, 160], [1088, 200],
+];
+---
+<svg class:list={["city", `city--${variant}`, `city--${layer}`]} viewBox={viewBox} preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+  {layer === "far" && (
+    <path fill="currentColor" d="M0 480V340h36V300h28v40h22V250h48v90h30V280h40v60h54V220h34v120h46V300h70v40h38V190h42v150h58V260h36v80h64V210h28v130h70V240h90v100h40V170h30v170h48V250h70v90h36V200h44v140h52V230h40v110H1200V480Z" />
+  )}
+  {layer === "mid" && (
+    <>
+      <path fill="currentColor" d="M0 480V250h48V180h22v70h18V120h36v130h26V200h58v50h20V90h30v160h40V210h24v40h70V150h26v100h48V70h22v180h36V190h64v60h28V130h40v120h52V100h18v150h46V220h38v30h60V160h24v90h42V80h20v170h30V200h48v50H1200V480Z" />
+      <g class="city__windows">
+        {windows.map(([x, y]) => <rect x={x} y={y} width="7" height="10" />)}
+      </g>
+    </>
+  )}
+  {layer === "near" && (
+    <>
+      <path fill="currentColor" d="M0 480V120h18V40h46v80h16V90h28v30H0zM1200 480V80h-24V20h-40v70h-22V60h-36v40H1200z" />
+      <g class="city__windows">
+        <rect x="10" y="150" width="6" height="12" />
+        <rect x="22" y="150" width="6" height="12" />
+        <rect x="10" y="172" width="6" height="12" />
+        <rect x="1148" y="110" width="6" height="12" />
+        <rect x="1162" y="110" width="6" height="12" />
+        <rect x="1148" y="132" width="6" height="12" />
+      </g>
+    </>
+  )}
+  {variant === "noir" && layer !== "far" && (
+    <g class="city__rain" stroke="currentColor" stroke-width="1" opacity="0.35">
+      <path d="M80 40l-10 28M160 70l-10 28M240 30l-10 28M340 80l-10 28M460 24l-10 28M580 64l-10 28M700 36l-10 28M820 78l-10 28M960 28l-10 28M1080 60l-10 28" />
+    </g>
+  )}
+</svg>

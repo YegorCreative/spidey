@@ -2,6 +2,7 @@
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
 import Atmosphere from "./Atmosphere.astro";
+import VillainMark from "./art/VillainMark.astro";
 
 const villains = getCatalog().villains;
 ---
@@ -20,6 +21,7 @@ const villains = getCatalog().villains;
     {villains.map((villain, index) => (
       <li>
         <a class:list={["rogue-card", "panel", `accent-${villain.accent}`]} href={hrefFor("villain", villain.id)} data-reveal style={`--delay: ${(index % 4) * 70}ms`}>
+          <span class="rogue-card__art"><VillainMark id={villain.id} /></span>
           <span class="rogue-card__ego">{villain.alterEgo}</span>
           <span class="rogue-card__name">{villain.name}</span>
           <span class="rogue-card__text">{villain.summary}</span>

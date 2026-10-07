@@ -1,24 +1,33 @@
 ---
+import ArchiveCover from "./art/ArchiveCover.astro";
+import UniverseScene from "./art/UniverseScene.astro";
+import VillainMark from "./art/VillainMark.astro";
+import WebArt from "./art/WebArt.astro";
+import { getCatalog } from "../lib/catalog";
 import { href } from "../lib/paths";
-import type { MediaImage, ProfileModel } from "../lib/types";
+import type { MediaImage, MediaSet, ProfileModel } from "../lib/types";
 
 interface Props {
   profile: ProfileModel;
   image?: MediaImage;
+  media?: MediaSet;
+  scene?: "city" | "cover" | "villain" | "web";
+  sceneId?: string;
 }
-const { profile, image } = Astro.props;
+const { profile, image, media, scene, sceneId } = Astro.props;
+const picture = media?.heroImage ?? media?.poster ?? media?.portrait ?? image;
+const comic = scene === "cover" && sceneId ? getCatalog().comic(sceneId) : undefined;
 ---
 <article class:list={["profile", "stage", `accent-${profile.accent}`]} data-parallax>
   <div class="stage__glow" data-depth style="--depth: 0.12" aria-hidden="true"></div>
   <p class="stage__ghost" data-depth style="--depth: 0.16" aria-hidden="true">{profile.kicker}</p>
-  <svg class="stage__web" data-depth style="--depth: 0.62" viewBox="0 0 640 640" aria-hidden="true">
-    <g fill="none" stroke="currentColor" stroke-width="1">
-      <circle cx="520" cy="80" r="30" />
-      <circle cx="520" cy="80" r="90" />
-      <circle cx="520" cy="80" r="160" />
-      <path d="M520 0v360M300 80h340" />
-    </g>
-  </svg>
+  <div class="stage__web" data-depth style="--depth: 0.62" aria-hidden="true"><WebArt variant="radial" /></div>
+  {scene === "villain" && sceneId && (
+    <div class="stage__sigil" data-depth style="--depth: 0.28"><VillainMark id={sceneId} /></div>
+  )}
+  {scene === "city" && sceneId && (
+    <div class="stage__world" data-depth style="--depth: 0.18"><UniverseScene id={sceneId} /></div>
+  )}
   <nav class="crumbs" aria-label="Breadcrumb">
     <ol>
       {profile.crumbs.map((crumb, index) => (
@@ -36,13 +45,13 @@ const { profile, image } = Astro.props;
     <header class="profile__intro">
       <p class="kicker">{profile.kicker}</p>
       <h1>{profile.title}</h1>
-      {image && (
+      {picture && (
         <img
           class="profile__image"
-          src={href(image.src)}
-          alt={image.alt}
-          width={image.width}
-          height={image.height}
+          src={href(picture.src)}
+          alt={picture.alt}
+          width={picture.width}
+          height={picture.height}
           decoding="async"
         />
       )}
@@ -57,6 +66,11 @@ const { profile, image } = Astro.props;
           </>
         ))}
       </dl>
+    )}
+    {comic && (
+      <div class="stage__cover" data-depth style="--depth: 0.22">
+        <ArchiveCover title={comic.title} issue={comic.issue} year={comic.year} tone={comic.id} />
+      </div>
     )}
   </div>
   {profile.groups.length > 0 && (

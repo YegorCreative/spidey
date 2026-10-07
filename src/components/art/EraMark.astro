@@ -1,0 +1,60 @@
+---
+interface Props {
+  era?: string;
+}
+const { era = "print" } = Astro.props;
+const tone = era.includes("raimi") || era.includes("tobey")
+  ? "raimi"
+  : era.includes("webb") || era.includes("andrew")
+    ? "webb"
+    : era.includes("mcu") || era.includes("holland")
+      ? "mcu"
+      : era.includes("verse") || era.includes("shameik") || era.includes("65")
+        ? "verse"
+        : "print";
+---
+<div class:list={["era", `era-art--${tone}`]} aria-hidden="true">
+  <svg class="era__svg" viewBox="0 0 320 220" preserveAspectRatio="xMidYMid slice">
+    {tone === "raimi" && (
+      <>
+        <path fill="currentColor" opacity="0.35" d="M0 220V120h40V70h30v50h20V40h50v80h24V90h40v30H0z" />
+        <circle cx="230" cy="78" r="34" fill="none" stroke="currentColor" stroke-width="1.2" />
+        <path d="M210 78h40M230 58v40" stroke="currentColor" stroke-width="1" />
+        <path d="M40 40c30 20 40 50 20 80" fill="none" stroke="currentColor" stroke-width="1.2" />
+      </>
+    )}
+    {tone === "webb" && (
+      <>
+        <path fill="currentColor" opacity="0.28" d="M0 220V90h26V40h18v50h40V20h22v70h36V60h28v30H0z" />
+        <path d="M180 30c20 40 16 80-10 120M210 24c8 48-4 90-30 130" fill="none" stroke="currentColor" stroke-width="1.1" />
+        <circle cx="250" cy="70" r="18" fill="none" stroke="currentColor" />
+      </>
+    )}
+    {tone === "mcu" && (
+      <>
+        <g fill="none" stroke="currentColor" stroke-width="1.1">
+          <rect x="24" y="36" width="120" height="78" />
+          <path d="M24 62h120M64 36v78M108 36v78" />
+          <circle cx="230" cy="74" r="36" />
+          <path d="M206 74h48M230 50v48M214 58l32 32M246 58l-32 32" />
+        </g>
+      </>
+    )}
+    {tone === "verse" && (
+      <>
+        <circle cx="70" cy="70" r="28" fill="none" stroke="currentColor" />
+        <circle cx="86" cy="78" r="28" fill="none" stroke="currentColor" />
+        <path d="M150 30h70v90H150z" fill="none" stroke="currentColor" stroke-width="1.4" transform="rotate(-8 185 75)" />
+        <path d="M40 150h240" stroke="currentColor" stroke-dasharray="2 6" />
+      </>
+    )}
+    {tone === "print" && (
+      <>
+        <circle cx="250" cy="60" r="40" fill="none" stroke="currentColor" />
+        <path d="M20 180c40-30 70-20 100 10" fill="none" stroke="currentColor" />
+        <path d="M40 40h80M40 40v60" stroke="currentColor" />
+      </>
+    )}
+  </svg>
+  <span class="era__grain"></span>
+</div>

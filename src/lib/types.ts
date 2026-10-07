@@ -37,6 +37,19 @@ export interface MediaImage {
   alt: string;
   width?: number;
   height?: number;
+  credit?: string;
+  source?: string;
+  /** Permission or usage note. Leave empty until an authorized file exists. */
+  license?: string;
+}
+
+/** Future authorized stills. Do not fill with scraped or unlicensed URLs. */
+export interface MediaSet {
+  heroImage?: MediaImage;
+  thumbnail?: MediaImage;
+  poster?: MediaImage;
+  portrait?: MediaImage;
+  gallery?: MediaImage[];
 }
 
 export interface Movie {
@@ -55,6 +68,7 @@ export interface Movie {
   characterIds?: string[];
   runtimeMinutes?: number;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Series {
@@ -70,6 +84,7 @@ export interface Series {
   characterIds: string[];
   cast: Credit[];
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Comic {
@@ -86,6 +101,7 @@ export interface Comic {
   villainIds: string[];
   arc?: string;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface ActorPrimary {
@@ -103,6 +119,7 @@ export interface Actor {
   summary: string;
   primary: ActorPrimary;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Character {
@@ -114,6 +131,7 @@ export interface Character {
   universeIds: string[];
   firstAppearance?: string;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Villain {
@@ -125,6 +143,7 @@ export interface Villain {
   accent: Accent;
   firstAppearance?: string;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Universe {
@@ -135,6 +154,7 @@ export interface Universe {
   summary: string;
   accent: Accent;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Suit {
@@ -146,6 +166,7 @@ export interface Suit {
   universeIds: string[];
   accent: Accent;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface Creator {
@@ -154,6 +175,7 @@ export interface Creator {
   roles: string[];
   summary: string;
   image?: MediaImage;
+  media?: MediaSet;
 }
 
 export interface TimelineEvent {

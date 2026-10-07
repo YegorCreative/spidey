@@ -2,11 +2,14 @@
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
 import Atmosphere from "./Atmosphere.astro";
+import Portal from "./art/Portal.astro";
+import UniverseScene from "./art/UniverseScene.astro";
 
 const universes = getCatalog().universes;
 ---
 <div class="band" data-parallax>
   <Atmosphere word="Verse" tone="blue" web />
+  <div class="portal-anchor" data-depth style="--depth: 0.18"><Portal /></div>
   <section class="section" aria-labelledby="verse-title">
   <div class="section__head section__head--split" data-reveal>
     <div>
@@ -22,6 +25,7 @@ const universes = getCatalog().universes;
     {universes.map((universe, index) => (
       <li data-reveal style={`--delay: ${(index % 4) * 50}ms`}>
         <a class:list={["verse-card", `accent-${universe.accent}`]} href={hrefFor("universe", universe.id)}>
+          <span class="verse-card__art"><UniverseScene id={universe.id} /></span>
           <span class="verse-card__code">{universe.designation}</span>
           <span class="verse-card__main">
             <span class="verse-card__name">{universe.name}</span>

@@ -2,7 +2,7 @@
 import Profile from "../../components/Profile.astro";
 import { getCatalog } from "../../lib/catalog";
 import { profiles } from "../../lib/profiles";
-import type { MediaImage } from "../../lib/types";
+import type { MediaImage, MediaSet } from "../../lib/types";
 import Base from "../../layouts/Base.astro";
 
 export function getStaticPaths() {
@@ -10,47 +10,47 @@ export function getStaticPaths() {
   return [
     ...catalog.movies.map((item) => ({
       params: { section: "movies", slug: item.id },
-      props: { profile: profiles.movie(item), image: item.image },
+      props: { profile: profiles.movie(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.universeId },
     })),
     ...catalog.series.map((item) => ({
       params: { section: "series", slug: item.id },
-      props: { profile: profiles.series(item), image: item.image },
+      props: { profile: profiles.series(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.universeId ?? "earth-616" },
     })),
     ...catalog.comics.map((item) => ({
       params: { section: "comics", slug: item.id },
-      props: { profile: profiles.comic(item), image: item.image },
+      props: { profile: profiles.comic(item), image: item.image, media: item.media, scene: "cover" as const, sceneId: item.id },
     })),
     ...catalog.actors.map((item) => ({
       params: { section: "actors", slug: item.id },
-      props: { profile: profiles.actor(item), image: item.image },
+      props: { profile: profiles.actor(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.primary.universeId ?? "earth-616" },
     })),
     ...catalog.characters
       .filter((item) => item.kind === "spider-person")
       .map((item) => ({
         params: { section: "spider-people", slug: item.id },
-        props: { profile: profiles.character(item), image: item.image },
+        props: { profile: profiles.character(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.universeIds[0] },
       })),
     ...catalog.characters
       .filter((item) => item.kind === "supporting")
       .map((item) => ({
         params: { section: "characters", slug: item.id },
-        props: { profile: profiles.character(item), image: item.image },
+        props: { profile: profiles.character(item), image: item.image, media: item.media, scene: "web" as const, sceneId: item.id },
       })),
     ...catalog.villains.map((item) => ({
       params: { section: "villains", slug: item.id },
-      props: { profile: profiles.villain(item), image: item.image },
+      props: { profile: profiles.villain(item), image: item.image, media: item.media, scene: "villain" as const, sceneId: item.id },
     })),
     ...catalog.universes.map((item) => ({
       params: { section: "universes", slug: item.id },
-      props: { profile: profiles.universe(item), image: item.image },
+      props: { profile: profiles.universe(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.id },
     })),
     ...catalog.suits.map((item) => ({
       params: { section: "suits", slug: item.id },
-      props: { profile: profiles.suit(item), image: item.image },
+      props: { profile: profiles.suit(item), image: item.image, media: item.media, scene: "web" as const, sceneId: item.id },
     })),
     ...catalog.creators.map((item) => ({
       params: { section: "creators", slug: item.id },
-      props: { profile: profiles.creator(item), image: item.image },
+      props: { profile: profiles.creator(item), image: item.image, media: item.media, scene: "web" as const, sceneId: item.id },
     })),
   ];
 }
@@ -58,9 +58,12 @@ export function getStaticPaths() {
 interface Props {
   profile: ReturnType<typeof profiles.movie>;
   image?: MediaImage;
+  media?: MediaSet;
+  scene?: "city" | "cover" | "villain" | "web";
+  sceneId?: string;
 }
-const { profile, image } = Astro.props;
+const { profile, image, media, scene, sceneId } = Astro.props;
 ---
 <Base title={`${profile.title} — Spidey`} description={profile.lede}>
-  <Profile profile={profile} image={image} />
+  <Profile profile={profile} image={image} media={media} scene={scene} sceneId={sceneId} />
 </Base>

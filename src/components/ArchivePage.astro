@@ -1,6 +1,10 @@
 ---
 import type { ArchiveCard } from "../lib/cards";
 import { href } from "../lib/paths";
+import ArchiveCover from "./art/ArchiveCover.astro";
+import EraMark from "./art/EraMark.astro";
+import UniverseScene from "./art/UniverseScene.astro";
+import VillainMark from "./art/VillainMark.astro";
 import Atmosphere from "./Atmosphere.astro";
 
 interface Props {
@@ -22,6 +26,18 @@ const { kicker, title, lede, cards } = Astro.props;
   {cards.map((card, index) => (
     <li>
       <a class:list={["archive-card", "panel", `accent-${card.accent}`]} href={card.href} data-reveal style={`--delay: ${(index % 4) * 60}ms`}>
+        {!card.image && card.cover && (
+          <span class="card-art"><ArchiveCover title={card.cover.title} issue={card.cover.issue} year={card.cover.year} tone={card.cover.tone} /></span>
+        )}
+        {!card.image && !card.cover && card.era && (
+          <span class="card-art"><EraMark era={card.era} /></span>
+        )}
+        {!card.image && !card.cover && !card.era && card.sigil && (
+          <span class="card-art"><VillainMark id={card.sigil} /></span>
+        )}
+        {!card.image && !card.cover && !card.era && !card.sigil && card.world && (
+          <span class="card-art"><UniverseScene id={card.world} /></span>
+        )}
         {card.image && (
           <img
             class="archive-card__image"

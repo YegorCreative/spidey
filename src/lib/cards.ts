@@ -1,5 +1,5 @@
 import { getCatalog, hrefFor, performanceLabel } from "./catalog";
-import type { Accent, MediaImage } from "./types";
+import type { Accent, MediaImage, MediaSet } from "./types";
 
 export interface ArchiveCard {
   href: string;
@@ -9,6 +9,14 @@ export interface ArchiveCard {
   summary: string;
   accent: Accent;
   image?: MediaImage;
+  cover?: { title: string; issue: string; year: number; tone: string };
+  era?: string;
+  sigil?: string;
+  world?: string;
+}
+
+function still(image?: MediaImage, media?: MediaSet): MediaImage | undefined {
+  return image ?? media?.poster ?? media?.thumbnail ?? media?.heroImage ?? media?.portrait;
 }
 
 const catalog = getCatalog();
@@ -23,7 +31,8 @@ export function movieCards(): ArchiveCard[] {
       meta: universe.name,
       summary: movie.tagline,
       accent: universe.accent,
-      image: movie.image,
+      image: still(movie.image, movie.media),
+      world: movie.universeId,
     };
   });
 }
@@ -36,7 +45,8 @@ export function seriesCards(): ArchiveCard[] {
     meta: show.medium === "animated" ? "Animated" : "Live-action",
     summary: show.summary,
     accent: "teal",
-    image: show.image,
+    image: still(show.image, show.media),
+    world: show.universeId ?? "night",
   }));
 }
 
@@ -48,7 +58,8 @@ export function comicCards(): ArchiveCard[] {
     meta: catalog.universe(comic.universeId).name,
     summary: comic.summary,
     accent: catalog.universe(comic.universeId).accent,
-    image: comic.image,
+    image: still(comic.image, comic.media),
+    cover: { title: comic.title, issue: comic.issue, year: comic.year, tone: comic.id },
   }));
 }
 
@@ -60,7 +71,8 @@ export function actorCards(): ArchiveCard[] {
     meta: `${actor.primary.identity} · ${actor.primary.years}`,
     summary: actor.summary,
     accent: actor.primary.universeId ? catalog.universe(actor.primary.universeId).accent : "red",
-    image: actor.image,
+    image: still(actor.image, actor.media),
+    era: actor.primary.universeId ?? actor.id,
   }));
 }
 
@@ -74,7 +86,8 @@ export function spiderCards(): ArchiveCard[] {
       meta: character.firstAppearance,
       summary: character.summary,
       accent: catalog.universe(character.universeIds[0]).accent,
-      image: character.image,
+      image: still(character.image, character.media),
+      world: character.universeIds[0],
     }));
 }
 
@@ -88,7 +101,7 @@ export function supportingCards(): ArchiveCard[] {
       meta: character.firstAppearance,
       summary: character.summary,
       accent: "blue",
-      image: character.image,
+      image: still(character.image, character.media),
     }));
 }
 
@@ -104,7 +117,8 @@ export function villainCards(): ArchiveCard[] {
     meta: villain.firstAppearance,
     summary: villain.summary,
     accent: villain.accent,
-    image: villain.image,
+    image: still(villain.image, villain.media),
+    sigil: villain.id,
   }));
 }
 
@@ -116,7 +130,8 @@ export function universeCards(): ArchiveCard[] {
     meta: universe.medium,
     summary: universe.summary,
     accent: universe.accent,
-    image: universe.image,
+    image: still(universe.image, universe.media),
+    world: universe.id,
   }));
 }
 
@@ -127,7 +142,8 @@ export function suitCards(): ArchiveCard[] {
     title: suit.name,
     summary: suit.summary,
     accent: suit.accent,
-    image: suit.image,
+    image: still(suit.image, suit.media),
+    world: suit.universeIds[0],
   }));
 }
 
@@ -138,6 +154,6 @@ export function creatorCards(): ArchiveCard[] {
     title: creator.name,
     summary: creator.summary,
     accent: "blue",
-    image: creator.image,
+    image: still(creator.image, creator.media),
   }));
 }

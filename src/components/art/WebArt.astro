@@ -1,0 +1,67 @@
+---
+interface Props {
+  variant?: "corner" | "radial" | "broken" | "strand" | "dense" | "subtle";
+}
+const { variant = "radial" } = Astro.props;
+---
+<svg class:list={["web", `web--${variant}`, variant === "strand" && "web--draw"]} viewBox="0 0 640 640" fill="none" aria-hidden="true">
+  {variant === "corner" && (
+    <g stroke="currentColor" stroke-width="1.15">
+      <path d="M18 46c70 8 120 46 150 112" />
+      <path d="M24 18c48 54 62 128 58 214" />
+      <path d="M70 12c18 78 8 150-28 230" />
+      <path d="M8 92h168M14 150c70-18 120-8 176 28" />
+      <path d="M40 70c46 20 78 62 86 118" stroke-dasharray="4 7" />
+      <path d="M112 28c-8 40 6 78 34 108" />
+    </g>
+  )}
+  {variant === "radial" && (
+    <g stroke="currentColor" stroke-width="1.05">
+      <circle cx="430" cy="150" r="28" />
+      <circle cx="438" cy="146" r="74" />
+      <path d="M452 158c46 8 92 34 128 78" />
+      <path d="M418 168c-20 48-18 102 8 154" />
+      <path d="M446 124c8-52 34-92 78-118" />
+      <path d="M470 168c40 28 62 74 58 128" />
+      <path d="M410 132c-48-6-92 18-124 58" stroke-dasharray="3 6" />
+      <path d="M360 210c28-8 62-6 92 10" />
+    </g>
+  )}
+  {variant === "broken" && (
+    <g stroke="currentColor" stroke-width="1.2">
+      <path d="M80 40c40 70 36 120 8 180" />
+      <path d="M120 36c10 48-8 90-40 140" />
+      <path d="M48 88c64 6 108 28 140 78" />
+      <path d="M36 150c48-16 92-8 140 24" stroke-dasharray="6 9" />
+      <path d="M168 120c28 18 40 52 28 92" />
+      <path d="M96 210c22-30 18-8 46-36" />
+    </g>
+  )}
+  {variant === "strand" && (
+    <g stroke="currentColor" stroke-width="1.25">
+      <path d="M-10 210C150 40 230 20 390 120" />
+      <path d="M20 250C170 120 280 90 460 150" />
+      <path d="M660 30C520 40 430 130 360 230" />
+      <path d="M640 120C500 100 430 170 390 250" />
+      <path d="M300 90c18 28 10 48-8 70" stroke-dasharray="2 8" />
+    </g>
+  )}
+  {variant === "dense" && (
+    <g stroke="currentColor" stroke-width="0.9">
+      <circle cx="120" cy="520" r="36" />
+      <circle cx="126" cy="508" r="90" />
+      <circle cx="110" cy="530" r="150" />
+      <path d="M120 360v220M20 500h240" />
+      <path d="M40 420c80 20 120 70 130 140" />
+      <path d="M200 430c-20 50-10 100 30 140" stroke-dasharray="5 6" />
+      <path d="M70 560c40-10 70 8 90 40" />
+    </g>
+  )}
+  {variant === "subtle" && (
+    <g stroke="currentColor" stroke-width="0.8" opacity="0.8">
+      <path d="M500 20c-10 80-40 120-90 150" />
+      <path d="M560 70c-70 10-120 40-150 100" />
+      <path d="M470 40c20 50 16 90-6 130" stroke-dasharray="3 10" />
+    </g>
+  )}
+</svg>

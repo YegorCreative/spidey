@@ -1,0 +1,77 @@
+---
+interface Props {
+  id?: string;
+}
+const { id = "" } = Astro.props;
+---
+<svg class:list={["sigil", `sigil--${id}`]} viewBox="0 0 320 180" aria-hidden="true">
+  {id === "green-goblin" && (
+    <>
+      <ellipse cx="160" cy="90" rx="90" ry="36" fill="currentColor" opacity="0.18" />
+      <path d="M40 100l70-28 50 16 70-34 50 22-46 18-74 30-54-10z" fill="currentColor" opacity="0.8" />
+      <path class="sigil__drift" d="M70 40c20 30 10 50-10 70M250 30c-10 36 8 58 24 78" fill="none" stroke="currentColor" stroke-width="1.4" />
+    </>
+  )}
+  {id === "doctor-octopus" && (
+    <g fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+      <path class="sigil__drift" d="M40 150C80 40 120 30 150 90" />
+      <path d="M70 20C90 80 70 120 130 140" />
+      <path class="sigil__drift" d="M280 150C230 30 190 40 176 100" />
+      <path d="M250 24C220 80 250 120 190 146" />
+      <circle cx="150" cy="92" r="8" fill="currentColor" stroke="none" />
+      <circle cx="176" cy="102" r="6" fill="currentColor" stroke="none" />
+    </g>
+  )}
+  {id === "venom" && (
+    <>
+      <path d="M70 40c20 50-10 90 20 120 30-10 40-40 70-40 28 0 40 36 78 28 18-40-4-90 10-120-40 16-70 8-90 30-22-28-58-24-88-18z" fill="#141820" stroke="#f4f0e6" stroke-width="2" />
+      <path d="M118 78c8 10 16 10 24 0M176 70c10 12 22 12 32 0" fill="none" stroke="#141820" stroke-width="2" />
+      <circle cx="128" cy="84" r="8" fill="#f4f0e6" />
+      <circle cx="190" cy="78" r="12" fill="#f4f0e6" />
+      <path class="sigil__drift" d="M60 120c30 20 20 40 8 56M250 110c-10 30 10 46 28 58" fill="none" stroke="currentColor" stroke-width="2" />
+    </>
+  )}
+  {id === "carnage" && (
+    <g fill="none" stroke="currentColor" stroke-width="1.6">
+      <path class="sigil__drift" d="M40 20c30 40 10 30 28 70M80 16c-8 40 20 40 8 84M140 10c10 36-16 28 4 78" />
+      <path d="M200 24c-20 30 16 28-6 74M250 12c8 48-18 36 6 90M290 30c-14 24 10 40-8 70" />
+    </g>
+  )}
+  {id === "mysterio" && (
+    <>
+      <ellipse cx="168" cy="90" rx="70" ry="48" fill="currentColor" opacity="0.12" />
+      <circle cx="168" cy="88" r="40" fill="none" stroke="currentColor" stroke-width="1.5" />
+      <ellipse cx="168" cy="88" rx="40" ry="16" fill="none" stroke="currentColor" opacity="0.7" />
+      <path class="sigil__drift" d="M30 70c40 10 50-20 90-8M230 120c30-16 40 10 70 0" fill="none" stroke="currentColor" />
+    </>
+  )}
+  {id === "sandman" && (
+    <g fill="currentColor">
+      <path d="M0 150c40-36 80-18 120-28s70 8 110-6 60 10 90 4v60H0z" opacity="0.85" />
+      <path d="M20 132c30-22 54-8 78-16" fill="none" stroke="currentColor" stroke-dasharray="2 5" />
+      <circle cx="48" cy="118" r="2.2" /><circle cx="86" cy="104" r="1.8" /><circle cx="130" cy="96" r="2" />
+      <circle cx="176" cy="108" r="1.6" /><circle cx="214" cy="92" r="2" /><circle cx="260" cy="112" r="1.8" />
+    </g>
+  )}
+  {id === "electro" && (
+    <path class="sigil__drift" d="M40 30l36 48-28 8 48 62M150 20l28 40h-24l40 70M230 28l22 36-20 6 36 64" fill="none" stroke="currentColor" stroke-width="1.7" />
+  )}
+  {id === "lizard" && (
+    <>
+      <path d="M30 120c16-20 16-20 32 0s16 20 32 0 16-20 32 0 16 20 32 0 16-20 32 0 16 20 32 0" fill="none" stroke="currentColor" />
+      <path d="M180 40l28 36-34 8 18 28" fill="none" stroke="currentColor" stroke-width="2" />
+    </>
+  )}
+  {id === "vulture" && (
+    <path d="M160 100L40 70l50 28L30 120l70-6-20 30 80-28 78 28-18-32 72 8-52-28z" fill="currentColor" opacity="0.85" />
+  )}
+  {id === "kraven" && (
+    <>
+      <path d="M0 0l320 180M0 40l240 140M40 0l280 160" stroke="currentColor" stroke-width="8" opacity="0.18" />
+      <path d="M70 130c20-30 28-28 40-8M210 50c16-20 24-16 30 4" fill="currentColor" />
+    </>
+  )}
+  {id !== "green-goblin" && id !== "doctor-octopus" && id !== "venom" && id !== "carnage" && id !== "mysterio" && id !== "sandman" && id !== "electro" && id !== "lizard" && id !== "vulture" && id !== "kraven" && (
+    <circle cx="160" cy="90" r="36" fill="none" stroke="currentColor" />
+  )}
+</svg>

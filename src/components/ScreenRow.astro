@@ -2,17 +2,10 @@
 import { screenActorIds } from "../config/curation";
 import { getCatalog, hrefFor } from "../lib/catalog";
 import Atmosphere from "./Atmosphere.astro";
+import EraMark from "./art/EraMark.astro";
 
 const catalog = getCatalog();
 const actors = screenActorIds.map((id) => catalog.actor(id));
-
-function initials(name: string): string {
-  return name
-    .split(" ")
-    .map((part) => part[0])
-    .slice(0, 2)
-    .join("");
-}
 ---
 <div class="band" data-parallax>
   <Atmosphere word="On Screen" tone="blue" web />
@@ -31,7 +24,7 @@ function initials(name: string): string {
       return (
         <li>
           <a class:list={["screen-card", "panel", `accent-${universe?.accent ?? "red"}`]} href={hrefFor("actor", actor.id)} data-reveal style={`--delay: ${(index % 4) * 70}ms`}>
-            <span class="screen-card__mark" aria-hidden="true">{initials(actor.name)}</span>
+            <span class="screen-card__art"><EraMark era={universe?.id ?? actor.id} /></span>
             <span class="screen-card__kicker">{universe?.name ?? "Screen"}</span>
             <span class="screen-card__label">Actor</span>
             <span class="screen-card__name">{actor.name}</span>

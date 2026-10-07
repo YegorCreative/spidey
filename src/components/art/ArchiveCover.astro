@@ -1,0 +1,27 @@
+---
+interface Props {
+  title: string;
+  issue: string;
+  year: number;
+  tone?: string;
+}
+const { title, issue, year, tone = "" } = Astro.props;
+const plate = tone.includes("300")
+  ? "ink"
+  : tone.includes("fallout")
+    ? "ash"
+    : tone.includes("ultimate-spider")
+      ? "press"
+      : "fantasy";
+---
+<span class:list={["cover", `cover--${plate}`]}>
+  <span class="cover__marks" aria-hidden="true"></span>
+  <svg class="cover__web" viewBox="0 0 200 260" aria-hidden="true">
+    <path d="M20 20c40 10 70 40 80 90M16 70c50-8 90 10 120 50M40 16c8 50-6 90-30 130" fill="none" stroke="currentColor" stroke-width="1.2" />
+    <path d="M150 200c-20-40-10-70 20-100" fill="none" stroke="currentColor" stroke-dasharray="4 7" />
+  </svg>
+  <span class="cover__issue">{issue}</span>
+  <span class="cover__title">{title}</span>
+  <span class="cover__year">{year}</span>
+  <span class="cover__caption">Archive plate</span>
+</span>
