@@ -1,6 +1,7 @@
 ---
 import type { ArchiveCard } from "../lib/cards";
 import { href } from "../lib/paths";
+import Atmosphere from "./Atmosphere.astro";
 
 interface Props {
   kicker: string;
@@ -10,15 +11,17 @@ interface Props {
 }
 const { kicker, title, lede, cards } = Astro.props;
 ---
-<section class="page-hero">
-  <p class="kicker">{kicker}</p>
-  <h1>{title}</h1>
-  <p class="lede">{lede}</p>
-</section>
+<div class="band" data-parallax>
+  <Atmosphere word={title} tone="blue" web />
+  <section class="page-hero" data-reveal>
+    <p class="kicker">{kicker}</p>
+    <h1 class="display-title">{title}</h1>
+    <p class="lede">{lede}</p>
+  </section>
 <ul class="archive-grid">
-  {cards.map((card) => (
+  {cards.map((card, index) => (
     <li>
-      <a class:list={["archive-card", "panel", `accent-${card.accent}`]} href={card.href}>
+      <a class:list={["archive-card", "panel", `accent-${card.accent}`]} href={card.href} data-reveal style={`--delay: ${(index % 4) * 60}ms`}>
         {card.image && (
           <img
             class="archive-card__image"
@@ -38,3 +41,4 @@ const { kicker, title, lede, cards } = Astro.props;
     </li>
   ))}
 </ul>
+</div>

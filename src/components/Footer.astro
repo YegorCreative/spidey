@@ -33,7 +33,17 @@ const columns = [
   },
 ] as const;
 ---
-<footer class="footer">
+<div class="footer-stage" data-parallax>
+  <p class="footer-stage__ghost" data-depth style="--depth: 0.08" aria-hidden="true">Spidey</p>
+  <svg class="footer-stage__web" data-depth style="--depth: 0.2" viewBox="0 0 640 640" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="520" cy="70" r="26" />
+      <circle cx="520" cy="70" r="80" />
+      <circle cx="520" cy="70" r="150" />
+      <path d="M520 0v280M320 70h300" />
+    </g>
+  </svg>
+  <footer class="footer">
   <div class="footer__brand">
     <p class="logo__word">Spidey</p>
     <p class="footer__tag">Everything Spider-Man. One place.</p>
@@ -55,4 +65,5 @@ const columns = [
     endorsed by, or sponsored by Marvel, Sony, Disney, or other rights holders. Spider-Man and related
     names, stories, and characters belong to their respective owners.
   </p>
-</footer>
+  </footer>
+</div>

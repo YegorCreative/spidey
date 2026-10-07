@@ -8,7 +8,17 @@ interface Props {
 }
 const { profile, image } = Astro.props;
 ---
-<article class:list={["profile", `accent-${profile.accent}`]}>
+<article class:list={["profile", "stage", `accent-${profile.accent}`]} data-parallax>
+  <div class="stage__glow" data-depth style="--depth: 0.12" aria-hidden="true"></div>
+  <p class="stage__ghost" data-depth style="--depth: 0.16" aria-hidden="true">{profile.kicker}</p>
+  <svg class="stage__web" data-depth style="--depth: 0.62" viewBox="0 0 640 640" aria-hidden="true">
+    <g fill="none" stroke="currentColor" stroke-width="1">
+      <circle cx="520" cy="80" r="30" />
+      <circle cx="520" cy="80" r="90" />
+      <circle cx="520" cy="80" r="160" />
+      <path d="M520 0v360M300 80h340" />
+    </g>
+  </svg>
   <nav class="crumbs" aria-label="Breadcrumb">
     <ol>
       {profile.crumbs.map((crumb, index) => (
@@ -39,7 +49,7 @@ const { profile, image } = Astro.props;
       <p class="lede">{profile.lede}</p>
     </header>
     {profile.facts.length > 0 && (
-      <dl class="facts panel">
+      <dl class="facts panel" data-reveal>
         {profile.facts.map((fact) => (
           <>
             <dt>{fact.label}</dt>
@@ -52,7 +62,7 @@ const { profile, image } = Astro.props;
   {profile.groups.length > 0 && (
     <div class="groups">
       {profile.groups.map((group) => (
-        <section class="group" aria-labelledby={`group-${group.title.replace(/\s+/g, "-").toLowerCase()}`}>
+        <section class="group" data-reveal aria-labelledby={`group-${group.title.replace(/\s+/g, "-").toLowerCase()}`}>
           <h2 id={`group-${group.title.replace(/\s+/g, "-").toLowerCase()}`}>{group.title}</h2>
           <ul>
             {group.links.map((link) => (

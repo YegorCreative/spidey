@@ -1,0 +1,26 @@
+---
+interface Props {
+  word?: string;
+  tone?: "red" | "blue";
+  web?: boolean;
+}
+const { word, tone = "red", web = false } = Astro.props;
+---
+<div class:list={["atmo", tone === "blue" ? "atmo--blue" : "atmo--red"]} aria-hidden="true">
+  <div class="atmo__glow" data-depth style="--depth: 0.12"></div>
+  <div class="atmo__dots" data-depth style="--depth: 0.22"></div>
+  {web && (
+    <svg class="atmo__web" data-depth style="--depth: 0.36" viewBox="0 0 640 640">
+      <g fill="none" stroke="currentColor" stroke-width="1">
+        <circle cx="72" cy="88" r="28" />
+        <circle cx="72" cy="88" r="78" />
+        <circle cx="72" cy="88" r="140" />
+        <circle cx="72" cy="88" r="210" />
+        <path d="M72 0v420M0 88h360M72 88 310 330" />
+      </g>
+    </svg>
+  )}
+  {word && (
+    <p class="atmo__word" data-depth style="--depth: 0.16">{word}</p>
+  )}
+</div>

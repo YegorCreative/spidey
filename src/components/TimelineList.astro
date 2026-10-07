@@ -1,6 +1,7 @@
 ---
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
+import type { TimelineEvent } from "../lib/types";
 
 interface Props {
   mode?: "preview" | "full";
@@ -8,6 +9,16 @@ interface Props {
 const { mode = "full" } = Astro.props;
 const catalog = getCatalog();
 const events = catalog.timeline;
+
+const eras = [
+  { year: 1962, title: "The Beginning", note: "1962+" },
+  { year: 1967, title: "Spider-Man on Television", note: "1967+" },
+  { year: 1977, title: "Live Action Emerges", note: "1977+" },
+  { year: 2002, title: "The Raimi Era", note: "2002+" },
+  { year: 2012, title: "The Amazing Era", note: "2012+" },
+  { year: 2016, title: "The MCU Era", note: "2016+" },
+  { year: 2018, title: "The Spider-Verse", note: "2018+" },
+];
 
 function labelFor(type: string, id: string): string {
   if (type === "movie") return catalog.movie(id).title;
@@ -24,53 +35,110 @@ function labelFor(type: string, id: string): string {
   if (type === "creator") return catalog.creator(id).name;
   return catalog.event(id).title;
 }
+
+function kindLabel(kind: TimelineEvent["kind"]): string {
+  if (kind === "comic") return "Comic";
+  if (kind === "series") return "Series";
+  if (kind === "movie") return "Film";
+  return "Milestone";
+}
+
+const rows = events.flatMap((event, index) => {
+  const era = eras.find((item) => item.year === event.year);
+  const entry = {
+    kind: "event" as const,
+    event,
+    side: index % 2 === 0 ? "is-left" : "is-right",
+    index,
+  };
+  return era ? [{ kind: "era" as const, ...era }, entry] : [entry];
+});
 ---
 {mode === "preview" ? (
-  <section class="section" aria-labelledby="years-title">
-    <div class="section__head section__head--split">
-      <div>
-        <p class="kicker">03 — History</p>
-        <h2 id="years-title">Through the Years</h2>
-      </div>
-      <a class="text-link" href={href("/timeline/")}>Open the full timeline</a>
+  <div class="band band--red" data-parallax>
+    <div class="atmo atmo--red" aria-hidden="true">
+      <div class="atmo__glow" data-depth style="--depth: 0.12"></div>
+      <p class="atmo__word" data-depth style="--depth: 0.15">1962</p>
     </div>
-    <ol class="years">
-      {events.map((event) => {
-        const primary = event.refs[0];
-        const destination = primary ? hrefFor(primary.type, primary.id) : href(`/timeline/#${event.id}`);
-        return (
-          <li class="years__item">
-            <a class="years__card" href={destination}>
-              <span class="years__year">{event.year}</span>
-              <span>
-                <span class="years__title">{event.title}</span>
-                <span class="years__summary">{event.summary}</span>
-              </span>
-            </a>
-          </li>
-        );
-      })}
-    </ol>
-  </section>
+    <section class="section" aria-labelledby="years-title">
+      <div class="section__head section__head--split" data-reveal>
+        <div>
+          <p class="kicker">03 — History</p>
+          <h2 id="years-title" class="display-title"><span>Through</span><span>the Years</span></h2>
+        </div>
+        <a class="text-link" href={href("/timeline/")}>Open the full timeline</a>
+      </div>
+      <div class="thread thread--preview" data-parallax data-draw>
+        <div class="thread__line" aria-hidden="true"><span class="thread__fill"></span></div>
+        <ol class="thread__list">
+          {rows.map((row) => row.kind === "era" ? (
+            <li class="era era--compact">
+              <p class="kicker">Marker · {row.note}</p>
+              <p class="era__title">{row.title}</p>
+            </li>
+          ) : (
+            <li class="thread__item">
+              <span class="thread__node" data-node aria-hidden="true"></span>
+              <a
+                class="artifact panel"
+                data-reveal
+                style={`--delay: ${(row.index % 4) * 60}ms`}
+                href={row.event.refs[0] ? hrefFor(row.event.refs[0].type, row.event.refs[0].id) : href(`/timeline/#${row.event.id}`)}
+              >
+                <span class:list={["artifact__plate", "poster", "accent-red"]} aria-hidden="true">
+                  <span class="poster__issue">{row.event.year}</span>
+                  <span class="poster__name">{kindLabel(row.event.kind)}</span>
+                </span>
+                <span>
+                  <span class="artifact__year">{row.event.year}</span>
+                  <span class="artifact__title">{row.event.title}</span>
+                  <span class="artifact__summary">{row.event.summary}</span>
+                </span>
+              </a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  </div>
 ) : (
-  <ol class="years">
-    {events.map((event) => (
-      <li class="years__item" id={event.id}>
-        <article class="years__card years__card--static">
-          <span class="years__year">{event.year}</span>
-          <div>
-            <h2 class="years__title">{event.title}</h2>
-            <p class="years__summary">{event.summary}</p>
-            {event.refs.length > 0 && (
-              <ul class="inline-links">
-                {event.refs.map((ref) => (
-                  <li><a href={hrefFor(ref.type, ref.id)}>{labelFor(ref.type, ref.id)}</a></li>
-                ))}
-              </ul>
-            )}
+  <div class="thread thread--full" data-parallax data-draw>
+    <div class="thread__line" aria-hidden="true"><span class="thread__fill"></span></div>
+    <ol class="thread__list">
+      {rows.map((row) => row.kind === "era" ? (
+        <li class="era">
+          <div class="era__shift" data-depth style="--depth: 0.16">
+            <p class="era__ghost" aria-hidden="true">{row.note}</p>
           </div>
-        </article>
-      </li>
-    ))}
-  </ol>
+          <p class="kicker">Marker · {row.note}</p>
+          <h2 class="era__title">{row.title}</h2>
+        </li>
+      ) : (
+        <li class:list={["thread__item", row.side]} id={row.event.id}>
+          <span class="thread__node" data-node aria-hidden="true"></span>
+          <article class="artifact panel" data-reveal style={`--delay: ${(row.index % 4) * 60}ms`}>
+            <span class:list={["artifact__plate", "poster", "accent-red"]} aria-hidden="true">
+              <span class="poster__issue">{row.event.year}</span>
+              <span class="poster__name">{kindLabel(row.event.kind)}</span>
+            </span>
+            <div>
+              <p class="artifact__year">{row.event.year}</p>
+              <h2 class="artifact__title">{row.event.title}</h2>
+              <p class="artifact__summary">{row.event.summary}</p>
+            </div>
+            {row.event.refs.length > 0 && (
+              <div class="artifact__links">
+                <span class="artifact__label">Related records</span>
+                <ul class="inline-links">
+                  {row.event.refs.map((ref) => (
+                    <li><a href={hrefFor(ref.type, ref.id)}>{labelFor(ref.type, ref.id)}</a></li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </article>
+        </li>
+      ))}
+    </ol>
+  </div>
 )}

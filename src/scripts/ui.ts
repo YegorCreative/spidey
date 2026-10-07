@@ -46,20 +46,33 @@ function renderDialog(query: string, docs: SearchDoc[]) {
     dialogResults.append(empty);
     return;
   }
-  const list = document.createElement("ul");
+  const groups = new Map<string, SearchDoc[]>();
   for (const doc of matches) {
-    const item = document.createElement("li");
-    const link = document.createElement("a");
-    link.href = doc.href;
-    const title = document.createElement("span");
-    title.textContent = doc.title;
-    const meta = document.createElement("span");
-    meta.textContent = doc.typeLabel;
-    link.append(title, meta);
-    item.append(link);
-    list.append(item);
+    const bucket = groups.get(doc.typeLabel) ?? [];
+    bucket.push(doc);
+    groups.set(doc.typeLabel, bucket);
   }
-  dialogResults.append(list);
+  for (const [label, bucket] of groups) {
+    const section = document.createElement("section");
+    section.className = "search-dialog__group";
+    const heading = document.createElement("h3");
+    heading.textContent = label;
+    const list = document.createElement("ul");
+    for (const doc of bucket) {
+      const item = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = doc.href;
+      const title = document.createElement("span");
+      title.textContent = doc.title;
+      const meta = document.createElement("span");
+      meta.textContent = doc.summary;
+      link.append(title, meta);
+      item.append(link);
+      list.append(item);
+    }
+    section.append(heading, list);
+    dialogResults.append(section);
+  }
 }
 
 document.querySelectorAll<HTMLAnchorElement>("[data-open-search]").forEach((link) => {

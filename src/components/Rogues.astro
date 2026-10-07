@@ -1,22 +1,25 @@
 ---
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
+import Atmosphere from "./Atmosphere.astro";
 
 const villains = getCatalog().villains;
 ---
-<section class="section section--rogues" aria-labelledby="rogues-title">
-  <div class="section__head section__head--split">
+<div class="band" data-parallax>
+  <Atmosphere word="Rogues" web />
+  <section class="section section--rogues" aria-labelledby="rogues-title">
+  <div class="section__head section__head--split" data-reveal>
     <div>
       <p class="kicker">05 — Opposition</p>
-      <h2 id="rogues-title">The Rogues’ Gallery</h2>
+      <h2 id="rogues-title" class="display-title"><span>The Rogues’</span><span>Gallery</span></h2>
       <p class="section__lede">Ten names that keep the mask honest. Each one leads to a profile that can grow into a full history.</p>
     </div>
     <a class="text-link" href={href("/villains/")}>All villains</a>
   </div>
   <ul class="rogue-grid">
-    {villains.map((villain) => (
+    {villains.map((villain, index) => (
       <li>
-        <a class:list={["rogue-card", "panel", `accent-${villain.accent}`]} href={hrefFor("villain", villain.id)}>
+        <a class:list={["rogue-card", "panel", `accent-${villain.accent}`]} href={hrefFor("villain", villain.id)} data-reveal style={`--delay: ${(index % 4) * 70}ms`}>
           <span class="rogue-card__ego">{villain.alterEgo}</span>
           <span class="rogue-card__name">{villain.name}</span>
           <span class="rogue-card__text">{villain.summary}</span>
@@ -24,4 +27,5 @@ const villains = getCatalog().villains;
       </li>
     ))}
   </ul>
-</section>
+  </section>
+</div>

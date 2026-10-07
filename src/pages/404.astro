@@ -1,4 +1,5 @@
 ---
+import Atmosphere from "../components/Atmosphere.astro";
 import { href } from "../lib/paths";
 import Base from "../layouts/Base.astro";
 
@@ -14,6 +15,8 @@ const links = [
 ] as const;
 ---
 <Base title="Page not found — Spidey" description="This page is not in the Spidey archive." noindex>
+  <div class="band" data-parallax>
+    <Atmosphere word="Missing" />
   <section class="missing">
     <p class="kicker">404</p>
     <h1>Looks like this page slipped out of the Spider-Verse.</h1>
@@ -24,4 +27,5 @@ const links = [
       ))}
     </ul>
   </section>
+  </div>
 </Base>

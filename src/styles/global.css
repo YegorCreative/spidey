@@ -1,5 +1,6 @@
 @import "@fontsource/bricolage-grotesque/latin-600.css";
 @import "@fontsource/bricolage-grotesque/latin-700.css";
+@import "@fontsource/bricolage-grotesque/latin-800.css";
 @import "@fontsource/outfit/latin-400.css";
 @import "@fontsource/outfit/latin-500.css";
 @import "@fontsource/outfit/latin-600.css";
@@ -229,7 +230,6 @@ body:has(.nav-toggle:checked) { overflow: hidden; }
   width: min(70rem, 120vw);
   color: rgba(244, 240, 230, 0.16);
   pointer-events: none;
-  animation: drift 90s linear infinite;
 }
 .hero__halftone {
   position: absolute;
@@ -705,12 +705,6 @@ body:has(.nav-toggle:checked) { overflow: hidden; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .hero__web { animation: none; }
   .explore-card { transition: none; }
   .explore-card:hover { transform: none; }
-}
-
-@keyframes drift {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }

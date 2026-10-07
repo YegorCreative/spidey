@@ -1,6 +1,7 @@
 ---
 import { screenActorIds } from "../config/curation";
 import { getCatalog, hrefFor } from "../lib/catalog";
+import Atmosphere from "./Atmosphere.astro";
 
 const catalog = getCatalog();
 const actors = screenActorIds.map((id) => catalog.actor(id));
@@ -13,21 +14,23 @@ function initials(name: string): string {
     .join("");
 }
 ---
-<section class="section" aria-labelledby="screen-title">
-  <div class="section__head">
+<div class="band" data-parallax>
+  <Atmosphere word="On Screen" tone="blue" web />
+  <section class="section" aria-labelledby="screen-title">
+  <div class="section__head" data-reveal>
     <p class="kicker">02 — On screen</p>
-    <h2 id="screen-title">Spider-Man on Screen</h2>
+    <h2 id="screen-title" class="display-title"><span>Spider-Man</span><span>on Screen</span></h2>
     <p class="section__lede">
       Four portrayals that carry the mask into movies. Each profile is ready for the actors and voice actors still to come.
     </p>
   </div>
   <ul class="screen-grid">
-    {actors.map((actor) => {
+    {actors.map((actor, index) => {
       const character = actor.primary.characterId ? catalog.character(actor.primary.characterId) : undefined;
       const universe = actor.primary.universeId ? catalog.universe(actor.primary.universeId) : undefined;
       return (
         <li>
-          <a class:list={["screen-card", "panel", `accent-${universe?.accent ?? "red"}`]} href={hrefFor("actor", actor.id)}>
+          <a class:list={["screen-card", "panel", `accent-${universe?.accent ?? "red"}`]} href={hrefFor("actor", actor.id)} data-reveal style={`--delay: ${(index % 4) * 70}ms`}>
             <span class="screen-card__mark" aria-hidden="true">{initials(actor.name)}</span>
             <span class="screen-card__kicker">{universe?.name ?? "Screen"}</span>
             <span class="screen-card__label">Actor</span>
@@ -42,4 +45,5 @@ function initials(name: string): string {
       );
     })}
   </ul>
-</section>
+  </section>
+</div>

@@ -2,15 +2,18 @@
 import { featuredComicIds } from "../config/curation";
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
+import Atmosphere from "./Atmosphere.astro";
 
 const catalog = getCatalog();
 const comics = featuredComicIds.map((id) => catalog.comic(id));
 ---
-<section class="section" aria-labelledby="comics-title">
-  <div class="section__head section__head--split">
+<div class="band" data-parallax>
+  <Atmosphere word="Print" tone="blue" />
+  <section class="section" aria-labelledby="comics-title">
+  <div class="section__head section__head--split" data-reveal>
     <div>
       <p class="kicker">04 — Print</p>
-      <h2 id="comics-title">From the Comics</h2>
+      <h2 id="comics-title" class="display-title"><span>From the</span><span>Comics</span></h2>
       <p class="section__lede">
         Spider-Man begins on the page. These founding issues show the shape of a record: cover, title, issue, year, creators, universe, and story.
       </p>
@@ -18,13 +21,13 @@ const comics = featuredComicIds.map((id) => catalog.comic(id));
     <a class="text-link" href={href("/comics/")}>Browse comics</a>
   </div>
   <ul class="comic-grid">
-    {comics.map((comic) => {
+    {comics.map((comic, index) => {
       const universe = catalog.universe(comic.universeId);
       const writers = comic.writerIds.map((id) => catalog.creator(id).name).join(", ");
       const artists = comic.artistIds.map((id) => catalog.creator(id).name).join(", ");
       return (
         <li>
-          <a class="comic-card" href={hrefFor("comic", comic.id)}>
+          <a class="comic-card" href={hrefFor("comic", comic.id)} data-reveal style={`--delay: ${(index % 4) * 70}ms`}>
             <span class:list={["poster", `accent-${universe.accent}`]} aria-hidden="true">
               <span class="poster__issue">{comic.issue}</span>
               <span class="poster__name">{comic.title}</span>
@@ -42,4 +45,5 @@ const comics = featuredComicIds.map((id) => catalog.comic(id));
       );
     })}
   </ul>
-</section>
+  </section>
+</div>

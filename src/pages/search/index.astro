@@ -1,4 +1,5 @@
 ---
+import Atmosphere from "../../components/Atmosphere.astro";
 import { searchDocuments } from "../../lib/catalog";
 import Base from "../../layouts/Base.astro";
 
@@ -9,9 +10,11 @@ const groups = order
   .filter((group) => group.items.length > 0);
 ---
 <Base title="Search — Spidey" description="Search the Spidey archive across movies, comics, series, characters, villains, and universes.">
-  <section class="page-hero">
+  <div class="band" data-parallax>
+    <Atmosphere word="Search" tone="blue" />
+  <section class="page-hero" data-reveal>
     <p class="kicker">Index</p>
-    <h1>Search</h1>
+    <h1 class="display-title">Search</h1>
     <p class="lede">One index for the whole archive. Try a name, a year, or a villain.</p>
     <form class="search-page__form" action="" role="search">
       <label class="sr-only" for="archive-filter">Filter the archive</label>
@@ -36,4 +39,5 @@ const groups = order
     ))}
   </div>
   <p id="search-empty" class="search-empty" hidden>Nothing in the archive matches that yet.</p>
+  </div>
 </Base>

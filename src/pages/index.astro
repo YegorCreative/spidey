@@ -4,6 +4,7 @@ import ExploreGrid from "../components/ExploreGrid.astro";
 import Hero from "../components/Hero.astro";
 import Rogues from "../components/Rogues.astro";
 import ScreenRow from "../components/ScreenRow.astro";
+import Seam from "../components/Seam.astro";
 import TimelineList from "../components/TimelineList.astro";
 import Verse from "../components/Verse.astro";
 import { site } from "../config/site";
@@ -27,10 +28,16 @@ const json = JSON.stringify(schema).replace(/</g, "\\u003c");
 <Base>
   <script slot="head" is:inline type="application/ld+json" set:html={json} />
   <Hero />
+  <Seam />
   <ExploreGrid />
+  <Seam />
   <ScreenRow />
+  <Seam />
   <TimelineList mode="preview" />
+  <Seam />
   <ComicRow />
+  <Seam />
   <Rogues />
+  <Seam />
   <Verse />
 </Base>

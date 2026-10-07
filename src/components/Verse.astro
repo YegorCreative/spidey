@@ -1,14 +1,17 @@
 ---
 import { getCatalog, hrefFor } from "../lib/catalog";
 import { href } from "../lib/paths";
+import Atmosphere from "./Atmosphere.astro";
 
 const universes = getCatalog().universes;
 ---
-<section class="section" aria-labelledby="verse-title">
-  <div class="section__head section__head--split">
+<div class="band" data-parallax>
+  <Atmosphere word="Verse" tone="blue" web />
+  <section class="section" aria-labelledby="verse-title">
+  <div class="section__head section__head--split" data-reveal>
     <div>
       <p class="kicker">06 — Realities</p>
-      <h2 id="verse-title">Across the Spider-Verse</h2>
+      <h2 id="verse-title" class="display-title"><span>Across the</span><span>Spider-Verse</span></h2>
       <p class="section__lede">
         Spider-Man is not one life. These realities are the shelves the rest of the archive sits on — comics, films, futures, and the animated multiverse.
       </p>
@@ -16,8 +19,8 @@ const universes = getCatalog().universes;
     <a class="text-link" href={href("/universes/")}>All universes</a>
   </div>
   <ul class="verse-list">
-    {universes.map((universe) => (
-      <li>
+    {universes.map((universe, index) => (
+      <li data-reveal style={`--delay: ${(index % 4) * 50}ms`}>
         <a class:list={["verse-card", `accent-${universe.accent}`]} href={hrefFor("universe", universe.id)}>
           <span class="verse-card__code">{universe.designation}</span>
           <span class="verse-card__main">
@@ -29,4 +32,5 @@ const universes = getCatalog().universes;
       </li>
     ))}
   </ul>
-</section>
+  </section>
+</div>

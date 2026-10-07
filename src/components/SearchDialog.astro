@@ -3,6 +3,10 @@ import Icon from "./Icon.astro";
 import { href } from "../lib/paths";
 ---
 <dialog id="search-dialog" class="search-dialog" aria-labelledby="search-dialog-title">
+  <div class="search-dialog__head">
+    <p class="kicker">The index</p>
+    <h2 id="search-dialog-title">Search the archive</h2>
+  </div>
   <div class="search-dialog__bar">
     <Icon name="search" />
     <input
@@ -18,7 +22,6 @@ import { href } from "../lib/paths";
       <Icon name="close" />
     </button>
   </div>
-  <p id="search-dialog-title" class="sr-only">Search the archive</p>
   <div id="search-results" class="search-results" aria-live="polite"></div>
   <a class="search-dialog__all" href={href("/search/")}>Browse the full index</a>
 </dialog>

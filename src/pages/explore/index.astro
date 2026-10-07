@@ -1,5 +1,6 @@
 ---
 import { exploreItems } from "../../config/curation";
+import Atmosphere from "../../components/Atmosphere.astro";
 import Icon from "../../components/Icon.astro";
 import { href } from "../../lib/paths";
 import Base from "../../layouts/Base.astro";
@@ -12,28 +13,31 @@ const more = [
 ];
 ---
 <Base title="Explore — Spidey" description="Every shelf in the Spidey archive: movies, comics, series, people, villains, universes, and suits.">
-  <section class="page-hero">
-    <p class="kicker">Directory</p>
-    <h1>Explore</h1>
-    <p class="lede">The whole archive is a set of shelves. Start anywhere. The links between records are the point.</p>
-  </section>
+  <div class="band" data-parallax>
+    <Atmosphere word="Explore" web />
+    <section class="page-hero" data-reveal>
+      <p class="kicker">Directory</p>
+      <h1 class="display-title">Explore</h1>
+      <p class="lede">The whole archive is a set of shelves. Start anywhere. The links between records are the point.</p>
+    </section>
   <ul class="explore-grid explore-grid--page">
-    {exploreItems.map((item) => (
+    {exploreItems.map((item, index) => (
       <li>
-        <a class:list={["explore-card", "panel", `accent-${item.accent}`]} href={href(item.href)}>
+        <a class:list={["explore-card", "panel", `accent-${item.accent}`]} href={href(item.href)} data-reveal style={`--delay: ${(index % 4) * 60}ms`}>
           <span class="explore-card__icon"><Icon name={item.icon} /></span>
           <span class="explore-card__title">{item.title}</span>
           <span class="explore-card__text">{item.description}</span>
         </a>
       </li>
     ))}
-    {more.map((item) => (
+    {more.map((item, index) => (
       <li>
-        <a class="explore-card panel accent-blue" href={href(item.href)}>
+        <a class="explore-card panel accent-blue" href={href(item.href)} data-reveal style={`--delay: ${(index % 4) * 60}ms`}>
           <span class="explore-card__title">{item.title}</span>
           <span class="explore-card__text">{item.description}</span>
         </a>
       </li>
     ))}
   </ul>
+  </div>
 </Base>
