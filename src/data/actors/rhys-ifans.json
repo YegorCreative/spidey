@@ -1,0 +1,12 @@
+{
+  "id": "rhys-ifans",
+  "name": "Rhys Ifans",
+  "performance": "live-action",
+  "summary": "Rhys Ifans plays Dr. Curt Connors and the Lizard in The Amazing Spider-Man.",
+  "primary": {
+    "identity": "Lizard",
+    "years": "2012",
+    "villainId": "lizard",
+    "universeId": "webb"
+  }
+}

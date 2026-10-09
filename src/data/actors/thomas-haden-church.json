@@ -1,0 +1,12 @@
+{
+  "id": "thomas-haden-church",
+  "name": "Thomas Haden Church",
+  "performance": "live-action",
+  "summary": "Thomas Haden Church plays Flint Marko and Sandman in Spider-Man 3.",
+  "primary": {
+    "identity": "Sandman",
+    "years": "2007",
+    "villainId": "sandman",
+    "universeId": "raimi"
+  }
+}

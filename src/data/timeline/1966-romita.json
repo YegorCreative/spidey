@@ -1,0 +1,17 @@
+{
+  "id": "1966-romita",
+  "year": 1966,
+  "title": "John Romita Sr. on Spider-Man",
+  "summary": "Romita becomes the defining Spider-Man artist of the later 1960s.",
+  "kind": "creator",
+  "refs": [
+    {
+      "type": "creator",
+      "id": "john-romita-sr"
+    },
+    {
+      "type": "character",
+      "id": "peter-parker"
+    }
+  ]
+}

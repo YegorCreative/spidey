@@ -1,0 +1,13 @@
+{
+  "id": "2017-disney-xd",
+  "year": 2017,
+  "title": "Marvel’s Spider-Man",
+  "summary": "Disney XD premieres a new series with Robbie Daymond. It is not the Insomniac game.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "marvels-spider-man-2017"
+    }
+  ]
+}

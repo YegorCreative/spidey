@@ -1,0 +1,17 @@
+{
+  "id": "jessica-drew",
+  "name": "Jessica Drew",
+  "aliases": [
+    "Spider-Woman"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "Spider-Woman is her own hero. She is not a Peter Parker variant and not a symbiote.",
+  "summary": "Jessica Drew is Spider-Woman, a Marvel hero with spider powers and her own publishing history. She has fought beside Spider-Man and led her own cases. Issa Rae voices a film version in Across the Spider-Verse. That performance is not the whole of her comic life.",
+  "universeIds": [
+    "earth-616",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Marvel Spotlight #32 (1977).",
+  "creators": "Archie Goodwin and Sal Buscema."
+}

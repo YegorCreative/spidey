@@ -1,0 +1,17 @@
+{
+  "id": "1971-morbius",
+  "year": 1971,
+  "title": "Morbius",
+  "summary": "Michael Morbius debuts in The Amazing Spider-Man #101.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-101"
+    },
+    {
+      "type": "villain",
+      "id": "morbius"
+    }
+  ]
+}

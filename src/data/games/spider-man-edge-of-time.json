@@ -1,0 +1,32 @@
+{
+  "id": "spider-man-edge-of-time",
+  "title": "Spider-Man: Edge of Time",
+  "year": 2011,
+  "tagline": "Peter Parker and Miguel O’Hara undo the same disaster.",
+  "releaseLabel": "2011",
+  "developerIds": [
+    "beenox"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 3",
+    "Xbox 360",
+    "Wii",
+    "Nintendo DS",
+    "Nintendo 3DS"
+  ],
+  "playableCharacterIds": [
+    "peter-parker",
+    "miguel-ohara"
+  ],
+  "villainIds": [],
+  "universeId": "game-multiverse",
+  "summary": "Beenox pairs the Amazing Spider-Man with Spider-Man 2099. Actions in one time period change the other. The antagonist is a scientist’s attempt to rewrite history. This record does not file that plot’s villain under an existing rogue.",
+  "gameplay": "Switching between Peter and Miguel, with timed rescues across the two periods.",
+  "relatedGameIds": [
+    "spider-man-shattered-dimensions"
+  ],
+  "categories": [
+    "multiverse"
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-v2-30",
+  "title": "The Amazing Spider-Man",
+  "issue": "Vol. 2 #30",
+  "year": 2001,
+  "coverDate": "June 2001",
+  "summary": "Morlun hunts Peter Parker as prey. The story treats Spider-Man as part of a totemic line, not only a neighborhood hero.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "j-michael-straczynski"
+  ],
+  "artistIds": [
+    "john-romita-jr"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "morlun"
+  ]
+}

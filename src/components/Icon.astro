@@ -1,10 +1,16 @@
 ---
 interface Props {
-  name: "film" | "book" | "tv" | "spider" | "mask" | "globe" | "suit" | "hourglass" | "search" | "menu" | "close";
+  name: "film" | "book" | "tv" | "spider" | "mask" | "globe" | "suit" | "hourglass" | "search" | "menu" | "close" | "game";
 }
 const { name } = Astro.props;
 ---
 <svg class="icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+  {name === "game" && (
+    <g fill="none" stroke="currentColor" stroke-width="1.6">
+      <rect x="6" y="10" width="20" height="13" rx="3" />
+      <path d="M10 16h4M12 14v4M20 15.5h.01M23 17.5h.01" stroke-linecap="round" />
+    </g>
+  )}
   {name === "film" && (
     <g fill="none" stroke="currentColor" stroke-width="1.6">
       <rect x="5" y="7" width="22" height="18" rx="2" />

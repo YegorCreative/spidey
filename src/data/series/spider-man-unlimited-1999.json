@@ -1,0 +1,26 @@
+{
+  "id": "spider-man-unlimited-1999",
+  "title": "Spider-Man Unlimited",
+  "years": "1999",
+  "yearStart": 1999,
+  "medium": "animated",
+  "network": "Fox Kids",
+  "summary": "Rino Romano voices Peter Parker in a Counter-Earth story that followed the 1990s series. The show is one season long. Broadcast end dates vary by listing, so this record keeps 1999 as the premiere year.",
+  "universeId": "unlimited-1999",
+  "seasons": 1,
+  "episodes": 13,
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "rino-romano",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "villainIds": [
+    "venom",
+    "carnage"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2008-mister-negative",
+  "year": 2008,
+  "title": "Mister Negative",
+  "summary": "Martin Li debuts as Brand New Day begins.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-546"
+    },
+    {
+      "type": "villain",
+      "id": "mister-negative"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2011-edge-of-time",
+  "year": 2011,
+  "title": "Edge of Time",
+  "summary": "Peter Parker and Miguel O’Hara share one disaster across time.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-edge-of-time"
+    },
+    {
+      "type": "character",
+      "id": "miguel-ohara"
+    }
+  ]
+}

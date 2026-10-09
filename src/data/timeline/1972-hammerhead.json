@@ -1,0 +1,13 @@
+{
+  "id": "1972-hammerhead",
+  "year": 1972,
+  "title": "Hammerhead",
+  "summary": "The steel-skulled gangster debuts in The Amazing Spider-Man #113.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "villain",
+      "id": "hammerhead"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2007-spider-man-3",
+  "year": 2007,
+  "title": "Spider-Man 3",
+  "summary": "The black suit, Venom, and Sandman share Raimi’s third film.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-3"
+    },
+    {
+      "type": "villain",
+      "id": "venom"
+    },
+    {
+      "type": "villain",
+      "id": "sandman"
+    }
+  ]
+}

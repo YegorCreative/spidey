@@ -1,0 +1,21 @@
+{
+  "id": "1963-amazing-spider-man-1",
+  "year": 1963,
+  "title": "The Amazing Spider-Man #1",
+  "summary": "The monthly series begins, and the Chameleon becomes Peter’s first costumed enemy.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-1"
+    },
+    {
+      "type": "character",
+      "id": "peter-parker"
+    },
+    {
+      "type": "villain",
+      "id": "chameleon"
+    }
+  ]
+}

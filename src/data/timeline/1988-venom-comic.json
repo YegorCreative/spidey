@@ -1,0 +1,17 @@
+{
+  "id": "1988-venom-comic",
+  "year": 1988,
+  "title": "Venom",
+  "summary": "Eddie Brock and the symbiote arrive together in The Amazing Spider-Man #300.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-300"
+    },
+    {
+      "type": "villain",
+      "id": "venom"
+    }
+  ]
+}

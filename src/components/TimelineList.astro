@@ -1,5 +1,6 @@
 ---
-import { getCatalog, hrefFor } from "../lib/catalog";
+import { previewTimelineIds } from "../config/curation";
+import { getCatalog, hrefFor, timelineBucket } from "../lib/catalog";
 import { href } from "../lib/paths";
 import type { TimelineEvent } from "../lib/types";
 
@@ -8,7 +9,8 @@ interface Props {
 }
 const { mode = "full" } = Astro.props;
 const catalog = getCatalog();
-const events = catalog.timeline;
+const previewIds = new Set<string>(previewTimelineIds);
+const events = mode === "preview" ? catalog.timeline.filter((event) => previewIds.has(event.id)) : catalog.timeline;
 
 const eras = [
   { year: 1962, title: "The Beginning", note: "1962+" },
@@ -33,25 +35,36 @@ function labelFor(type: string, id: string): string {
   if (type === "universe") return catalog.universe(id).name;
   if (type === "suit") return catalog.suit(id).name;
   if (type === "creator") return catalog.creator(id).name;
+  if (type === "game") return catalog.game(id).title;
   return catalog.event(id).title;
 }
 
 function kindLabel(kind: TimelineEvent["kind"]): string {
   if (kind === "comic") return "Comic";
-  if (kind === "series") return "Series";
-  if (kind === "movie") return "Film";
+  if (kind === "series" || kind === "animation") return "Series";
+  if (kind === "movie" || kind === "spider-verse") return "Film";
+  if (kind === "game") return "Game";
+  if (kind === "character") return "Character";
+  if (kind === "creator") return "Creator";
   return "Milestone";
 }
 
-const rows = events.flatMap((event, index) => {
-  const era = eras.find((item) => item.year === event.year);
-  const entry = {
-    kind: "event" as const,
+const rows: Array<
+  | { kind: "era"; year: number; title: string; note: string }
+  | { kind: "event"; event: TimelineEvent; side: string; index: number }
+> = [];
+let nextEra = 0;
+events.forEach((event, index) => {
+  while (nextEra < eras.length && eras[nextEra].year <= event.year) {
+    rows.push({ kind: "era", ...eras[nextEra] });
+    nextEra += 1;
+  }
+  rows.push({
+    kind: "event",
     event,
     side: index % 2 === 0 ? "is-left" : "is-right",
     index,
-  };
-  return era ? [{ kind: "era" as const, ...era }, entry] : [entry];
+  });
 });
 ---
 {mode === "preview" ? (
@@ -72,7 +85,7 @@ const rows = events.flatMap((event, index) => {
         <div class="thread__line" aria-hidden="true"><span class="thread__fill"></span></div>
         <ol class="thread__list">
           {rows.map((row) => row.kind === "era" ? (
-            <li class="era era--compact">
+            <li class="era era--compact" data-filter-era>
               <p class="kicker">Marker · {row.note}</p>
               <p class="era__title">{row.title}</p>
             </li>
@@ -102,11 +115,24 @@ const rows = events.flatMap((event, index) => {
     </section>
   </div>
 ) : (
+  <div data-filter-root>
+    <div class="filters" role="toolbar" aria-label="Filter the timeline">
+      {[
+        ["all", "All events"],
+        ["movies", "Movies"],
+        ["comics", "Comics"],
+        ["series", "Series"],
+        ["games", "Games"],
+        ["characters", "Characters"],
+      ].map(([value, label]) => (
+        <button type="button" data-filter="bucket" data-value={value} aria-pressed={value === "all" ? "true" : "false"}>{label}</button>
+      ))}
+    </div>
   <div class="thread thread--full" data-parallax data-draw>
     <div class="thread__line" aria-hidden="true"><span class="thread__fill"></span></div>
     <ol class="thread__list">
       {rows.map((row) => row.kind === "era" ? (
-        <li class="era">
+        <li class="era" data-filter-era>
           <div class="era__shift" data-depth style="--depth: 0.16">
             <p class="era__ghost" aria-hidden="true">{row.note}</p>
           </div>
@@ -114,7 +140,7 @@ const rows = events.flatMap((event, index) => {
           <h2 class="era__title">{row.title}</h2>
         </li>
       ) : (
-        <li class:list={["thread__item", row.side]} id={row.event.id}>
+        <li class:list={["thread__item", row.side]} id={row.event.id} data-filter-item data-bucket={timelineBucket(row.event.kind)}>
           <span class="thread__node" data-node aria-hidden="true"></span>
           <article class="artifact panel" data-reveal style={`--delay: ${(row.index % 4) * 60}ms`}>
             <span class:list={["artifact__plate", "poster", "accent-red"]} aria-hidden="true">
@@ -140,5 +166,7 @@ const rows = events.flatMap((event, index) => {
         </li>
       ))}
     </ol>
+    <p class="search-empty" data-filter-empty hidden>No events match that filter.</p>
+  </div>
   </div>
 )}

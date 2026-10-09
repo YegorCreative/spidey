@@ -28,5 +28,7 @@
   "comicIds": [
     "amazing-fantasy-15"
   ],
-  "runtimeMinutes": 121
+  "runtimeMinutes": 121,
+  "status": "released",
+  "medium": "live-action"
 }

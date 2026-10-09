@@ -1,0 +1,13 @@
+{
+  "id": "2008-web-of-shadows",
+  "year": 2008,
+  "title": "Web of Shadows",
+  "summary": "An original symbiote game, separate from the movie tie-ins.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-web-of-shadows"
+    }
+  ]
+}

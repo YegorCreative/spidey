@@ -1,0 +1,37 @@
+{
+  "id": "spider-man-shattered-dimensions",
+  "title": "Spider-Man: Shattered Dimensions",
+  "year": 2010,
+  "tagline": "Four Spider-Men, four worlds, one broken tablet.",
+  "releaseLabel": "2010",
+  "developerIds": [
+    "beenox"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 3",
+    "Xbox 360",
+    "Wii",
+    "Nintendo DS",
+    "Windows"
+  ],
+  "playableCharacterIds": [
+    "peter-parker",
+    "spider-man-noir",
+    "miguel-ohara"
+  ],
+  "villainIds": [
+    "kraven",
+    "hammerhead",
+    "hobgoblin"
+  ],
+  "universeId": "game-multiverse",
+  "summary": "Beenox splits the player across four Spider-Men: a present-day Peter, Spider-Man Noir, Miguel O’Hara, and an Ultimate-universe Peter. The Ultimate Peter in this game is not Miles Morales. The levels are separate dimensions, not the animated films.",
+  "gameplay": "Linear levels that change combat rules with each Spider-Man. Noir emphasizes stealth. The 2099 levels use accelerated movement.",
+  "relatedGameIds": [
+    "spider-man-edge-of-time"
+  ],
+  "categories": [
+    "multiverse"
+  ]
+}

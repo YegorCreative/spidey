@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-238",
+  "title": "The Amazing Spider-Man",
+  "issue": "#238",
+  "year": 1983,
+  "coverDate": "March 1983",
+  "summary": "A new goblin, not Norman Osborn, starts stealing weapons and calling himself the Hobgoblin. His civilian name stays hidden.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "roger-stern"
+  ],
+  "artistIds": [
+    "john-romita-jr"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "hobgoblin"
+  ]
+}

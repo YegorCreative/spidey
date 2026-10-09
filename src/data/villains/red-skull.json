@@ -1,0 +1,15 @@
+{
+  "id": "red-skull",
+  "name": "Red Skull",
+  "alterEgo": "Johann Shmidt",
+  "accent": "rust",
+  "summary": "The Red Skull is Captain America’s enemy. A predecessor using the name appears in Captain America Comics #1, and Johann Shmidt becomes the enduring version. He is not a Spider-Man villain. This record exists so the archive does not file him in the rogues’ gallery by mistake.",
+  "relation": "Primarily a Captain America villain. No core Spider-Man role is claimed here.",
+  "firstAppearance": "Captain America Comics #1 (1941) introduces a Red Skull. Johann Shmidt is the version that endures, created in that early run.",
+  "creators": "Joe Simon and Jack Kirby.",
+  "powers": "A strategist and combatant. Specific enhancements change by story and are not one fixed Spider-Man power set.",
+  "origin": "A Nazi antagonist built as Captain America’s opposite.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

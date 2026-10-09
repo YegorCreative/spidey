@@ -1,0 +1,15 @@
+{
+  "id": "chameleon",
+  "name": "Chameleon",
+  "alterEgo": "Dmitri Smerdyakov",
+  "accent": "green",
+  "summary": "Dmitri Smerdyakov is the first costumed enemy in The Amazing Spider-Man. He works by impersonation rather than a single superpower. He is a Spider-Man villain from the start of the monthly comic.",
+  "relation": "Core Spider-Man rogue. The first antagonist of The Amazing Spider-Man.",
+  "firstAppearance": "The Amazing Spider-Man #1 (1963).",
+  "creators": "Stan Lee and Steve Ditko.",
+  "powers": "Master of disguise. Later stories add technological masks. The original tool is impersonation.",
+  "origin": "A spy and half-brother figure in the Kraven stories, already a criminal when Peter’s monthly title begins.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

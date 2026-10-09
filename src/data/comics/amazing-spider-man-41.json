@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-41",
+  "title": "The Amazing Spider-Man",
+  "issue": "#41",
+  "year": 1966,
+  "coverDate": "October 1966",
+  "summary": "The Rhino smashes into the book as a hired, unstoppable suit of muscle.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "john-romita-sr"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "rhino"
+  ]
+}

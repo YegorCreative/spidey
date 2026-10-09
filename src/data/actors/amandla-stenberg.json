@@ -1,0 +1,12 @@
+{
+  "id": "amandla-stenberg",
+  "name": "Amandla Stenberg",
+  "performance": "voice",
+  "summary": "Amandla Stenberg voices Margo Kess, Spider-Byte, in Spider-Man: Across the Spider-Verse.",
+  "primary": {
+    "identity": "Spider-Byte",
+    "years": "2023",
+    "characterId": "margo-kess",
+    "universeId": "spider-verse-animated"
+  }
+}

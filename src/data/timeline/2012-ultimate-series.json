@@ -1,0 +1,17 @@
+{
+  "id": "2012-ultimate-series",
+  "year": 2012,
+  "title": "Ultimate Spider-Man series",
+  "summary": "Drake Bell’s Disney XD series begins. It is not the Ultimate comic.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "ultimate-spider-man-2012"
+    },
+    {
+      "type": "actor",
+      "id": "drake-bell"
+    }
+  ]
+}

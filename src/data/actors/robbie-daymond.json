@@ -1,0 +1,12 @@
+{
+  "id": "robbie-daymond",
+  "name": "Robbie Daymond",
+  "performance": "voice",
+  "summary": "Robbie Daymond voices Peter Parker in Disney XD’s Marvel’s Spider-Man.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "2017–2020",
+    "characterId": "peter-parker",
+    "universeId": "marvel-spider-man-2017"
+  }
+}

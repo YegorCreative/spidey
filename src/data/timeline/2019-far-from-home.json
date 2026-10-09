@@ -1,0 +1,21 @@
+{
+  "id": "2019-far-from-home",
+  "year": 2019,
+  "title": "Spider-Man: Far From Home",
+  "summary": "Mysterio meets Tom Holland’s Peter on a school trip.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-far-from-home"
+    },
+    {
+      "type": "villain",
+      "id": "mysterio"
+    },
+    {
+      "type": "actor",
+      "id": "jake-gyllenhaal"
+    }
+  ]
+}

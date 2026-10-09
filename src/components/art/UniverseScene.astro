@@ -20,7 +20,7 @@ const city = id === "raimi"
             : "night";
 ---
 <div class:list={["world", `world--${id}`]} aria-hidden="true">
-  {(id === "raimi" || id === "webb" || id === "mcu" || id === "earth-90214" || id === "earth-928" || id === "ultimate") && (
+  {(id === "raimi" || id === "webb" || id === "mcu" || id === "earth-90214" || id === "earth-928" || id === "ultimate" || id === "insomniac" || !["earth-616", "spider-verse-animated", "earth-65"].includes(id)) && (
     <CityArt variant={city} layer="mid" />
   )}
   {id === "earth-616" && (

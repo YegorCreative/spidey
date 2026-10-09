@@ -1,0 +1,17 @@
+{
+  "id": "1994-clone-saga",
+  "year": 1994,
+  "title": "Clone Saga",
+  "summary": "Ben Reilly’s Scarlet Spider years turn the 1975 clone into a long publishing event.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "character",
+      "id": "ben-reilly"
+    },
+    {
+      "type": "villain",
+      "id": "jackal"
+    }
+  ]
+}

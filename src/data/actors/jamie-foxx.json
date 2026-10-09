@@ -1,0 +1,12 @@
+{
+  "id": "jamie-foxx",
+  "name": "Jamie Foxx",
+  "performance": "live-action",
+  "summary": "Jamie Foxx plays Max Dillon and Electro in The Amazing Spider-Man 2 and again in Spider-Man: No Way Home.",
+  "primary": {
+    "identity": "Electro",
+    "years": "2014, 2021",
+    "villainId": "electro",
+    "universeId": "webb"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-3",
+  "title": "The Amazing Spider-Man",
+  "issue": "#3",
+  "year": 1963,
+  "coverDate": "July 1963",
+  "summary": "Doctor Octopus debuts and beats Spider-Man badly enough that Peter has to decide to try again.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "steve-ditko"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "doctor-octopus"
+  ]
+}

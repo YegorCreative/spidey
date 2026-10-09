@@ -1,0 +1,36 @@
+{
+  "id": "the-amazing-spider-man-2-game",
+  "title": "The Amazing Spider-Man 2",
+  "year": 2014,
+  "tagline": "Electro and a goblin, in the Webb films’ New York.",
+  "releaseLabel": "2014",
+  "developerIds": [
+    "beenox"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 4",
+    "PlayStation 3",
+    "Xbox 360",
+    "Wii U",
+    "Windows",
+    "Nintendo 3DS"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "electro",
+    "green-goblin"
+  ],
+  "universeId": "webb",
+  "summary": "The sequel tie-in follows The Amazing Spider-Man 2, with Electro and Harry Osborn’s Goblin among the threats. Beenox developed it for Activision. It is not the Insomniac series that arrived four years later.",
+  "gameplay": "Open-world swinging and combat on the main platforms, retelling pieces of the film and adding gang territories.",
+  "relatedGameIds": [
+    "the-amazing-spider-man-game"
+  ],
+  "categories": [
+    "movie-tie-in",
+    "open-world"
+  ]
+}

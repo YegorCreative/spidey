@@ -1,0 +1,12 @@
+{
+  "id": "josh-keaton",
+  "name": "Josh Keaton",
+  "performance": "voice",
+  "summary": "Josh Keaton voices Peter Parker in The Spectacular Spider-Man.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "2008–2009",
+    "characterId": "peter-parker",
+    "universeId": "spectacular"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "rino-romano",
+  "name": "Rino Romano",
+  "performance": "voice",
+  "summary": "Rino Romano voices Peter Parker in Spider-Man Unlimited.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "1999",
+    "characterId": "peter-parker",
+    "universeId": "unlimited-1999"
+  }
+}

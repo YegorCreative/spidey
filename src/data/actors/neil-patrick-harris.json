@@ -1,0 +1,12 @@
+{
+  "id": "neil-patrick-harris",
+  "name": "Neil Patrick Harris",
+  "performance": "voice",
+  "summary": "Neil Patrick Harris voices Peter Parker in Spider-Man: The New Animated Series on MTV.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "2003",
+    "characterId": "peter-parker",
+    "universeId": "mtv-2003"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2007-spider-man-3-game",
+  "year": 2007,
+  "title": "Spider-Man 3 game",
+  "summary": "Treyarch adapts the third film.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-3-game"
+    },
+    {
+      "type": "movie",
+      "id": "spider-man-3"
+    }
+  ]
+}

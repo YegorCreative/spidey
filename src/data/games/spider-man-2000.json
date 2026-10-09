@@ -1,0 +1,35 @@
+{
+  "id": "spider-man-2000",
+  "title": "Spider-Man",
+  "year": 2000,
+  "tagline": "Neversoft’s PlayStation Spider-Man, before the films.",
+  "releaseLabel": "2000",
+  "developerIds": [
+    "neversoft"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation",
+    "Nintendo 64",
+    "Dreamcast",
+    "Windows",
+    "Game Boy Color"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "doctor-octopus",
+    "venom",
+    "carnage"
+  ],
+  "universeId": "neversoft-2000",
+  "summary": "Activision’s 2000 game is an original story in a comic-book New York, not a movie adaptation. Neversoft developed the PlayStation version. Other platforms were ported by separate teams and are not credited to Neversoft here.",
+  "gameplay": "Third-person swinging and combat through enclosed levels. The player unlocks suits and moves between street missions and indoor boss fights.",
+  "relatedGameIds": [
+    "spider-man-1982"
+  ],
+  "categories": [
+    "classic"
+  ]
+}

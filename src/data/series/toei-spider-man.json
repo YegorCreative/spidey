@@ -1,0 +1,23 @@
+{
+  "id": "toei-spider-man",
+  "title": "Spider-Man",
+  "years": "1978–1979",
+  "yearStart": 1978,
+  "yearEnd": 1979,
+  "medium": "live-action",
+  "network": "Tokyo Channel 12",
+  "summary": "Toei’s tokusatsu series stars Takuya Yamashiro, played by Shinji Todō. He gains the Spider-Man identity from an alien source and pilots a giant robot. The show ran 41 episodes. It is not an adaptation of Peter Parker.",
+  "universeId": "toei-1978",
+  "seasons": 1,
+  "episodes": 41,
+  "characterIds": [
+    "takuya-yamashiro"
+  ],
+  "cast": [
+    {
+      "actorId": "shinji-todo",
+      "characterId": "takuya-yamashiro",
+      "identity": "Spider-Man"
+    }
+  ]
+}

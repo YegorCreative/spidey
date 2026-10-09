@@ -1,0 +1,36 @@
+{
+  "id": "the-amazing-spider-man-2",
+  "title": "The Amazing Spider-Man 2",
+  "year": 2014,
+  "releaseDate": "2014-05-02",
+  "tagline": "Electro lights the city, and Harry Osborn becomes a goblin.",
+  "summary": "Marc Webb’s sequel puts Andrew Garfield’s Peter between Max Dillon and a dying Harry Osborn. Jamie Foxx plays Electro. Dane DeHaan’s Harry is this film’s Green Goblin, not Norman Osborn.",
+  "universeId": "webb",
+  "directorIds": [
+    "marc-webb"
+  ],
+  "portrayals": [
+    {
+      "actorId": "andrew-garfield",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "electro",
+      "actorId": "jamie-foxx"
+    },
+    {
+      "villainId": "green-goblin",
+      "actorId": "dane-dehaan"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [],
+  "status": "released",
+  "medium": "live-action",
+  "runtimeMinutes": 142
+}

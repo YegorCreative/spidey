@@ -1,0 +1,17 @@
+{
+  "id": "2001-morlun",
+  "year": 2001,
+  "title": "Morlun",
+  "summary": "An Inheritor hunts Spider-Man in The Amazing Spider-Man vol. 2 #30.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-v2-30"
+    },
+    {
+      "type": "villain",
+      "id": "morlun"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "id": "1983-spider-ham",
+  "year": 1983,
+  "title": "Spider-Ham",
+  "summary": "Peter Porker debuts in Marvel Tails.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "spider-ham"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "hammerhead",
+  "name": "Hammerhead",
+  "alterEgo": "A consistent civilian name is not used in this record",
+  "accent": "slate",
+  "summary": "Hammerhead is a flat-skulled crime boss in Spider-Man’s underworld, styled after old gangster films. He is a Maggia-era antagonist, not a science accident like the Lizard or Electro.",
+  "relation": "Spider-Man crime boss.",
+  "firstAppearance": "The Amazing Spider-Man #113 (1972).",
+  "creators": "Gerry Conway and John Romita Sr.",
+  "powers": "A steel-strengthened skull and the criminal organization around it.",
+  "origin": "A gangster rebuilt after an injury, with a metal plate that becomes his weapon.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

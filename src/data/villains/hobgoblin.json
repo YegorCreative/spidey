@@ -1,0 +1,15 @@
+{
+  "id": "hobgoblin",
+  "name": "Hobgoblin",
+  "alterEgo": "Roderick Kingsley",
+  "accent": "amber",
+  "summary": "Roderick Kingsley is the original Hobgoblin, a mercenary who steals Norman Osborn’s equipment and sells fear as a business. Other people have worn the identity. This record does not merge them into one person.",
+  "relation": "Spider-Man rogue. The original Hobgoblin is Roderick Kingsley.",
+  "firstAppearance": "The Amazing Spider-Man #238 (1983).",
+  "creators": "Roger Stern and John Romita Jr.",
+  "powers": "Goblin glider, pumpkin bombs, and later strength from the Goblin formula. Kingsley is also a planner who hires others.",
+  "origin": "A fashion criminal who finds hidden Osborn weapons and builds a profitable double life.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

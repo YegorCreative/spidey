@@ -1,0 +1,17 @@
+{
+  "id": "spidey-and-his-amazing-friends",
+  "title": "Spidey and His Amazing Friends",
+  "years": "2021–",
+  "yearStart": 2021,
+  "medium": "animated",
+  "network": "Disney Junior",
+  "summary": "A preschool series in which Peter Parker, Miles Morales, and Gwen Stacy solve short neighborhood problems. It is still running, so a final episode count would be a guess.",
+  "universeId": "spidey-friends-2021",
+  "episodeNote": "Ongoing. Season and episode totals are not closed.",
+  "characterIds": [
+    "peter-parker",
+    "miles-morales",
+    "gwen-stacy"
+  ],
+  "cast": []
+}

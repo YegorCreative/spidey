@@ -1,0 +1,17 @@
+{
+  "id": "kingpin",
+  "name": "Kingpin",
+  "alterEgo": "Wilson Fisk",
+  "accent": "slate",
+  "summary": "Wilson Fisk is a crime boss who debuted in Spider-Man’s comic. He later became a defining Daredevil antagonist as well. Both relationships are real. He is not only a Spider-Man villain.",
+  "relation": "Debuted as a Spider-Man crime lord. Also central to Daredevil.",
+  "firstAppearance": "The Amazing Spider-Man #50 (1967).",
+  "creators": "Stan Lee and John Romita Sr.",
+  "powers": "Enormous strength and a criminal empire. He is not superpowered in his original stories.",
+  "origin": "A seemingly genteel businessman who runs New York crime.",
+  "universeIds": [
+    "earth-616",
+    "spider-verse-animated",
+    "insomniac"
+  ]
+}

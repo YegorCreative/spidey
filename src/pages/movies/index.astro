@@ -2,7 +2,7 @@
 import MovieCard from "../../components/movies/MovieCard.astro";
 import CityArt from "../../components/art/CityArt.astro";
 import WebArt from "../../components/art/WebArt.astro";
-import { getCatalog, hrefFor } from "../../lib/catalog";
+import { getCatalog, hrefFor, spiderActorIds } from "../../lib/catalog";
 import Base from "../../layouts/Base.astro";
 import "../../styles/films.css";
 
@@ -13,11 +13,24 @@ const films = catalog.movies.map((movie) => ({
   year: movie.year,
   title: movie.title,
   universe: catalog.universe(movie.universeId).name,
+  universeId: movie.universeId,
   summary: movie.tagline,
   poster: movie.media?.poster ?? movie.image,
+  directorIds: movie.directorIds,
+  actorIds: spiderActorIds(movie),
+  medium: movie.medium ?? "live-action",
+  status: movie.status ?? "released",
 }));
+const years = [...new Set(films.map((film) => film.year))].sort((a, b) => a - b);
+const directorIds = [...new Set(films.flatMap((film) => film.directorIds))].sort((a, b) =>
+  catalog.creator(a).name.localeCompare(catalog.creator(b).name),
+);
+const actorIds = [...new Set(films.flatMap((film) => film.actorIds))].sort((a, b) =>
+  catalog.actor(a).name.localeCompare(catalog.actor(b).name),
+);
+const universeIds = [...new Set(films.map((film) => film.universeId))];
 ---
-<Base title="Movies — Spidey" description="Spider-Man films in the Spidey archive, from the 2002 movie to the Spider-Verse.">
+<Base title="Movies — Spidey" description="The main Spider-Man film series, from the 2002 movie through announced upcoming releases.">
   <div class="films">
     <div class="films__atmo" aria-hidden="true">
       <CityArt variant="night" layer="far" />
@@ -38,15 +51,26 @@ const films = catalog.movies.map((movie) => ({
       <div class="films-hero__copy">
         <p class="kicker">Films</p>
         <h1 class="display-title">Movies</h1>
-        <p class="lede">A founding shelf of Spider-Man films. Each record can connect an actor, a villain, a suit, a universe, and the comics underneath.</p>
+        <p class="lede">The main Spider-Man film series, in release order. Upcoming titles stay marked until they open. Frames on this shelf are original archive art unless a record carries a licensed image.</p>
       </div>
     </header>
-    <ul class="films-grid">
-      {films.map((film, index) => (
-        <li>
-          <MovieCard delay={`${(index % 3) * 70}ms`} {...film} />
-        </li>
-      ))}
-    </ul>
+    <div data-filter-root>
+      <form class="filters" aria-label="Filter films">
+        <label>Year <select data-filter="year"><option value="all">All years</option>{years.map((year) => <option value={String(year)}>{year}</option>)}</select></label>
+        <label>Director <select data-filter="director"><option value="all">All directors</option>{directorIds.map((id) => <option value={id}>{catalog.creator(id).name}</option>)}</select></label>
+        <label>Spider-Man actor <select data-filter="actor"><option value="all">All actors</option>{actorIds.map((id) => <option value={id}>{catalog.actor(id).name}</option>)}</select></label>
+        <label>Universe <select data-filter="universe"><option value="all">All universes</option>{universeIds.map((id) => <option value={id}>{catalog.universe(id).name}</option>)}</select></label>
+        <label>Format <select data-filter="medium"><option value="all">Live-action and animation</option><option value="live-action">Live-action</option><option value="animated">Animation</option></select></label>
+        <label>Status <select data-filter="status"><option value="all">Released and upcoming</option><option value="released">Released</option><option value="upcoming">Upcoming</option></select></label>
+      </form>
+      <ul class="films-grid">
+        {films.map((film, index) => (
+          <li data-filter-item data-year={String(film.year)} data-director={film.directorIds.join("|")} data-actor={film.actorIds.join("|")} data-universe={film.universeId} data-medium={film.medium} data-status={film.status}>
+            <MovieCard id={film.id} href={film.href} year={film.year} title={film.title} universe={film.universe} summary={film.summary} poster={film.poster} delay={`${(index % 3) * 70}ms`} />
+          </li>
+        ))}
+      </ul>
+      <p class="search-empty" data-filter-empty hidden>No films match those filters.</p>
+    </div>
   </div>
 </Base>

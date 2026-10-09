@@ -1,0 +1,12 @@
+{
+  "id": "shinji-todo",
+  "name": "Shinji Todō",
+  "performance": "live-action",
+  "summary": "Shinji Todō plays Takuya Yamashiro in Toei’s 1978 Spider-Man television series. That hero is not Peter Parker.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "1978–1979",
+    "characterId": "takuya-yamashiro",
+    "universeId": "toei-1978"
+  }
+}

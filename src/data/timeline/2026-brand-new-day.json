@@ -1,0 +1,21 @@
+{
+  "id": "2026-brand-new-day",
+  "year": 2026,
+  "title": "Spider-Man: Brand New Day",
+  "summary": "Destin Daniel Cretton’s film opens on July 31, 2026.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-brand-new-day"
+    },
+    {
+      "type": "actor",
+      "id": "tom-holland"
+    },
+    {
+      "type": "creator",
+      "id": "destin-daniel-cretton"
+    }
+  ]
+}

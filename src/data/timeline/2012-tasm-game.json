@@ -1,0 +1,17 @@
+{
+  "id": "2012-tasm-game",
+  "year": 2012,
+  "title": "The Amazing Spider-Man game",
+  "summary": "Beenox adapts Marc Webb’s film into an open city.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "the-amazing-spider-man-game"
+    },
+    {
+      "type": "movie",
+      "id": "the-amazing-spider-man"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2008-spectacular",
+  "year": 2008,
+  "title": "The Spectacular Spider-Man",
+  "summary": "Josh Keaton’s series premieres on The CW.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "the-spectacular-spider-man"
+    },
+    {
+      "type": "actor",
+      "id": "josh-keaton"
+    }
+  ]
+}

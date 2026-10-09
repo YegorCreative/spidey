@@ -1,0 +1,17 @@
+{
+  "id": "1967-kingpin",
+  "year": 1967,
+  "title": "Kingpin",
+  "summary": "Wilson Fisk debuts in The Amazing Spider-Man #50, in the same issue Peter tries to quit.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-50"
+    },
+    {
+      "type": "villain",
+      "id": "kingpin"
+    }
+  ]
+}

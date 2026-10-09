@@ -1,0 +1,19 @@
+{
+  "id": "jackal",
+  "name": "Jackal",
+  "alterEgo": "Miles Warren",
+  "accent": "green",
+  "summary": "Miles Warren is the geneticist who becomes the Jackal and engineers the clones at the center of the Clone Saga, including Ben Reilly. He is a Spider-Man villain whose damage is scientific rather than a simple robbery.",
+  "relation": "Spider-Man villain. Architect of the clone stories.",
+  "firstAppearance": "Miles Warren appears earlier as a professor. The Jackal identity debuts in The Amazing Spider-Man #129 (1974).",
+  "creators": "The Jackal identity is credited to Gerry Conway and Ross Andru.",
+  "powers": "Genetic cloning and, in the costume, enhanced agility.",
+  "origin": "An ESU professor whose obsession curdles into the Jackal persona.",
+  "universeIds": [
+    "earth-616"
+  ],
+  "relatedCharacterIds": [
+    "peter-parker",
+    "ben-reilly"
+  ]
+}

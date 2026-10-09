@@ -1,0 +1,22 @@
+{
+  "id": "amazing-spider-man-546",
+  "title": "The Amazing Spider-Man",
+  "issue": "#546",
+  "year": 2008,
+  "coverDate": "March 2008",
+  "summary": "Brand New Day resets Peter’s daily life and introduces Martin Li, Mister Negative. The 2026 film borrows the story’s title. It does not adapt this issue scene for scene.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "dan-slott"
+  ],
+  "artistIds": [
+    "steve-mcniven"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "mister-negative"
+  ],
+  "arc": "Brand New Day"
+}

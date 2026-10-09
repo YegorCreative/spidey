@@ -1,0 +1,17 @@
+{
+  "id": "1966-rhino",
+  "year": 1966,
+  "title": "Rhino",
+  "summary": "Aleksei Sytsevich debuts in The Amazing Spider-Man #41.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-41"
+    },
+    {
+      "type": "villain",
+      "id": "rhino"
+    }
+  ]
+}

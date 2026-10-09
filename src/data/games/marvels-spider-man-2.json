@@ -1,0 +1,35 @@
+{
+  "id": "marvels-spider-man-2",
+  "title": "Marvel’s Spider-Man 2",
+  "year": 2023,
+  "tagline": "Peter and Miles share a larger map, and Venom arrives.",
+  "releaseLabel": "PlayStation 5: October 20, 2023. A Windows version followed in 2025.",
+  "developerIds": [
+    "insomniac-games"
+  ],
+  "publisher": "Sony Interactive Entertainment",
+  "platforms": [
+    "PlayStation 5",
+    "Windows"
+  ],
+  "playableCharacterIds": [
+    "peter-parker",
+    "miles-morales"
+  ],
+  "villainIds": [
+    "venom",
+    "kraven",
+    "lizard"
+  ],
+  "universeId": "insomniac",
+  "summary": "Insomniac’s sequel lets the player switch between Peter Parker and Miles Morales. Kraven hunts the city’s powered people, and the Venom symbiote bonds with Peter. The story stays on Earth-1048.",
+  "gameplay": "Open-world traversal across New York boroughs, with two playable Spider-Men, symbiote combat for Peter, and co-operative set pieces.",
+  "relatedGameIds": [
+    "marvels-spider-man-2018",
+    "marvels-spider-man-miles-morales"
+  ],
+  "categories": [
+    "insomniac",
+    "open-world"
+  ]
+}

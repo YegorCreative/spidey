@@ -1,0 +1,17 @@
+{
+  "id": "2004-pavitr",
+  "year": 2004,
+  "title": "Spider-Man India",
+  "summary": "Pavitr Prabhakar debuts in his own miniseries.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "pavitr-prabhakar"
+    },
+    {
+      "type": "universe",
+      "id": "earth-50101"
+    }
+  ]
+}

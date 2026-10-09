@@ -1,0 +1,37 @@
+{
+  "id": "spider-man-3-game",
+  "title": "Spider-Man 3",
+  "year": 2007,
+  "tagline": "The black suit, Venom, and Sandman in a movie tie-in.",
+  "releaseLabel": "2007",
+  "developerIds": [
+    "treyarch"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 3",
+    "PlayStation 2",
+    "Xbox 360",
+    "Wii",
+    "Windows",
+    "Nintendo DS",
+    "PSP"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "venom",
+    "sandman"
+  ],
+  "universeId": "raimi",
+  "summary": "Treyarch’s tie-in follows Spider-Man 3’s symbiote plot, Eddie Brock, and Flint Marko. The open city is less free than the 2004 game. It remains a film adaptation.",
+  "gameplay": "Third-person combat with a black-suit mode, outdoor traversal, and missions patterned on the film.",
+  "relatedGameIds": [
+    "spider-man-2-game"
+  ],
+  "categories": [
+    "movie-tie-in",
+    "open-world"
+  ]
+}

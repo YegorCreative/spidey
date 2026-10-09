@@ -1,0 +1,39 @@
+{
+  "id": "spider-man-beyond-the-spider-verse",
+  "title": "Spider-Man: Beyond the Spider-Verse",
+  "year": 2027,
+  "releaseDate": "2027-06-18",
+  "tagline": "Miles is still trying to get home.",
+  "summary": "Sony Pictures Animation schedules the third Spider-Verse film for June 18, 2027, with Bob Persichetti and Justin K. Thompson directing. It has not been released. Earlier announced dates were delays, not alternate premieres.",
+  "universeId": "spider-verse-animated",
+  "directorIds": [
+    "bob-persichetti",
+    "justin-k-thompson"
+  ],
+  "portrayals": [
+    {
+      "actorId": "shameik-moore",
+      "characterId": "miles-morales",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [],
+  "suitIds": [
+    "miles-suit"
+  ],
+  "comicIds": [
+    "ultimate-fallout-4"
+  ],
+  "characterIds": [
+    "miles-morales"
+  ],
+  "status": "upcoming",
+  "medium": "animated",
+  "releaseNote": "Sony Pictures Animation lists a United States theatrical date of June 18, 2027. The film is upcoming. Do not treat earlier slipped dates as the premiere.",
+  "sources": [
+    {
+      "label": "Sony Pictures Animation",
+      "url": "https://www.sonypicturesanimation.com/projects/films/spider-man-beyond-spider-verse"
+    }
+  ]
+}

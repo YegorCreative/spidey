@@ -1,0 +1,17 @@
+{
+  "id": "1981-amazing-friends",
+  "year": 1981,
+  "title": "Amazing Friends",
+  "summary": "NBC pairs Spider-Man with Iceman and Firestar.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "spider-man-and-his-amazing-friends"
+    },
+    {
+      "type": "actor",
+      "id": "dan-gilvezan"
+    }
+  ]
+}

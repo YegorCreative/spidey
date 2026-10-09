@@ -1,0 +1,23 @@
+{
+  "id": "amazing-spider-man-121",
+  "title": "The Amazing Spider-Man",
+  "issue": "#121",
+  "year": 1973,
+  "coverDate": "June 1973",
+  "summary": "Gwen Stacy dies in a fight between Spider-Man and the Green Goblin. The issue changes what the series is willing to take from Peter.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "gerry-conway"
+  ],
+  "artistIds": [
+    "gil-kane"
+  ],
+  "characterIds": [
+    "peter-parker",
+    "gwen-stacy"
+  ],
+  "villainIds": [
+    "green-goblin"
+  ],
+  "arc": "The Night Gwen Stacy Died"
+}

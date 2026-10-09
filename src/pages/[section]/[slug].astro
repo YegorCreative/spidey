@@ -12,6 +12,10 @@ export function getStaticPaths() {
       params: { section: "movies", slug: item.id },
       props: { profile: profiles.movie(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.universeId },
     })),
+    ...catalog.games.map((item) => ({
+      params: { section: "games", slug: item.id },
+      props: { profile: profiles.game(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.universeId },
+    })),
     ...catalog.series.map((item) => ({
       params: { section: "series", slug: item.id },
       props: { profile: profiles.series(item), image: item.image, media: item.media, scene: "city" as const, sceneId: item.universeId ?? "earth-616" },

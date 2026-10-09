@@ -1,0 +1,17 @@
+{
+  "id": "2020-miles-game",
+  "year": 2020,
+  "title": "Miles Morales",
+  "summary": "Insomniac’s Miles game launches with the PlayStation 5.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "marvels-spider-man-miles-morales"
+    },
+    {
+      "type": "character",
+      "id": "miles-morales"
+    }
+  ]
+}

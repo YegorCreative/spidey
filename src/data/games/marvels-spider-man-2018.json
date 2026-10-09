@@ -1,0 +1,42 @@
+{
+  "id": "marvels-spider-man-2018",
+  "title": "Marvel’s Spider-Man",
+  "year": 2018,
+  "tagline": "Insomniac’s open New York, eight years into Peter’s career.",
+  "releaseLabel": "PlayStation 4: September 7, 2018. PlayStation 5: November 12, 2020. Windows: August 12, 2022.",
+  "developerIds": [
+    "insomniac-games"
+  ],
+  "publisher": "Sony Interactive Entertainment",
+  "platforms": [
+    "PlayStation 4",
+    "PlayStation 5",
+    "Windows"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "characterIds": [
+    "miles-morales",
+    "mary-jane-watson"
+  ],
+  "villainIds": [
+    "mister-negative",
+    "doctor-octopus",
+    "kingpin",
+    "rhino",
+    "electro",
+    "vulture"
+  ],
+  "universeId": "insomniac",
+  "summary": "Insomniac’s first Marvel game follows an experienced Peter Parker as Martin Li and a rebuilt Otto Octavius tear up the city. Miles Morales is part of the story and is not the lead player character. Marvel later placed this world on Earth-1048.",
+  "gameplay": "Open-world web swinging, gadget combat, and suit crafting across Manhattan. Side missions sit between the story chapters.",
+  "relatedGameIds": [
+    "marvels-spider-man-miles-morales",
+    "marvels-spider-man-2"
+  ],
+  "categories": [
+    "insomniac",
+    "open-world"
+  ]
+}

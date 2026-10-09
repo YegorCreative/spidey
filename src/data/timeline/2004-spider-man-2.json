@@ -1,0 +1,21 @@
+{
+  "id": "2004-spider-man-2",
+  "year": 2004,
+  "title": "Spider-Man 2",
+  "summary": "Alfred Molina’s Doctor Octopus leads Raimi’s second film.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-2"
+    },
+    {
+      "type": "villain",
+      "id": "doctor-octopus"
+    },
+    {
+      "type": "actor",
+      "id": "alfred-molina"
+    }
+  ]
+}

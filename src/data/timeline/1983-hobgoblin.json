@@ -1,0 +1,17 @@
+{
+  "id": "1983-hobgoblin",
+  "year": 1983,
+  "title": "Hobgoblin",
+  "summary": "A new goblin debuts in The Amazing Spider-Man #238. His name stays a secret.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-238"
+    },
+    {
+      "type": "villain",
+      "id": "hobgoblin"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "hailee-steinfeld",
+  "name": "Hailee Steinfeld",
+  "performance": "voice",
+  "summary": "Hailee Steinfeld voices Gwen Stacy in the Spider-Verse films.",
+  "primary": {
+    "identity": "Spider-Gwen",
+    "years": "2018, 2023",
+    "characterId": "gwen-stacy",
+    "universeId": "spider-verse-animated"
+  }
+}

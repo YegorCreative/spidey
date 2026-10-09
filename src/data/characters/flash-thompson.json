@@ -1,0 +1,16 @@
+{
+  "id": "flash-thompson",
+  "name": "Flash Thompson",
+  "aliases": [
+    "Agent Venom"
+  ],
+  "kind": "spider-person",
+  "classification": "symbiote-hero",
+  "distinction": "A symbiote hero. Flash Thompson is not a Peter Parker variant. The Venom symbiote is bonded to him while he works as a soldier.",
+  "summary": "Eugene “Flash” Thompson is a classmate of Peter Parker who later becomes Agent Venom. The government pairs him with the Venom symbiote. The powers belong to that bond, not to a spider bite of his own.",
+  "universeIds": [
+    "earth-616"
+  ],
+  "firstAppearance": "As Flash Thompson, Amazing Fantasy #15 (1962). As Agent Venom, The Amazing Spider-Man #654 (2011).",
+  "creators": "Stan Lee and Steve Ditko created Flash Thompson. Dan Slott wrote the Agent Venom status quo."
+}

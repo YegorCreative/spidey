@@ -1,0 +1,17 @@
+{
+  "id": "2000-ultimate-comic",
+  "year": 2000,
+  "title": "Ultimate Spider-Man #1",
+  "summary": "Brian Michael Bendis and Mark Bagley restart Peter Parker for a new line.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "ultimate-spider-man-1"
+    },
+    {
+      "type": "universe",
+      "id": "ultimate"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "spider-man-far-from-home",
+  "title": "Spider-Man: Far From Home",
+  "year": 2019,
+  "releaseDate": "2019-07-02",
+  "tagline": "A school trip, a staged hero, and the story that gets Peter noticed.",
+  "summary": "Jon Watts sends Tom Holland’s Peter Parker to Europe, where Jake Gyllenhaal’s Quentin Beck performs the role of a hero. Mysterio’s illusion is the plot. The public secret comes after it.",
+  "universeId": "mcu",
+  "directorIds": [
+    "jon-watts"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tom-holland",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "mysterio",
+      "actorId": "jake-gyllenhaal"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [],
+  "status": "released",
+  "medium": "live-action",
+  "runtimeMinutes": 129
+}

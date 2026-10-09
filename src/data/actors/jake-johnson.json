@@ -1,0 +1,12 @@
+{
+  "id": "jake-johnson",
+  "name": "Jake Johnson",
+  "performance": "voice",
+  "summary": "Jake Johnson voices Peter B. Parker in the Spider-Verse films. That character is an older film variant, kept separate from the Earth-616 Peter Parker record.",
+  "primary": {
+    "identity": "Peter B. Parker",
+    "years": "2018, 2023",
+    "characterId": "peter-b-parker",
+    "universeId": "spider-verse-animated"
+  }
+}

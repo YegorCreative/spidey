@@ -1,0 +1,17 @@
+{
+  "id": "pavitr-prabhakar",
+  "name": "Pavitr Prabhakar",
+  "aliases": [
+    "Spider-Man India"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "A Spider-Man based in Mumbattan in the films and in the Spider-Man: India comics. He is not Peter Parker.",
+  "summary": "Pavitr Prabhakar is Spider-Man India. The 2004 comic miniseries introduced him. Karan Soni voices a film version in Across the Spider-Verse.",
+  "universeIds": [
+    "earth-50101",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Spider-Man: India #1 (2004).",
+  "creators": "Sharad Devarajan, Suresh Seetharaman, and Jeevan J. Kang."
+}

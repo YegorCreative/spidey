@@ -1,0 +1,17 @@
+{
+  "id": "2000-neversoft",
+  "year": 2000,
+  "title": "Spider-Man (2000)",
+  "summary": "Neversoft and Activision release a comic-inspired game before the Raimi films.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-2000"
+    },
+    {
+      "type": "creator",
+      "id": "neversoft"
+    }
+  ]
+}

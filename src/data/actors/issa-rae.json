@@ -1,0 +1,12 @@
+{
+  "id": "issa-rae",
+  "name": "Issa Rae",
+  "performance": "voice",
+  "summary": "Issa Rae voices Jessica Drew in Spider-Man: Across the Spider-Verse. The film version is a pregnant Spider-Woman and is not a Peter Parker variant.",
+  "primary": {
+    "identity": "Spider-Woman",
+    "years": "2023",
+    "characterId": "jessica-drew",
+    "universeId": "spider-verse-animated"
+  }
+}

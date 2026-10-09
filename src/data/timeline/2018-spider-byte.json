@@ -1,0 +1,17 @@
+{
+  "id": "2018-spider-byte",
+  "year": 2018,
+  "title": "Spider-Byte",
+  "summary": "Margo Kess debuts in Vault of Spiders #1.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "margo-kess"
+    },
+    {
+      "type": "universe",
+      "id": "earth-22191"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "daniel-kaluuya",
+  "name": "Daniel Kaluuya",
+  "performance": "voice",
+  "summary": "Daniel Kaluuya voices Hobie Brown, Spider-Punk, in Spider-Man: Across the Spider-Verse.",
+  "primary": {
+    "identity": "Spider-Punk",
+    "years": "2023",
+    "characterId": "hobie-brown",
+    "universeId": "spider-verse-animated"
+  }
+}

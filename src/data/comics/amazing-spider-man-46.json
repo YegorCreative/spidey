@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-46",
+  "title": "The Amazing Spider-Man",
+  "issue": "#46",
+  "year": 1967,
+  "coverDate": "March 1967",
+  "summary": "Herman Schultz debuts as the Shocker, a burglar who engineered his own way through walls.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "john-romita-sr"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "shocker"
+  ]
+}

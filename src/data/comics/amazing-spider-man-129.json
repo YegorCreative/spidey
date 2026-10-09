@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-129",
+  "title": "The Amazing Spider-Man",
+  "issue": "#129",
+  "year": 1974,
+  "coverDate": "February 1974",
+  "summary": "The Jackal debuts, and so does the Punisher. Miles Warren’s obsession will later produce the clones.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "gerry-conway"
+  ],
+  "artistIds": [
+    "ross-andru"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "jackal"
+  ]
+}

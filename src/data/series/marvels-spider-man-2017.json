@@ -1,0 +1,29 @@
+{
+  "id": "marvels-spider-man-2017",
+  "title": "Marvel’s Spider-Man",
+  "years": "2017–2020",
+  "yearStart": 2017,
+  "yearEnd": 2020,
+  "medium": "animated",
+  "network": "Disney XD",
+  "summary": "Robbie Daymond voices a Peter Parker who attends a science school and crosses paths with Miles Morales. The title matches Insomniac’s game. The series does not share that game’s continuity.",
+  "universeId": "marvel-spider-man-2017",
+  "seasons": 3,
+  "episodeNote": "Three seasons aired on Disney XD. This record does not lock a single episode total.",
+  "characterIds": [
+    "peter-parker",
+    "miles-morales"
+  ],
+  "cast": [
+    {
+      "actorId": "robbie-daymond",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "villainIds": [
+    "doctor-octopus",
+    "venom",
+    "vulture"
+  ]
+}

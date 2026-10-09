@@ -1,0 +1,12 @@
+{
+  "id": "jake-gyllenhaal",
+  "name": "Jake Gyllenhaal",
+  "performance": "live-action",
+  "summary": "Jake Gyllenhaal plays Quentin Beck and Mysterio in Spider-Man: Far From Home.",
+  "primary": {
+    "identity": "Mysterio",
+    "years": "2019",
+    "villainId": "mysterio",
+    "universeId": "mcu"
+  }
+}

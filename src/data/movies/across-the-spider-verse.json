@@ -16,6 +16,41 @@
       "actorId": "shameik-moore",
       "characterId": "miles-morales",
       "identity": "Spider-Man"
+    },
+    {
+      "actorId": "hailee-steinfeld",
+      "characterId": "gwen-stacy",
+      "identity": "Spider-Gwen"
+    },
+    {
+      "actorId": "oscar-isaac",
+      "characterId": "miguel-ohara",
+      "identity": "Spider-Man 2099"
+    },
+    {
+      "actorId": "daniel-kaluuya",
+      "characterId": "hobie-brown",
+      "identity": "Spider-Punk"
+    },
+    {
+      "actorId": "karan-soni",
+      "characterId": "pavitr-prabhakar",
+      "identity": "Spider-Man India"
+    },
+    {
+      "actorId": "issa-rae",
+      "characterId": "jessica-drew",
+      "identity": "Spider-Woman"
+    },
+    {
+      "actorId": "amandla-stenberg",
+      "characterId": "margo-kess",
+      "identity": "Spider-Byte"
+    },
+    {
+      "actorId": "jake-johnson",
+      "characterId": "peter-b-parker",
+      "identity": "Spider-Man"
     }
   ],
   "antagonists": [],
@@ -29,7 +64,14 @@
   ],
   "characterIds": [
     "gwen-stacy",
-    "miguel-ohara"
+    "miguel-ohara",
+    "hobie-brown",
+    "pavitr-prabhakar",
+    "jessica-drew",
+    "margo-kess",
+    "peter-b-parker"
   ],
-  "runtimeMinutes": 140
+  "runtimeMinutes": 140,
+  "status": "released",
+  "medium": "animated"
 }

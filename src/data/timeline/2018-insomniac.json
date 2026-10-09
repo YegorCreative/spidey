@@ -1,0 +1,21 @@
+{
+  "id": "2018-insomniac",
+  "year": 2018,
+  "title": "Marvel’s Spider-Man",
+  "summary": "Insomniac and Sony release an open-world Peter Parker on PlayStation 4.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "marvels-spider-man-2018"
+    },
+    {
+      "type": "creator",
+      "id": "insomniac-games"
+    },
+    {
+      "type": "universe",
+      "id": "insomniac"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "id": "shocker",
+  "name": "Shocker",
+  "alterEgo": "Herman Schultz",
+  "accent": "sand",
+  "summary": "A hired thief in a padded suit whose gauntlets fire concentrated vibration. He is a recurring Spider-Man criminal, more often a contractor than the architect of a saga.",
+  "relation": "Earth-616 Spider-Man rogue.",
+  "firstAppearance": "The Amazing Spider-Man #46 (1967).",
+  "creators": "Stan Lee and John Romita Sr.",
+  "powers": "Vibration gauntlets built into a shock-absorbing suit.",
+  "origin": "Schultz invents the gauntlets and turns to robbery.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

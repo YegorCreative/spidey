@@ -1,0 +1,21 @@
+{
+  "id": "2014-spider-verse-comic",
+  "year": 2014,
+  "title": "Spider-Verse",
+  "summary": "Marvel’s comic event gathers spider-heroes against the Inheritors. Morlun is part of that hunt.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "villain",
+      "id": "morlun"
+    },
+    {
+      "type": "character",
+      "id": "peter-parker"
+    },
+    {
+      "type": "character",
+      "id": "miles-morales"
+    }
+  ]
+}

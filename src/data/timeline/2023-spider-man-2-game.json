@@ -1,0 +1,21 @@
+{
+  "id": "2023-spider-man-2-game",
+  "year": 2023,
+  "title": "Marvel’s Spider-Man 2",
+  "summary": "Peter and Miles share Insomniac’s sequel on PlayStation 5.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "marvels-spider-man-2"
+    },
+    {
+      "type": "villain",
+      "id": "venom"
+    },
+    {
+      "type": "villain",
+      "id": "kraven"
+    }
+  ]
+}

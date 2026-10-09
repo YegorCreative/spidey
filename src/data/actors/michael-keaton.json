@@ -1,0 +1,12 @@
+{
+  "id": "michael-keaton",
+  "name": "Michael Keaton",
+  "performance": "live-action",
+  "summary": "Michael Keaton plays Adrian Toomes and the Vulture in Spider-Man: Homecoming.",
+  "primary": {
+    "identity": "Vulture",
+    "years": "2017",
+    "villainId": "vulture",
+    "universeId": "mcu"
+  }
+}

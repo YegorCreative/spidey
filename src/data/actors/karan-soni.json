@@ -1,0 +1,12 @@
+{
+  "id": "karan-soni",
+  "name": "Karan Soni",
+  "performance": "voice",
+  "summary": "Karan Soni voices Pavitr Prabhakar in Spider-Man: Across the Spider-Verse.",
+  "primary": {
+    "identity": "Spider-Man India",
+    "years": "2023",
+    "characterId": "pavitr-prabhakar",
+    "universeId": "spider-verse-animated"
+  }
+}

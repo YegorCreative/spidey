@@ -1,0 +1,17 @@
+{
+  "id": "2011-miles",
+  "year": 2011,
+  "title": "Miles Morales",
+  "summary": "Miles becomes Spider-Man in Ultimate Fallout #4.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "ultimate-fallout-4"
+    },
+    {
+      "type": "character",
+      "id": "miles-morales"
+    }
+  ]
+}

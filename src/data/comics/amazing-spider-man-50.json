@@ -1,0 +1,22 @@
+{
+  "id": "amazing-spider-man-50",
+  "title": "The Amazing Spider-Man",
+  "issue": "#50",
+  "year": 1967,
+  "coverDate": "July 1967",
+  "summary": "Peter briefly walks away from Spider-Man. The same issue introduces Wilson Fisk, the Kingpin.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "john-romita-sr"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "kingpin"
+  ],
+  "arc": "Spider-Man No More"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "spider-ham",
+  "name": "Peter Porker",
+  "aliases": [
+    "Spider-Ham"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "An anthropomorphic animal Spider-Man. He is not a human Peter Parker variant.",
+  "summary": "Peter Porker, the Spectacular Spider-Ham, is a cartoon pig with spider powers. John Mulaney voices him in Into the Spider-Verse.",
+  "universeIds": [
+    "earth-8311",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Marvel Tails Starring Peter Porker, the Spectacular Spider-Ham #1 (1983).",
+  "creators": "Tom DeFalco and Mark Armstrong."
+}

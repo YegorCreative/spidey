@@ -1,0 +1,15 @@
+{
+  "id": "morlun",
+  "name": "Morlun",
+  "alterEgo": "No civilian name in common use",
+  "accent": "rust",
+  "summary": "Morlun is an Inheritor who hunts people tied to the spider totem and feeds on their life force. He is a Spider-Man villain, especially in J. Michael Straczynski’s run and the later Spider-Verse comics. He is not a street criminal.",
+  "relation": "Spider-Man villain. A hunter of spider-totems.",
+  "firstAppearance": "The Amazing Spider-Man (vol. 2) #30 (2001).",
+  "creators": "J. Michael Straczynski and John Romita Jr.",
+  "powers": "Superhuman strength, durability, and the ability to drain the life force of spider-totems.",
+  "origin": "One of a family of Inheritors. His arrival reframes Spider-Man as prey in a larger hunt.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

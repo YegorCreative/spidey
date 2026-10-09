@@ -1,0 +1,12 @@
+{
+  "id": "oscar-isaac",
+  "name": "Oscar Isaac",
+  "performance": "voice",
+  "summary": "Oscar Isaac voices Miguel O’Hara in Spider-Man: Across the Spider-Verse.",
+  "primary": {
+    "identity": "Spider-Man 2099",
+    "years": "2023",
+    "characterId": "miguel-ohara",
+    "universeId": "spider-verse-animated"
+  }
+}

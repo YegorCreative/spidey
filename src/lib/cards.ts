@@ -1,4 +1,4 @@
-import { getCatalog, hrefFor, performanceLabel } from "./catalog";
+import { classificationLabel, getCatalog, hrefFor, performanceLabel } from "./catalog";
 import type { Accent, MediaImage, MediaSet } from "./types";
 
 export interface ArchiveCard {
@@ -81,7 +81,7 @@ export function spiderCards(): ArchiveCard[] {
     .filter((character) => character.kind === "spider-person")
     .map((character) => ({
       href: hrefFor("character", character.id),
-      eyebrow: character.aliases[0] ?? "Spider-Person",
+      eyebrow: classificationLabel(character.classification, character.kind),
       title: character.name,
       meta: character.firstAppearance,
       summary: character.summary,

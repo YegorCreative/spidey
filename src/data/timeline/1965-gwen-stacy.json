@@ -1,0 +1,17 @@
+{
+  "id": "1965-gwen-stacy",
+  "year": 1965,
+  "title": "Gwen Stacy",
+  "summary": "Gwen Stacy meets Peter Parker in The Amazing Spider-Man #31. She is not Spider-Gwen yet.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-31"
+    },
+    {
+      "type": "character",
+      "id": "gwen-stacy"
+    }
+  ]
+}

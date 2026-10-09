@@ -1,0 +1,12 @@
+{
+  "id": "alfred-molina",
+  "name": "Alfred Molina",
+  "performance": "live-action",
+  "summary": "Alfred Molina plays Otto Octavius in Spider-Man 2 and returns as Doctor Octopus in Spider-Man: No Way Home.",
+  "primary": {
+    "identity": "Doctor Octopus",
+    "years": "2004, 2021",
+    "villainId": "doctor-octopus",
+    "universeId": "raimi"
+  }
+}

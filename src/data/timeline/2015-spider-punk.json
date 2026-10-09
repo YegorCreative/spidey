@@ -1,0 +1,17 @@
+{
+  "id": "2015-spider-punk",
+  "year": 2015,
+  "title": "Spider-Punk",
+  "summary": "Hobie Brown’s Spider-Punk debuts in the comics.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "hobie-brown"
+    },
+    {
+      "type": "universe",
+      "id": "earth-138"
+    }
+  ]
+}

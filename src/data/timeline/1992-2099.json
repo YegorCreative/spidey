@@ -1,0 +1,17 @@
+{
+  "id": "1992-2099",
+  "year": 1992,
+  "title": "Spider-Man 2099",
+  "summary": "Miguel O’Hara debuts in his own series.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "miguel-ohara"
+    },
+    {
+      "type": "universe",
+      "id": "earth-928"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "id": "2025-yfns",
+  "year": 2025,
+  "title": "Your Friendly Neighborhood Spider-Man",
+  "summary": "Disney+ premieres an animated retelling. It is not the live-action MCU.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "your-friendly-neighborhood-spider-man"
+    },
+    {
+      "type": "actor",
+      "id": "hudson-thames"
+    }
+  ]
+}

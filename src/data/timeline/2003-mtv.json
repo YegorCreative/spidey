@@ -1,0 +1,13 @@
+{
+  "id": "2003-mtv",
+  "year": 2003,
+  "title": "MTV’s Spider-Man",
+  "summary": "Neil Patrick Harris voices a CGI series that is not part of the Raimi films.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "spider-man-the-new-animated-series"
+    }
+  ]
+}

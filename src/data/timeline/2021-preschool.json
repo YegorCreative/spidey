@@ -1,0 +1,13 @@
+{
+  "id": "2021-preschool",
+  "year": 2021,
+  "title": "Spidey and His Amazing Friends",
+  "summary": "Disney Junior starts a preschool series with Peter, Miles, and Gwen.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "spidey-and-his-amazing-friends"
+    }
+  ]
+}

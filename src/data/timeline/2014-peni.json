@@ -1,0 +1,13 @@
+{
+  "id": "2014-peni",
+  "year": 2014,
+  "title": "Peni Parker",
+  "summary": "SP//dr debuts in Edge of Spider-Verse #5.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "peni-parker"
+    }
+  ]
+}

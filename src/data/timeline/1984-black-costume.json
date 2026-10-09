@@ -1,0 +1,21 @@
+{
+  "id": "1984-black-costume",
+  "year": 1984,
+  "title": "The black costume",
+  "summary": "Secret Wars #8 gives Spider-Man the alien suit that leads to Venom.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "secret-wars-8"
+    },
+    {
+      "type": "suit",
+      "id": "black-suit"
+    },
+    {
+      "type": "character",
+      "id": "peter-parker"
+    }
+  ]
+}

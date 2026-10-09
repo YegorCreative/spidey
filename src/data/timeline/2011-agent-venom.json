@@ -1,0 +1,17 @@
+{
+  "id": "2011-agent-venom",
+  "year": 2011,
+  "title": "Agent Venom",
+  "summary": "Flash Thompson bonds with the Venom symbiote. He is not another Peter.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "flash-thompson"
+    },
+    {
+      "type": "villain",
+      "id": "venom"
+    }
+  ]
+}

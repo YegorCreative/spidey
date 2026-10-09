@@ -1,0 +1,27 @@
+{
+  "id": "spider-man-and-his-amazing-friends",
+  "title": "Spider-Man and His Amazing Friends",
+  "years": "1981–1983",
+  "yearStart": 1981,
+  "yearEnd": 1983,
+  "medium": "animated",
+  "network": "NBC",
+  "summary": "Peter Parker shares the series with Iceman and Firestar. Dan Gilvezan voices Spider-Man. Firestar was created for television and is not a Spider-Man villain.",
+  "universeId": "amazing-friends",
+  "seasons": 3,
+  "episodes": 24,
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "dan-gilvezan",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "villainIds": [
+    "green-goblin",
+    "doctor-octopus"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "id": "drake-bell",
+  "name": "Drake Bell",
+  "performance": "voice",
+  "summary": "Drake Bell voices Peter Parker in Disney XD’s Ultimate Spider-Man.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "2012–2017",
+    "characterId": "peter-parker",
+    "universeId": "ultimate-animated"
+  }
+}

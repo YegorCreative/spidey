@@ -4,7 +4,11 @@ import {
   comicsByCreator,
   comicsWithCharacter,
   comicsWithVillain,
+  classificationLabel,
   formatDate,
+  gamesByDeveloper,
+  gamesWithCharacter,
+  gamesWithVillain,
   getCatalog,
   hrefFor,
   moviesByDirector,
@@ -14,12 +18,17 @@ import {
   performanceLabel,
   seriesWithActor,
   seriesWithCharacter,
+  seriesWithVillain,
   suitsForCharacter,
 } from "./catalog";
 import { href } from "./paths";
-import type { Actor, Character, Comic, Creator, LinkItem, Movie, ProfileModel, Series, Suit, Universe, Villain } from "./types";
+import type { Actor, Character, Comic, Creator, Game, LinkItem, Movie, ProfileModel, Series, SourceNote, Suit, Universe, Villain } from "./types";
 
 const catalog = getCatalog();
+
+function cited(notes?: SourceNote[]): ProfileModel["sources"] {
+  return notes?.map((note) => ({ label: note.label, href: note.url }));
+}
 
 function group(title: string, links: LinkItem[]): ProfileModel["groups"] {
   const unique = new Map<string, LinkItem>();
@@ -41,10 +50,17 @@ function movieProfile(movie: Movie): ProfileModel {
     lede: movie.summary,
     accent: universe.accent,
     facts: [
-      { label: "Released", value: formatDate(movie.releaseDate) },
+      {
+        label: movie.status === "upcoming" ? "Scheduled release" : "Released",
+        value: formatDate(movie.releaseDate),
+      },
+      { label: "Status", value: movie.status === "upcoming" ? "Upcoming" : "Released" },
+      { label: "Format", value: movie.medium === "animated" ? "Animation" : "Live-action" },
       { label: "Universe", value: universe.name },
       ...(movie.runtimeMinutes ? [{ label: "Runtime", value: `${movie.runtimeMinutes} min` }] : []),
+      ...(movie.releaseNote ? [{ label: "Date note", value: movie.releaseNote }] : []),
     ],
+    sources: cited(movie.sources),
     groups: [
       ...group(
         "Spider-People",
@@ -105,6 +121,84 @@ function movieProfile(movie: Movie): ProfileModel {
       ...group("Universe", [
         { href: hrefFor("universe", universe.id), label: universe.name, meta: universe.designation },
       ]),
+      ...group(
+        "Related games",
+        catalog.games
+          .filter((game) => game.universeId === movie.universeId)
+          .map((game) => ({ href: hrefFor("game", game.id), label: game.title, meta: String(game.year) })),
+      ),
+    ],
+  };
+}
+
+function gameProfile(game: Game): ProfileModel {
+  const universe = catalog.universe(game.universeId);
+  const categoryLabels: Record<Game["categories"][number], string> = {
+    classic: "Classic",
+    "movie-tie-in": "Movie tie-in",
+    "open-world": "Open world",
+    insomniac: "Insomniac",
+    multiverse: "Multiverse",
+    mobile: "Mobile",
+  };
+  return {
+    crumbs: [
+      { href: href("/"), label: "Home" },
+      { href: href("/games/"), label: "Games" },
+      { label: game.title },
+    ],
+    kicker: String(game.year),
+    title: game.title,
+    lede: game.summary,
+    accent: universe.accent,
+    facts: [
+      { label: "Release", value: game.releaseLabel },
+      { label: "Publisher", value: game.publisher },
+      { label: "Platforms", value: game.platforms.join(", ") },
+      { label: "Categories", value: game.categories.map((item) => categoryLabels[item]).join(", ") },
+      { label: "Universe", value: universe.name },
+      { label: "Gameplay", value: game.gameplay },
+    ],
+    sources: cited(game.sources),
+    groups: [
+      ...group(
+        "Developers",
+        game.developerIds.map((id) => {
+          const creator = catalog.creator(id);
+          return { href: hrefFor("creator", creator.id), label: creator.name, meta: creator.roles.join(", ") };
+        }),
+      ),
+      ...group(
+        "Playable heroes",
+        game.playableCharacterIds.map((id) => {
+          const character = catalog.character(id);
+          return { href: hrefFor("character", character.id), label: character.name, meta: character.aliases[0] };
+        }),
+      ),
+      ...group(
+        "Characters",
+        (game.characterIds ?? []).map((id) => {
+          const character = catalog.character(id);
+          return { href: hrefFor("character", character.id), label: character.name };
+        }),
+      ),
+      ...group(
+        "Villains",
+        game.villainIds.map((id) => {
+          const villain = catalog.villain(id);
+          return { href: hrefFor("villain", villain.id), label: villain.name, meta: villain.alterEgo };
+        }),
+      ),
+      ...group("Universe", [
+        { href: hrefFor("universe", universe.id), label: universe.name, meta: universe.designation },
+      ]),
+      ...group(
+        "Related games",
+        game.relatedGameIds.map((id) => {
+          const related = catalog.game(id);
+          return { href: hrefFor("game", related.id), label: related.title, meta: String(related.year) };
+        }),
+      ),
     ],
   };
 }
@@ -119,12 +213,16 @@ function seriesProfile(show: Series): ProfileModel {
     kicker: show.medium === "animated" ? "Animated series" : "Live-action series",
     title: show.title,
     lede: show.summary,
-    accent: "teal",
+    accent: show.universeId ? catalog.universe(show.universeId).accent : "teal",
     facts: [
       { label: "Years", value: show.years },
+      ...(show.seasons !== undefined ? [{ label: "Seasons", value: String(show.seasons) }] : []),
+      ...(show.episodes !== undefined ? [{ label: "Episodes", value: String(show.episodes) }] : []),
+      ...(show.episodeNote ? [{ label: "Episode note", value: show.episodeNote }] : []),
       ...(show.network ? [{ label: "Network", value: show.network }] : []),
       { label: "Medium", value: show.medium === "animated" ? "Animation" : "Live-action" },
     ],
+    sources: cited(show.sources),
     groups: [
       ...group(
         "Cast",
@@ -143,6 +241,19 @@ function seriesProfile(show: Series): ProfileModel {
           const character = catalog.character(id);
           return { href: hrefFor("character", character.id), label: character.name };
         }),
+      ),
+      ...group(
+        "Villains",
+        (show.villainIds ?? []).map((id) => {
+          const villain = catalog.villain(id);
+          return { href: hrefFor("villain", villain.id), label: villain.name, meta: villain.alterEgo };
+        }),
+      ),
+      ...group(
+        "Universe",
+        show.universeId
+          ? [{ href: hrefFor("universe", show.universeId), label: catalog.universe(show.universeId).name, meta: catalog.universe(show.universeId).designation }]
+          : [],
       ),
     ],
   };
@@ -270,14 +381,18 @@ function characterProfile(character: Character): ProfileModel {
       },
       { label: character.name },
     ],
-    kicker: character.kind === "spider-person" ? "Spider-Person" : "Character",
+    kicker: classificationLabel(character.classification, character.kind),
     title: character.name,
     lede: character.summary,
     accent: catalog.universe(character.universeIds[0]).accent,
     facts: [
+      { label: "Classification", value: classificationLabel(character.classification, character.kind) },
       ...(character.aliases.length ? [{ label: "Also known as", value: character.aliases.join(", ") }] : []),
+      ...(character.distinction ? [{ label: "Distinction", value: character.distinction }] : []),
       ...(character.firstAppearance ? [{ label: "First appearance", value: character.firstAppearance }] : []),
+      ...(character.creators ? [{ label: "Creators", value: character.creators }] : []),
     ],
+    sources: cited(character.sources),
     groups: [
       ...group(
         "Universes",
@@ -326,6 +441,14 @@ function characterProfile(character: Character): ProfileModel {
           meta: suit.era,
         })),
       ),
+      ...group(
+        "Games",
+        gamesWithCharacter(character.id).map((game) => ({
+          href: hrefFor("game", game.id),
+          label: game.title,
+          meta: String(game.year),
+        })),
+      ),
     ],
   };
 }
@@ -337,14 +460,19 @@ function villainProfile(villain: Villain): ProfileModel {
       { href: href("/villains/"), label: "Villains" },
       { label: villain.name },
     ],
-    kicker: "Rogue",
+    kicker: villain.relation ? "Archive entry" : "Rogue",
     title: villain.name,
     lede: villain.summary,
     accent: villain.accent,
     facts: [
-      { label: "Alter ego", value: villain.alterEgo },
+      { label: "Identity", value: villain.alterEgo },
+      ...(villain.relation ? [{ label: "Relationship", value: villain.relation }] : []),
       ...(villain.firstAppearance ? [{ label: "First appearance", value: villain.firstAppearance }] : []),
+      ...(villain.creators ? [{ label: "Creators", value: villain.creators }] : []),
+      ...(villain.powers ? [{ label: "Powers", value: villain.powers }] : []),
+      ...(villain.origin ? [{ label: "Origin", value: villain.origin }] : []),
     ],
+    sources: cited(villain.sources),
     groups: [
       ...group(
         "Actors",
@@ -371,6 +499,29 @@ function villainProfile(villain: Villain): ProfileModel {
         })),
       ),
       ...group(
+        "Series",
+        seriesWithVillain(villain.id).map((show) => ({
+          href: hrefFor("series", show.id),
+          label: show.title,
+          meta: show.years,
+        })),
+      ),
+      ...group(
+        "Games",
+        gamesWithVillain(villain.id).map((game) => ({
+          href: hrefFor("game", game.id),
+          label: game.title,
+          meta: String(game.year),
+        })),
+      ),
+      ...group(
+        "Related characters",
+        (villain.relatedCharacterIds ?? []).map((id) => {
+          const character = catalog.character(id);
+          return { href: hrefFor("character", character.id), label: character.name };
+        }),
+      ),
+      ...group(
         "Universes",
         villain.universeIds.map((id) => {
           const universe = catalog.universe(id);
@@ -388,6 +539,7 @@ function universeProfile(universe: Universe): ProfileModel {
   const relatedCharacters = catalog.characters.filter((character) => character.universeIds.includes(universe.id));
   const relatedVillains = catalog.villains.filter((villain) => villain.universeIds.includes(universe.id));
   const relatedSuits = catalog.suits.filter((suit) => suit.universeIds.includes(universe.id));
+  const relatedGames = catalog.games.filter((game) => game.universeId === universe.id);
   return {
     crumbs: [
       { href: href("/"), label: "Home" },
@@ -410,6 +562,10 @@ function universeProfile(universe: Universe): ProfileModel {
       ...group(
         "Series",
         relatedSeries.map((show) => ({ href: hrefFor("series", show.id), label: show.title, meta: show.years })),
+      ),
+      ...group(
+        "Games",
+        relatedGames.map((game) => ({ href: hrefFor("game", game.id), label: game.title, meta: String(game.year) })),
       ),
       ...group(
         "Comics",
@@ -500,12 +656,21 @@ function creatorProfile(creator: Creator): ProfileModel {
           meta: String(movie.year),
         })),
       ),
+      ...group(
+        "Games",
+        gamesByDeveloper(creator.id).map((game) => ({
+          href: hrefFor("game", game.id),
+          label: game.title,
+          meta: String(game.year),
+        })),
+      ),
     ],
   };
 }
 
 export const profiles = {
   movie: movieProfile,
+  game: gameProfile,
   series: seriesProfile,
   comic: comicProfile,
   actor: actorProfile,

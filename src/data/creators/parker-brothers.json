@@ -1,0 +1,9 @@
+{
+  "id": "parker-brothers",
+  "name": "Parker Brothers",
+  "roles": [
+    "Developer",
+    "Publisher"
+  ],
+  "summary": "Toy company that developed and published the 1982 Spider-Man game for the Atari 2600."
+}

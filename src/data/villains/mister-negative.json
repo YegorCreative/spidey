@@ -1,0 +1,16 @@
+{
+  "id": "mister-negative",
+  "name": "Mister Negative",
+  "alterEgo": "Martin Li",
+  "accent": "slate",
+  "summary": "Martin Li leads a charity in public and a criminal inner circle as Mister Negative. He is a Spider-Man villain from the Brand New Day era. The Insomniac games use their own version of him on Earth-1048.",
+  "relation": "Spider-Man villain, with a separate game version.",
+  "firstAppearance": "The Amazing Spider-Man #546 (2008).",
+  "creators": "Dan Slott and Steve McNiven.",
+  "powers": "A corrupting touch that reverses a person’s inner nature, plus control of a criminal crew.",
+  "origin": "Li’s philanthropic life splits from a dark persona born out of an experimental accident.",
+  "universeIds": [
+    "earth-616",
+    "insomniac"
+  ]
+}

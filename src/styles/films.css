@@ -1,5 +1,6 @@
 .films {
   position: relative;
+  overflow-x: clip;
   padding-bottom: 4.5rem;
   background:
     radial-gradient(520px 280px at 12% 8%, rgba(255, 77, 77, 0.16), transparent 70%),

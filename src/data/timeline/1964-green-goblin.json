@@ -1,0 +1,17 @@
+{
+  "id": "1964-green-goblin",
+  "year": 1964,
+  "title": "Green Goblin",
+  "summary": "Norman Osborn’s Goblin persona debuts in The Amazing Spider-Man #14.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-14"
+    },
+    {
+      "type": "villain",
+      "id": "green-goblin"
+    }
+  ]
+}

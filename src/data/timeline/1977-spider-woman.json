@@ -1,0 +1,13 @@
+{
+  "id": "1977-spider-woman",
+  "year": 1977,
+  "title": "Spider-Woman",
+  "summary": "Jessica Drew debuts in Marvel Spotlight #32. She is her own hero.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "character",
+      "id": "jessica-drew"
+    }
+  ]
+}

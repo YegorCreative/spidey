@@ -1,0 +1,17 @@
+{
+  "id": "2002-game",
+  "year": 2002,
+  "title": "Spider-Man game (2002)",
+  "summary": "Treyarch’s tie-in ships with Raimi’s first film.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-2002-game"
+    },
+    {
+      "type": "movie",
+      "id": "spider-man-2002"
+    }
+  ]
+}

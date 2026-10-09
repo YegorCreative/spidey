@@ -1,0 +1,21 @@
+{
+  "id": "1973-gwen-dies",
+  "year": 1973,
+  "title": "The Night Gwen Stacy Died",
+  "summary": "Gwen Stacy is killed in The Amazing Spider-Man #121.",
+  "kind": "comic",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-121"
+    },
+    {
+      "type": "character",
+      "id": "gwen-stacy"
+    },
+    {
+      "type": "villain",
+      "id": "green-goblin"
+    }
+  ]
+}

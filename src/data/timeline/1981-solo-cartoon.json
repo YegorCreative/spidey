@@ -1,0 +1,13 @@
+{
+  "id": "1981-solo-cartoon",
+  "year": 1981,
+  "title": "Spider-Man syndicated cartoon",
+  "summary": "A separate 1981 solo cartoon airs in syndication.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "spider-man-1981"
+    }
+  ]
+}

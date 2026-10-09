@@ -1,0 +1,16 @@
+{
+  "id": "peter-b-parker",
+  "name": "Peter B. Parker",
+  "aliases": [
+    "Spider-Man"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "An older Peter Parker created for the Spider-Verse films. He is not the Earth-616 Peter Parker record on this site.",
+  "summary": "Peter B. Parker is the weary mentor Miles meets in Into the Spider-Verse. Jake Johnson voices him. His story belongs to the animated films.",
+  "universeIds": [
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Spider-Man: Into the Spider-Verse (2018).",
+  "creators": "The character was created for the film."
+}

@@ -1,0 +1,37 @@
+{
+  "id": "spider-man-2-game",
+  "title": "Spider-Man 2",
+  "year": 2004,
+  "tagline": "The film’s Doc Ock story, in a city you can cross on a web line.",
+  "releaseLabel": "2004",
+  "developerIds": [
+    "treyarch"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 2",
+    "Xbox",
+    "GameCube",
+    "Windows",
+    "PSP",
+    "Nintendo DS",
+    "Game Boy Advance"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "doctor-octopus"
+  ],
+  "universeId": "raimi",
+  "summary": "The home-console game adapts Spider-Man 2 and is remembered for letting the player swing across an open Manhattan. Handheld versions are simpler adaptations by other teams. Treyarch made the main console game.",
+  "gameplay": "Open-borough web swinging on the home consoles, with physics-based swing speed and missions that retell Otto Octavius’s story.",
+  "relatedGameIds": [
+    "spider-man-2002-game",
+    "spider-man-3-game"
+  ],
+  "categories": [
+    "movie-tie-in",
+    "open-world"
+  ]
+}

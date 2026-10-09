@@ -1,0 +1,21 @@
+{
+  "id": "your-friendly-neighborhood-spider-man",
+  "title": "Your Friendly Neighborhood Spider-Man",
+  "years": "2025–",
+  "yearStart": 2025,
+  "medium": "animated",
+  "network": "Disney+",
+  "summary": "An animated retelling of Peter Parker’s early years on Disney+. Hudson Thames voices him. The series is not the live-action Marvel Cinematic Universe.",
+  "universeId": "yfns",
+  "episodeNote": "Season 1 premiered in 2025. Later seasons are not marked complete in this record.",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "hudson-thames",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ]
+}

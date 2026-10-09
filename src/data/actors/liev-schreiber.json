@@ -1,0 +1,12 @@
+{
+  "id": "liev-schreiber",
+  "name": "Liev Schreiber",
+  "performance": "voice",
+  "summary": "Liev Schreiber voices Wilson Fisk, the Kingpin, in Spider-Man: Into the Spider-Verse.",
+  "primary": {
+    "identity": "Kingpin",
+    "years": "2018",
+    "villainId": "kingpin",
+    "universeId": "spider-verse-animated"
+  }
+}

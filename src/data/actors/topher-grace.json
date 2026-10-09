@@ -1,0 +1,12 @@
+{
+  "id": "topher-grace",
+  "name": "Topher Grace",
+  "performance": "live-action",
+  "summary": "Topher Grace plays Eddie Brock and Venom in Spider-Man 3.",
+  "primary": {
+    "identity": "Venom",
+    "years": "2007",
+    "villainId": "venom",
+    "universeId": "raimi"
+  }
+}

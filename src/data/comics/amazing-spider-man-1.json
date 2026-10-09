@@ -1,0 +1,22 @@
+{
+  "id": "amazing-spider-man-1",
+  "title": "The Amazing Spider-Man",
+  "issue": "#1",
+  "year": 1963,
+  "coverDate": "March 1963",
+  "summary": "Peter Parker’s monthly series begins. The Chameleon is the first person in the title to challenge him in costume.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "steve-ditko"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "chameleon"
+  ],
+  "arc": "Chameleon"
+}

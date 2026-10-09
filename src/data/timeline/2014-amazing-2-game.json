@@ -1,0 +1,17 @@
+{
+  "id": "2014-amazing-2-game",
+  "year": 2014,
+  "title": "The Amazing Spider-Man 2 game",
+  "summary": "Beenox’s last film tie-in in this shelf.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "the-amazing-spider-man-2-game"
+    },
+    {
+      "type": "movie",
+      "id": "the-amazing-spider-man-2"
+    }
+  ]
+}

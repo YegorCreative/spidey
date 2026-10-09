@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-14",
+  "title": "The Amazing Spider-Man",
+  "issue": "#14",
+  "year": 1964,
+  "coverDate": "July 1964",
+  "summary": "The Green Goblin flies into Spider-Man’s life for the first time, already performing for an audience.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "steve-ditko"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "green-goblin"
+  ]
+}

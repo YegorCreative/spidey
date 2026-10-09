@@ -6,12 +6,11 @@ interface Props {
 const { id } = Astro.props;
 
 const kind =
-  id === "spider-man-2002" ? "raimi"
-  : id === "the-amazing-spider-man" ? "webb"
-  : id === "spider-man-homecoming" ? "mcu"
-  : id === "into-the-spider-verse" ? "into"
-  : id === "spider-man-no-way-home" ? "nwh"
-  : id === "across-the-spider-verse" ? "across"
+  id.includes("no-way") ? "nwh"
+  : id.includes("amazing") ? "webb"
+  : id.includes("homecoming") || id.includes("far-from") || id.includes("brand-new") ? "mcu"
+  : id.includes("into") ? "into"
+  : id.includes("beyond") || id.includes("across") ? "across"
   : "raimi";
 ---
 <div class:list={["reel", `reel--${kind}`]} aria-hidden="true">

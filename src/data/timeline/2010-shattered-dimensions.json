@@ -1,0 +1,21 @@
+{
+  "id": "2010-shattered-dimensions",
+  "year": 2010,
+  "title": "Shattered Dimensions",
+  "summary": "Beenox sends four Spider-Men after pieces of a broken tablet.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-shattered-dimensions"
+    },
+    {
+      "type": "character",
+      "id": "miguel-ohara"
+    },
+    {
+      "type": "character",
+      "id": "spider-man-noir"
+    }
+  ]
+}

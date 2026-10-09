@@ -16,5 +16,8 @@
       "characterId": "peter-parker",
       "identity": "Spider-Man"
     }
-  ]
+  ],
+  "universeId": "tas-1994",
+  "seasons": 5,
+  "episodes": 65
 }

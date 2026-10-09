@@ -1,0 +1,16 @@
+{
+  "id": "rhino",
+  "name": "Rhino",
+  "alterEgo": "Aleksei Sytsevich",
+  "accent": "sand",
+  "summary": "Aleksei Sytsevich is bonded to a rhino-shaped armor and used as a blunt instrument against Spider-Man. He remains a core member of the rogues’ gallery and also appears in Insomniac’s games.",
+  "relation": "Core Spider-Man rogue.",
+  "firstAppearance": "The Amazing Spider-Man #41 (1966).",
+  "creators": "Stan Lee and John Romita Sr.",
+  "powers": "Super strength and durability from the rhino suit, which he cannot easily remove.",
+  "origin": "A hired muscle whose experimental suit became permanent.",
+  "universeIds": [
+    "earth-616",
+    "insomniac"
+  ]
+}

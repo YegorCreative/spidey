@@ -1,0 +1,20 @@
+{
+  "id": "amazing-spider-man-31",
+  "title": "The Amazing Spider-Man",
+  "issue": "#31",
+  "year": 1965,
+  "coverDate": "December 1965",
+  "summary": "Gwen Stacy enters Peter Parker’s college life. She is not yet a spider-hero in this issue.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "stan-lee"
+  ],
+  "artistIds": [
+    "steve-ditko"
+  ],
+  "characterIds": [
+    "peter-parker",
+    "gwen-stacy"
+  ],
+  "villainIds": []
+}

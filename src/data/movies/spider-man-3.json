@@ -1,0 +1,40 @@
+{
+  "id": "spider-man-3",
+  "title": "Spider-Man 3",
+  "year": 2007,
+  "releaseDate": "2007-05-04",
+  "tagline": "A black suit, a new Venom, and the man who killed Ben Parker.",
+  "summary": "The third Raimi film piles the symbiote, Eddie Brock, and Flint Marko onto Peter’s life at once. Tobey Maguire stays Spider-Man. Topher Grace and Thomas Haden Church play Venom and Sandman.",
+  "universeId": "raimi",
+  "directorIds": [
+    "sam-raimi"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tobey-maguire",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "venom",
+      "actorId": "topher-grace"
+    },
+    {
+      "villainId": "sandman",
+      "actorId": "thomas-haden-church"
+    }
+  ],
+  "suitIds": [
+    "classic",
+    "black-suit"
+  ],
+  "comicIds": [
+    "amazing-spider-man-300",
+    "secret-wars-8"
+  ],
+  "status": "released",
+  "medium": "live-action",
+  "runtimeMinutes": 139
+}

@@ -1,0 +1,16 @@
+{
+  "id": "tombstone",
+  "name": "Tombstone",
+  "alterEgo": "Lonnie Lincoln",
+  "accent": "slate",
+  "summary": "Lonnie Lincoln is a nearly invulnerable mob enforcer in Spider-Man’s New York. He is a crime figure in the comics and a presence in The Spectacular Spider-Man, not a film lead in this archive.",
+  "relation": "Spider-Man underworld antagonist.",
+  "firstAppearance": "Web of Spider-Man #36 (1988).",
+  "creators": "Gerry Conway and Alex Saviuk.",
+  "powers": "Superhuman strength and skin hardened to a chalky near-invulnerability.",
+  "origin": "A Harlem criminal whose albino appearance and durability made him an enforcer.",
+  "universeIds": [
+    "earth-616",
+    "spectacular"
+  ]
+}

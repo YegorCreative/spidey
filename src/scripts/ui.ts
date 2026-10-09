@@ -138,3 +138,55 @@ if (filter) {
     apply(initial);
   }
 }
+
+document.querySelectorAll<HTMLElement>("[data-filter-root]").forEach((root) => {
+  const items = [...root.querySelectorAll<HTMLElement>("[data-filter-item]")];
+  const eras = [...root.querySelectorAll<HTMLElement>("[data-filter-era]")];
+  const empty = root.querySelector<HTMLElement>("[data-filter-empty]");
+  const state = new Map<string, string>();
+
+  const apply = () => {
+    let visible = 0;
+    for (const item of items) {
+      let show = true;
+      for (const [key, value] of state) {
+        if (!value || value === "all") continue;
+        const haystack = (item.dataset[key] ?? "").split("|").filter(Boolean);
+        if (!haystack.includes(value)) show = false;
+      }
+      item.hidden = !show;
+      if (show) visible += 1;
+    }
+    for (const era of eras) {
+      let sibling = era.nextElementSibling;
+      let any = false;
+      while (sibling && !sibling.hasAttribute("data-filter-era")) {
+        if (sibling.hasAttribute("data-filter-item") && !(sibling as HTMLElement).hidden) any = true;
+        sibling = sibling.nextElementSibling;
+      }
+      era.hidden = !any;
+    }
+    if (empty) empty.hidden = visible !== 0;
+  };
+
+  root.querySelectorAll<HTMLSelectElement>("select[data-filter]").forEach((control) => {
+    const key = control.dataset.filter;
+    if (!key) return;
+    control.addEventListener("change", () => {
+      state.set(key, control.value);
+      apply();
+    });
+  });
+
+  root.querySelectorAll<HTMLButtonElement>("button[data-filter]").forEach((control) => {
+    const key = control.dataset.filter;
+    if (!key) return;
+    control.addEventListener("click", () => {
+      root.querySelectorAll<HTMLButtonElement>(`button[data-filter="${key}"]`).forEach((button) => {
+        button.setAttribute("aria-pressed", String(button === control));
+      });
+      state.set(key, control.dataset.value ?? "all");
+      apply();
+    });
+  });
+});

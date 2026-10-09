@@ -1,0 +1,17 @@
+{
+  "id": "1978-toei",
+  "year": 1978,
+  "title": "Toei’s Spider-Man",
+  "summary": "Takuya Yamashiro premieres on Japanese television. He is not Peter Parker.",
+  "kind": "series",
+  "refs": [
+    {
+      "type": "series",
+      "id": "toei-spider-man"
+    },
+    {
+      "type": "character",
+      "id": "takuya-yamashiro"
+    }
+  ]
+}

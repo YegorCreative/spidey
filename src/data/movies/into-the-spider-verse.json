@@ -16,14 +16,53 @@
       "actorId": "shameik-moore",
       "characterId": "miles-morales",
       "identity": "Spider-Man"
+    },
+    {
+      "actorId": "jake-johnson",
+      "characterId": "peter-b-parker",
+      "identity": "Spider-Man"
+    },
+    {
+      "actorId": "hailee-steinfeld",
+      "characterId": "gwen-stacy",
+      "identity": "Spider-Gwen"
+    },
+    {
+      "actorId": "nicolas-cage",
+      "characterId": "spider-man-noir",
+      "identity": "Spider-Man Noir"
+    },
+    {
+      "actorId": "john-mulaney",
+      "characterId": "spider-ham",
+      "identity": "Spider-Ham"
+    },
+    {
+      "actorId": "kimiko-glenn",
+      "characterId": "peni-parker",
+      "identity": "SP//dr"
     }
   ],
-  "antagonists": [],
+  "antagonists": [
+    {
+      "villainId": "kingpin",
+      "actorId": "liev-schreiber"
+    }
+  ],
   "suitIds": [
     "miles-suit"
   ],
   "comicIds": [
     "ultimate-fallout-4"
   ],
-  "runtimeMinutes": 117
+  "runtimeMinutes": 117,
+  "status": "released",
+  "medium": "animated",
+  "characterIds": [
+    "peter-b-parker",
+    "gwen-stacy",
+    "spider-man-noir",
+    "spider-ham",
+    "peni-parker"
+  ]
 }

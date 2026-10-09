@@ -1,0 +1,17 @@
+{
+  "id": "2004-spider-man-2-game",
+  "year": 2004,
+  "title": "Spider-Man 2 game",
+  "summary": "The film tie-in opens Manhattan to web swinging.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-2-game"
+    },
+    {
+      "type": "movie",
+      "id": "spider-man-2"
+    }
+  ]
+}

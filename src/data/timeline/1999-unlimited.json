@@ -1,0 +1,17 @@
+{
+  "id": "1999-unlimited",
+  "year": 1999,
+  "title": "Spider-Man Unlimited",
+  "summary": "Fox Kids sends Peter to Counter-Earth for one short season.",
+  "kind": "animation",
+  "refs": [
+    {
+      "type": "series",
+      "id": "spider-man-unlimited-1999"
+    },
+    {
+      "type": "actor",
+      "id": "rino-romano"
+    }
+  ]
+}

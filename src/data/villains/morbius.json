@@ -1,0 +1,15 @@
+{
+  "id": "morbius",
+  "name": "Morbius",
+  "alterEgo": "Dr. Michael Morbius",
+  "accent": "violet",
+  "summary": "Michael Morbius is a living vampire who debuted in Spider-Man’s comic and later carried horror stories of his own. He is an antihero as often as an enemy. A 2022 film used his name outside this archive’s film list.",
+  "relation": "Debuted as a Spider-Man antagonist. Later a horror lead, not a core rogue.",
+  "firstAppearance": "The Amazing Spider-Man #101 (1971).",
+  "creators": "Roy Thomas and Gil Kane.",
+  "powers": "A pseudo-vampiric condition: strength, flight, and a need for blood, without the traditional undead rules in every story.",
+  "origin": "A biochemist’s attempt to cure his own blood disease creates the condition.",
+  "universeIds": [
+    "earth-616"
+  ]
+}

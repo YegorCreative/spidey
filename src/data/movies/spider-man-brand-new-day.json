@@ -1,0 +1,35 @@
+{
+  "id": "spider-man-brand-new-day",
+  "title": "Spider-Man: Brand New Day",
+  "year": 2026,
+  "releaseDate": "2026-07-31",
+  "tagline": "A city that does not remember Peter, and a threat it cannot see.",
+  "summary": "Destin Daniel Cretton directs Tom Holland’s Peter Parker after the world has forgotten him. Marvel’s synopsis describes the pressure of that erasure and a threat no one can see. This record does not name a villain the official overview does not name.",
+  "universeId": "mcu",
+  "directorIds": [
+    "destin-daniel-cretton"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tom-holland",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [
+    "amazing-spider-man-546"
+  ],
+  "status": "released",
+  "medium": "live-action",
+  "runtimeMinutes": 145,
+  "sources": [
+    {
+      "label": "Marvel.com — Spider-Man: Brand New Day",
+      "url": "https://www.marvel.com/movies/spider-man-brand-new-day"
+    }
+  ]
+}

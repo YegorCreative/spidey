@@ -1,0 +1,35 @@
+{
+  "id": "the-amazing-spider-man-game",
+  "title": "The Amazing Spider-Man",
+  "year": 2012,
+  "tagline": "The Webb film’s Lizard story, plus a city to cross.",
+  "releaseLabel": "2012",
+  "developerIds": [
+    "beenox"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 3",
+    "Xbox 360",
+    "Wii",
+    "Windows",
+    "Nintendo 3DS",
+    "Nintendo DS"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "lizard"
+  ],
+  "universeId": "webb",
+  "summary": "Beenox’s tie-in continues from Marc Webb’s film and sends Andrew Garfield’s Peter after Curt Connors. The home versions add an open Manhattan the movie does not have. It is still a film adaptation.",
+  "gameplay": "Open-city web swinging on consoles and PC, with indoor missions and a comic-panel disguise system.",
+  "relatedGameIds": [
+    "the-amazing-spider-man-2-game"
+  ],
+  "categories": [
+    "movie-tie-in",
+    "open-world"
+  ]
+}

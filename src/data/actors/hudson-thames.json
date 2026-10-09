@@ -1,0 +1,12 @@
+{
+  "id": "hudson-thames",
+  "name": "Hudson Thames",
+  "performance": "voice",
+  "summary": "Hudson Thames voices Peter Parker in Your Friendly Neighborhood Spider-Man.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "2025–",
+    "characterId": "peter-parker",
+    "universeId": "yfns"
+  }
+}

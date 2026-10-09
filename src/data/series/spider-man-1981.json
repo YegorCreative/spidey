@@ -1,0 +1,16 @@
+{
+  "id": "spider-man-1981",
+  "title": "Spider-Man",
+  "years": "1981",
+  "yearStart": 1981,
+  "medium": "animated",
+  "network": "Syndication",
+  "summary": "A solo syndicated cartoon from 1981, separate from Spider-Man and His Amazing Friends. It follows Peter Parker against familiar comic villains.",
+  "seasons": 1,
+  "episodes": 26,
+  "episodeNote": "The lead voice actor is not named in this record.",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": []
+}

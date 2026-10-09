@@ -1,0 +1,32 @@
+{
+  "id": "spider-man-web-of-shadows",
+  "title": "Spider-Man: Web of Shadows",
+  "year": 2008,
+  "tagline": "An original symbiote outbreak, not a movie.",
+  "releaseLabel": "2008",
+  "developerIds": [
+    "shaba-games"
+  ],
+  "publisher": "Activision",
+  "platforms": [
+    "PlayStation 3",
+    "Xbox 360",
+    "PlayStation 2",
+    "Wii",
+    "Nintendo DS",
+    "PSP"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "venom"
+  ],
+  "universeId": "web-of-shadows",
+  "summary": "Web of Shadows tells an original story about a symbiote invasion of Manhattan. Shaba Games developed the PlayStation 3 and Xbox 360 versions. Other platforms had separate teams. The player’s choices push Peter toward or away from the black suit.",
+  "gameplay": "Open Manhattan traversal with combo combat and a red-suit or black-suit stance. The story branches with those choices.",
+  "relatedGameIds": [],
+  "categories": [
+    "open-world"
+  ]
+}

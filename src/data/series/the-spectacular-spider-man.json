@@ -1,0 +1,38 @@
+{
+  "id": "the-spectacular-spider-man",
+  "title": "The Spectacular Spider-Man",
+  "years": "2008–2009",
+  "yearStart": 2008,
+  "yearEnd": 2009,
+  "medium": "animated",
+  "network": "The CW (season 1); Disney XD (season 2)",
+  "summary": "Greg Weisman and Victor Cook’s series puts a teenage Peter Parker back at the start, with villains arriving in small arcs. Josh Keaton voices him. The show ended after two seasons even though more had been planned.",
+  "universeId": "spectacular",
+  "seasons": 2,
+  "episodes": 26,
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "josh-keaton",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "villainIds": [
+    "vulture",
+    "electro",
+    "lizard",
+    "shocker",
+    "sandman",
+    "rhino",
+    "green-goblin",
+    "doctor-octopus",
+    "venom",
+    "hammerhead",
+    "tombstone",
+    "mysterio",
+    "kraven"
+  ]
+}

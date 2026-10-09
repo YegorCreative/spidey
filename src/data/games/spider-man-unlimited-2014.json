@@ -1,0 +1,32 @@
+{
+  "id": "spider-man-unlimited-2014",
+  "title": "Spider-Man Unlimited",
+  "year": 2014,
+  "tagline": "An endless runner with a roster of spider-heroes.",
+  "releaseLabel": "2014",
+  "developerIds": [
+    "gameloft"
+  ],
+  "publisher": "Gameloft",
+  "platforms": [
+    "iOS",
+    "Android"
+  ],
+  "playableCharacterIds": [
+    "peter-parker",
+    "miles-morales",
+    "gwen-stacy"
+  ],
+  "villainIds": [
+    "green-goblin",
+    "venom"
+  ],
+  "universeId": "unlimited-mobile",
+  "summary": "Gameloft’s mobile runner sends spider-heroes down a lane of obstacles. Peter, Miles, and Gwen are among the playable roster, which is larger than those three. The online service later shut down. It is not the 1999 cartoon of the same name.",
+  "gameplay": "Side-scrolling endless running, with swaps between spider-heroes and a free-to-play upgrade loop.",
+  "relatedGameIds": [],
+  "categories": [
+    "mobile",
+    "multiverse"
+  ]
+}

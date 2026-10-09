@@ -1,0 +1,17 @@
+{
+  "id": "margo-kess",
+  "name": "Margo Kess",
+  "aliases": [
+    "Spider-Byte"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "A virtual-reality spider-hero from Earth-22191. Her last name was attached after the debut story, ahead of the film.",
+  "summary": "Margo Kess protects a world that lives online, fighting as the avatar Spider-Byte. She debuted in Vault of Spiders #1 during Spider-Geddon. Amandla Stenberg voices her in Across the Spider-Verse.",
+  "universeIds": [
+    "earth-22191",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Vault of Spiders #1 (2018).",
+  "creators": "Nilah Magruder and Alberto Jiménez Alburquerque."
+}

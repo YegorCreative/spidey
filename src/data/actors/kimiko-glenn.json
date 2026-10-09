@@ -1,0 +1,12 @@
+{
+  "id": "kimiko-glenn",
+  "name": "Kimiko Glenn",
+  "performance": "voice",
+  "summary": "Kimiko Glenn voices Peni Parker in Spider-Man: Into the Spider-Verse.",
+  "primary": {
+    "identity": "SP//dr",
+    "years": "2018",
+    "characterId": "peni-parker",
+    "universeId": "spider-verse-animated"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "id": "ultimate-spider-man-2012",
+  "title": "Ultimate Spider-Man",
+  "years": "2012–2017",
+  "yearStart": 2012,
+  "yearEnd": 2017,
+  "medium": "animated",
+  "network": "Disney XD",
+  "summary": "Peter Parker trains with a S.H.I.E.L.D. team of young heroes. Drake Bell voices him. Later seasons were billed as Web-Warriors and as a fight with the Sinister Six. The show is not the Ultimate comic.",
+  "universeId": "ultimate-animated",
+  "seasons": 4,
+  "episodes": 104,
+  "episodeNote": "A published episode list counts 104 episodes, 26 in each of four seasons. Some databases differ by one episode.",
+  "characterIds": [
+    "peter-parker"
+  ],
+  "cast": [
+    {
+      "actorId": "drake-bell",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "villainIds": [
+    "green-goblin",
+    "doctor-octopus",
+    "venom",
+    "electro",
+    "lizard",
+    "rhino",
+    "kraven"
+  ]
+}

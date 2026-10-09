@@ -1,0 +1,17 @@
+{
+  "id": "1967-shocker",
+  "year": 1967,
+  "title": "Shocker",
+  "summary": "Herman Schultz debuts in The Amazing Spider-Man #46.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-46"
+    },
+    {
+      "type": "villain",
+      "id": "shocker"
+    }
+  ]
+}

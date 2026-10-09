@@ -13,7 +13,7 @@ export const site = {
   name: "Spidey",
   title: "Spidey — Everything Spider-Man",
   description:
-    "Explore the movies, comics, series, characters, actors, villains, universes, suits, and history of Spider-Man.",
+    "Explore the movies, games, comics, series, characters, actors, villains, universes, suits, and history of Spider-Man.",
   origin: "https://yegorcreative.github.io",
   base: "/spidey",
   locale: "en",

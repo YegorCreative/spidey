@@ -1,0 +1,17 @@
+{
+  "id": "1982-atari",
+  "year": 1982,
+  "title": "Atari Spider-Man",
+  "summary": "Parker Brothers publishes the first Spider-Man video game.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-1982"
+    },
+    {
+      "type": "creator",
+      "id": "laura-nikolich"
+    }
+  ]
+}

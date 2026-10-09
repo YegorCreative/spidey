@@ -1,0 +1,15 @@
+{
+  "id": "takuya-yamashiro",
+  "name": "Takuya Yamashiro",
+  "aliases": [
+    "Spider-Man"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "The hero of Toei’s Japanese television series. He is not Peter Parker.",
+  "summary": "Takuya Yamashiro becomes Spider-Man in Toei’s 1978 live-action series, with a spacecraft and a transforming robot that do not come from the comics. Shinji Todō plays him.",
+  "universeIds": [
+    "toei-1978"
+  ],
+  "firstAppearance": "Spider-Man (Toei), 1978."
+}

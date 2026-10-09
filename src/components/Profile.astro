@@ -67,6 +67,16 @@ const comic = scene === "cover" && sceneId ? getCatalog().comic(sceneId) : undef
         ))}
       </dl>
     )}
+    {profile.sources && profile.sources.length > 0 && (
+      <section class="group" aria-labelledby="profile-sources">
+        <h2 id="profile-sources">Sources</h2>
+        <ul class="inline-links">
+          {profile.sources.map((source) => (
+            <li><a href={source.href} rel="noopener noreferrer">{source.label}</a></li>
+          ))}
+        </ul>
+      </section>
+    )}
     {comic && (
       <div class="stage__cover" data-depth style="--depth: 0.22">
         <ArchiveCover title={comic.title} issue={comic.issue} year={comic.year} tone={comic.id} />

@@ -1,0 +1,12 @@
+{
+  "id": "dan-gilvezan",
+  "name": "Dan Gilvezan",
+  "performance": "voice",
+  "summary": "Dan Gilvezan voices Peter Parker in Spider-Man and His Amazing Friends.",
+  "primary": {
+    "identity": "Spider-Man",
+    "years": "1981–1983",
+    "characterId": "peter-parker",
+    "universeId": "amazing-friends"
+  }
+}

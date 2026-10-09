@@ -1,6 +1,7 @@
 export const nav = [
   { href: "/", label: "Home" },
   { href: "/movies/", label: "Movies" },
+  { href: "/games/", label: "Games" },
   { href: "/comics/", label: "Comics" },
   { href: "/series/", label: "Series" },
   { href: "/spider-people/", label: "Spider-People" },
@@ -9,6 +10,19 @@ export const nav = [
   { href: "/universes/", label: "Universes" },
   { href: "/timeline/", label: "Timeline" },
   { href: "/explore/", label: "Explore" },
+] as const;
+
+/** Homepage timeline stays on these milestones. The full timeline page holds the rest. */
+export const previewTimelineIds = [
+  "1962-amazing-fantasy-15",
+  "1967-animated-series",
+  "1977-live-action-tv",
+  "2002-spider-man",
+  "2012-amazing-spider-man",
+  "2016-mcu",
+  "2018-into-the-spider-verse",
+  "2021-no-way-home",
+  "2023-across-the-spider-verse",
 ] as const;
 
 export const screenActorIds = [
@@ -29,6 +43,19 @@ export const villainOrder = [
   "lizard",
   "vulture",
   "kraven",
+  "shocker",
+  "kingpin",
+  "tombstone",
+  "rhino",
+  "morbius",
+  "chameleon",
+  "red-skull",
+  "hobgoblin",
+  "jackal",
+  "morlun",
+  "mister-negative",
+  "hammerhead",
+  "scream",
 ] as const;
 
 export const universeOrder = [
@@ -41,6 +68,12 @@ export const universeOrder = [
   "earth-928",
   "earth-90214",
   "earth-65",
+  "insomniac",
+  "earth-138",
+  "earth-8311",
+  "earth-50101",
+  "earth-14512",
+  "earth-22191",
 ] as const;
 
 export const featuredComicIds = [
@@ -57,6 +90,13 @@ export const exploreItems = [
     description: "Film eras, from Raimi’s breakthrough to the animated Spider-Verse.",
     icon: "film",
     accent: "red",
+  },
+  {
+    href: "/games/",
+    title: "Games",
+    description: "From the 1982 Atari cartridge to Insomniac’s open-world trilogy.",
+    icon: "game",
+    accent: "amber",
   },
   {
     href: "/comics/",

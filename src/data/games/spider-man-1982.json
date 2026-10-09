@@ -1,0 +1,28 @@
+{
+  "id": "spider-man-1982",
+  "title": "Spider-Man",
+  "year": 1982,
+  "tagline": "The first Marvel video game, written by one programmer.",
+  "releaseLabel": "November 1982, North America",
+  "developerIds": [
+    "laura-nikolich",
+    "parker-brothers"
+  ],
+  "publisher": "Parker Brothers",
+  "platforms": [
+    "Atari 2600"
+  ],
+  "playableCharacterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "green-goblin"
+  ],
+  "universeId": "early-game",
+  "summary": "Laura Nikolich programmed a vertical climber for the Atari 2600. Spider-Man scales a building the Green Goblin has trapped with bombs. Parker Brothers published it. It is the first Spider-Man game and the first Marvel game.",
+  "gameplay": "A single-screen vertical scramble. Spider-Man moves between windows, avoids hazards, and defuses bombs before the Goblin’s trap closes.",
+  "relatedGameIds": [],
+  "categories": [
+    "classic"
+  ]
+}

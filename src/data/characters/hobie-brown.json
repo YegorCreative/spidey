@@ -1,0 +1,17 @@
+{
+  "id": "hobie-brown",
+  "name": "Hobie Brown",
+  "aliases": [
+    "Spider-Punk"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "A Spider-Man from Earth-138. The Hobie Brown of other worlds has also used the Prowler identity. This record is the Spider-Punk version.",
+  "summary": "Hobie Brown is Spider-Punk, a guitar-smashing Spider-Man from a fascist Britain. Daniel Kaluuya voices the film version in Across the Spider-Verse. The comic Hobie and the film Hobie should not be treated as one continuous life.",
+  "universeIds": [
+    "earth-138",
+    "spider-verse-animated"
+  ],
+  "firstAppearance": "Spider-Punk debuted in The Amazing Spider-Man (vol. 3) #10 (2015).",
+  "creators": "Dan Slott and Olivier Coipel."
+}

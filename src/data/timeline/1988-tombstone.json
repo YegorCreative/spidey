@@ -1,0 +1,13 @@
+{
+  "id": "1988-tombstone",
+  "year": 1988,
+  "title": "Tombstone",
+  "summary": "Lonnie Lincoln debuts in Web of Spider-Man #36.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "villain",
+      "id": "tombstone"
+    }
+  ]
+}

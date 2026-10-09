@@ -32,15 +32,19 @@
       "actorId": "willem-dafoe"
     },
     {
-      "villainId": "doctor-octopus"
+      "villainId": "doctor-octopus",
+      "actorId": "alfred-molina"
     },
     {
-      "villainId": "electro"
+      "villainId": "electro",
+      "actorId": "jamie-foxx"
     }
   ],
   "suitIds": [
     "classic"
   ],
   "comicIds": [],
-  "runtimeMinutes": 148
+  "runtimeMinutes": 148,
+  "status": "released",
+  "medium": "live-action"
 }

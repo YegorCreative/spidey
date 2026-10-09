@@ -1,0 +1,21 @@
+{
+  "id": "2017-homecoming",
+  "year": 2017,
+  "title": "Spider-Man: Homecoming",
+  "summary": "Jon Watts’s film gives Tom Holland a solo story after Civil War.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-homecoming"
+    },
+    {
+      "type": "actor",
+      "id": "tom-holland"
+    },
+    {
+      "type": "villain",
+      "id": "vulture"
+    }
+  ]
+}

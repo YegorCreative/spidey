@@ -1,0 +1,26 @@
+.games-page .films-hero__sky {
+  background:
+    radial-gradient(420px 220px at 18% 20%, rgba(255, 176, 32, 0.28), transparent 64%),
+    radial-gradient(420px 240px at 84% 30%, rgba(80, 140, 255, 0.22), transparent 66%),
+    linear-gradient(180deg, #07080c, #141018 60%, #07080c);
+}
+
+.game--classic { --game-edge: #8dff6a; }
+.game--tie { --game-edge: #f4f0e6; }
+.game--insomniac { --game-edge: #ff4d4d; }
+.game--multi { --game-edge: #6ea2ff; }
+.game--mobile { --game-edge: #ffb020; }
+
+.game { box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--game-edge) 45%, transparent); }
+
+.reel--classic .reel__sky { background: repeating-linear-gradient(0deg, #14081c 0 8px, #1c1030 8px 16px); }
+.reel--tie .reel__sky { background: linear-gradient(#1a120c, #07080c 70%); }
+.reel--insomniac .reel__sky { background: linear-gradient(#0c1424, #07080c 72%); }
+.reel--multi .reel__sky { background: radial-gradient(circle at 40% 30%, #2a1848, #07080c 70%); }
+.reel--mobile .reel__sky { background: linear-gradient(#241808, #07080c 70%); }
+
+.reel--classic .reel__draw { image-rendering: pixelated; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reel--game .reel__draw { transform: none; }
+}

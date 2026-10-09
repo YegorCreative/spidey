@@ -1,0 +1,52 @@
+---
+interface Props {
+  look: "classic" | "tie" | "insomniac" | "multi" | "mobile";
+}
+const { look } = Astro.props;
+---
+<div class:list={["reel", `reel--game`, `reel--${look}`]} aria-hidden="true">
+  <div class="reel__layer reel__sky" data-depth style="--depth: 0.2; --scroll-depth: 0.03"></div>
+  {look === "classic" && (
+    <svg class="reel__layer reel__draw" data-depth style="--depth: 0.55; --scroll-depth: 0.08" viewBox="0 0 160 240" preserveAspectRatio="xMidYMid slice">
+      <g fill="#39d353">
+        {Array.from({ length: 12 }, (_, row) => Array.from({ length: 8 }, (_, col) => (
+          <rect x={18 + col * 16} y={36 + row * 14} width="10" height="8" opacity={((row + col) % 3) === 0 ? "0.95" : "0.25"} />
+        )))}
+      </g>
+      <path d="M70 20h16l6 18H64z" fill="#f4f0e6" />
+    </svg>
+  )}
+  {look === "tie" && (
+    <svg class="reel__layer reel__draw" data-depth style="--depth: 0.62; --scroll-depth: 0.08" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+      <path fill="#141820" d="M0 900V500h40V280h24v220h18V220h36v280h20V340h50v160h80V180h22v320h40V260h30v240h70V140h24v360H600V900Z" />
+      <g fill="none" stroke="#f4f0e6" stroke-width="3">
+        <path d="M80 80h440v40H80zM80 160h440M80 200h440M80 240h440" opacity="0.35" />
+      </g>
+      <circle cx="300" cy="520" r="46" fill="none" stroke="#ff4d4d" stroke-width="8" />
+    </svg>
+  )}
+  {look === "insomniac" && (
+    <svg class="reel__layer reel__draw" data-depth style="--depth: 0.7; --scroll-depth: 0.09" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+      <path fill="#10151f" d="M0 900V420h50V200h30v220h20V140h40v280h24V240h60v180h90V100h28v320h36V220h40v200h80V80h32v340H600V900Z" />
+      <path d="M40 180C180 80 260 220 420 120 500 80 540 160 580 140" fill="none" stroke="#ff4d4d" stroke-width="3" />
+      <path data-depth style="--depth: 0.9" d="M120 260c80 20 120 80 80 140" fill="none" stroke="#f4f0e6" stroke-width="1.4" opacity="0.7" />
+      <circle cx="250" cy="300" r="7" fill="#f4f0e6" />
+    </svg>
+  )}
+  {look === "multi" && (
+    <svg class="reel__layer reel__draw" data-depth style="--depth: 0.58; --scroll-depth: 0.08" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+      <circle cx="220" cy="280" r="90" fill="none" stroke="#ff4d6d" stroke-width="3" />
+      <circle cx="340" cy="340" r="110" fill="none" stroke="#6ea2ff" stroke-width="3" />
+      <circle cx="280" cy="240" r="46" fill="none" stroke="#f4f0e6" stroke-dasharray="4 6" />
+      <path d="M80 700h440l-40 80H120z" fill="#121722" />
+    </svg>
+  )}
+  {look === "mobile" && (
+    <svg class="reel__layer reel__draw" data-depth style="--depth: 0.5; --scroll-depth: 0.07" viewBox="0 0 600 900" preserveAspectRatio="xMidYMid slice">
+      <rect x="210" y="80" width="180" height="360" rx="24" fill="#10131a" stroke="#f4f0e6" stroke-width="4" />
+      <circle cx="300" cy="390" r="8" fill="#f4f0e6" />
+      <path d="M250 180c20 40 10 70 30 100" fill="none" stroke="#ffb020" stroke-width="4" />
+      <path d="M80 640h440" stroke="#ffb020" stroke-dasharray="8 10" />
+    </svg>
+  )}
+</div>

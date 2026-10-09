@@ -1,5 +1,6 @@
 import {
   featuredComicIds,
+  previewTimelineIds,
   screenActorIds,
   universeOrder,
   villainOrder,
@@ -10,6 +11,7 @@ import type {
   Character,
   Comic,
   Creator,
+  Game,
   Movie,
   RefType,
   SearchDoc,
@@ -60,6 +62,10 @@ const timelineFiles = import.meta.glob<TimelineEvent>("../data/timeline/*.json",
   eager: true,
   import: "default",
 });
+const gameFiles = import.meta.glob<Game>("../data/games/*.json", {
+  eager: true,
+  import: "default",
+});
 
 function load<T extends { id: string }>(files: Record<string, T>, label: string): T[] {
   const items = Object.entries(files).map(([file, data]) => {
@@ -97,7 +103,16 @@ function inOrder<T extends { id: string }>(items: T[], order: readonly string[])
   return [...listed, ...rest];
 }
 
-const movies = load(movieFiles, "movie").sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+const movies = load(movieFiles, "movie")
+  .map((movie) => ({
+    ...movie,
+    status: movie.status ?? "released",
+    medium:
+      movie.medium ??
+      (movie.universeId === "spider-verse-animated" ? "animated" : "live-action"),
+  }))
+  .sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
+const games = load(gameFiles, "game").sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
 const series = load(seriesFiles, "series").sort((a, b) => a.yearStart - b.yearStart);
 const comics = load(comicFiles, "comic").sort((a, b) => a.year - b.year || a.title.localeCompare(b.title));
 const actors = load(actorFiles, "actor").sort((a, b) => a.name.localeCompare(b.name));
@@ -110,6 +125,7 @@ const timeline = load(timelineFiles, "timeline").sort((a, b) => a.year - b.year 
 
 const maps = {
   movie: indexById(movies, "movie"),
+  game: indexById(games, "game"),
   series: indexById(series, "series"),
   comic: indexById(comics, "comic"),
   actor: indexById(actors, "actor"),
@@ -145,6 +161,27 @@ for (const movie of movies) {
     requireId("villain", credit.villainId, movie.id);
     if (credit.actorId) requireId("actor", credit.actorId, movie.id);
   }
+  if (movie.status === "upcoming" && !movie.releaseNote) {
+    throw new Error(`${movie.id} is upcoming and needs a release note.`);
+  }
+}
+
+for (const game of games) {
+  if (!game.releaseLabel || !game.publisher || !game.summary || !game.gameplay || !game.tagline) {
+    throw new Error(`${game.id} is missing a release label, publisher, synopsis, tagline, or gameplay note.`);
+  }
+  if (!game.platforms.length) throw new Error(`${game.id} needs at least one platform.`);
+  if (!game.categories.length) throw new Error(`${game.id} needs a category.`);
+  if (!game.developerIds.length) throw new Error(`${game.id} needs a developer.`);
+  requireId("universe", game.universeId, game.id);
+  for (const id of game.developerIds) requireId("creator", id, game.id);
+  for (const id of game.playableCharacterIds) requireId("character", id, game.id);
+  for (const id of game.characterIds ?? []) requireId("character", id, game.id);
+  for (const id of game.villainIds) requireId("villain", id, game.id);
+  for (const id of game.relatedGameIds) {
+    if (id === game.id) throw new Error(`${game.id} cannot relate to itself.`);
+    requireId("game", id, game.id);
+  }
 }
 
 for (const show of series) {
@@ -155,6 +192,7 @@ for (const show of series) {
     requireId("actor", credit.actorId, show.id);
     if (credit.characterId) requireId("character", credit.characterId, show.id);
   }
+  for (const id of show.villainIds ?? []) requireId("villain", id, show.id);
 }
 
 for (const comic of comics) {
@@ -180,6 +218,7 @@ for (const character of characters) {
 
 for (const villain of villains) {
   for (const id of villain.universeIds) requireId("universe", id, villain.id);
+  for (const id of villain.relatedCharacterIds ?? []) requireId("character", id, villain.id);
 }
 
 for (const suit of suits) {
@@ -193,9 +232,11 @@ for (const event of timeline) {
 
 for (const id of screenActorIds) requireId("actor", id, "screen section");
 for (const id of featuredComicIds) requireId("comic", id, "comics preview");
+for (const id of previewTimelineIds) requireId("timeline", id, "timeline preview");
 
 export interface Catalog {
   movies: Movie[];
+  games: Game[];
   series: Series[];
   comics: Comic[];
   actors: Actor[];
@@ -206,6 +247,7 @@ export interface Catalog {
   creators: Creator[];
   timeline: TimelineEvent[];
   movie: (id: string) => Movie;
+  game: (id: string) => Game;
   seriesById: (id: string) => Series;
   comic: (id: string) => Comic;
   actor: (id: string) => Actor;
@@ -219,6 +261,7 @@ export interface Catalog {
 
 const catalog: Catalog = {
   movies,
+  games,
   series,
   comics,
   actors,
@@ -229,6 +272,7 @@ const catalog: Catalog = {
   creators,
   timeline,
   movie: (id) => must(maps.movie, id, "movie"),
+  game: (id) => must(maps.game, id, "game"),
   seriesById: (id) => must(maps.series, id, "series"),
   comic: (id) => must(maps.comic, id, "comic"),
   actor: (id) => must(maps.actor, id, "actor"),
@@ -246,6 +290,7 @@ export function getCatalog(): Catalog {
 
 const folders: Record<Exclude<RefType, "character" | "timeline">, string> = {
   movie: "movies",
+  game: "games",
   series: "series",
   comic: "comics",
   actor: "actors",
@@ -348,8 +393,55 @@ export function moviesByDirector(creatorId: string): Movie[] {
   return movies.filter((movie) => movie.directorIds.includes(creatorId));
 }
 
+export function gamesByDeveloper(creatorId: string): Game[] {
+  return games.filter((game) => game.developerIds.includes(creatorId));
+}
+
+export function gamesWithCharacter(characterId: string): Game[] {
+  return games.filter(
+    (game) =>
+      game.playableCharacterIds.includes(characterId) ||
+      (game.characterIds ?? []).includes(characterId),
+  );
+}
+
+export function gamesWithVillain(villainId: string): Game[] {
+  return games.filter((game) => game.villainIds.includes(villainId));
+}
+
+export function seriesWithVillain(villainId: string): Series[] {
+  return series.filter((show) => (show.villainIds ?? []).includes(villainId));
+}
+
+export function spiderActorIds(movie: Movie): string[] {
+  const ids: string[] = [];
+  for (const credit of movie.portrayals) {
+    if (!credit.actorId || !credit.characterId) continue;
+    const character = maps.character.get(credit.characterId);
+    if (character?.kind === "spider-person") ids.push(credit.actorId);
+  }
+  return ids;
+}
+
+export function classificationLabel(value: string | undefined, kind: "spider-person" | "supporting"): string {
+  if (value === "symbiote-hero") return "Symbiote hero";
+  if (value === "ally") return "Ally";
+  if (value === "spider-person" || kind === "spider-person") return "Spider-Person";
+  return "Character";
+}
+
+export function timelineBucket(kind: TimelineEvent["kind"]): string {
+  if (kind === "movie" || kind === "spider-verse") return "movies";
+  if (kind === "comic") return "comics";
+  if (kind === "series" || kind === "animation") return "series";
+  if (kind === "game") return "games";
+  if (kind === "character") return "characters";
+  return "other";
+}
+
 const typeLabels: Record<RefType, string> = {
   movie: "Movies",
+  game: "Games",
   series: "Series",
   comic: "Comics",
   actor: "Actors",
@@ -386,6 +478,29 @@ export function searchDocuments(): SearchDoc[] {
         catalog.universe(movie.universeId).name,
         ...movie.portrayals.flatMap((credit) => (credit.actorId ? [catalog.actor(credit.actorId).name] : [])),
         ...movie.antagonists.map((credit) => catalog.villain(credit.villainId!).name),
+      ),
+    });
+  }
+
+  for (const game of games) {
+    docs.push({
+      id: game.id,
+      type: "game",
+      typeLabel: typeLabels.game,
+      title: game.title,
+      summary: game.summary,
+      href: hrefFor("game", game.id),
+      keywords: words(
+        game.title,
+        game.year,
+        game.releaseLabel,
+        game.publisher,
+        ...game.platforms,
+        ...game.categories,
+        ...game.developerIds.map((id) => catalog.creator(id).name),
+        ...game.playableCharacterIds.map((id) => catalog.character(id).name),
+        ...game.villainIds.map((id) => catalog.villain(id).name),
+        catalog.universe(game.universeId).name,
       ),
     });
   }
@@ -442,7 +557,7 @@ export function searchDocuments(): SearchDoc[] {
       title: character.name,
       summary: character.summary,
       href: hrefFor("character", character.id),
-      keywords: words(character.name, ...character.aliases, character.kind),
+      keywords: words(character.name, ...character.aliases, character.kind, character.classification, character.distinction),
     });
   }
 

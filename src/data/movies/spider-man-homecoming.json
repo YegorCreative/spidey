@@ -18,12 +18,15 @@
   ],
   "antagonists": [
     {
-      "villainId": "vulture"
+      "villainId": "vulture",
+      "actorId": "michael-keaton"
     }
   ],
   "suitIds": [
     "classic"
   ],
   "comicIds": [],
-  "runtimeMinutes": 133
+  "runtimeMinutes": 133,
+  "status": "released",
+  "medium": "live-action"
 }

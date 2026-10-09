@@ -1,0 +1,21 @@
+{
+  "id": "amazing-spider-man-101",
+  "title": "The Amazing Spider-Man",
+  "issue": "#101",
+  "year": 1971,
+  "coverDate": "October 1971",
+  "summary": "Morbius, a living vampire, arrives while Spider-Man is dealing with extra arms. The character starts here and later leaves the monthly title’s orbit.",
+  "universeId": "earth-616",
+  "writerIds": [
+    "roy-thomas"
+  ],
+  "artistIds": [
+    "gil-kane"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "morbius"
+  ]
+}

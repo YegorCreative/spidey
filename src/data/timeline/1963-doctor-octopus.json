@@ -1,0 +1,17 @@
+{
+  "id": "1963-doctor-octopus",
+  "year": 1963,
+  "title": "Doctor Octopus",
+  "summary": "Otto Octavius debuts in The Amazing Spider-Man #3.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-3"
+    },
+    {
+      "type": "villain",
+      "id": "doctor-octopus"
+    }
+  ]
+}

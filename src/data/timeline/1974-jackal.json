@@ -1,0 +1,17 @@
+{
+  "id": "1974-jackal",
+  "year": 1974,
+  "title": "The Jackal",
+  "summary": "Miles Warren’s Jackal identity debuts in The Amazing Spider-Man #129.",
+  "kind": "character",
+  "refs": [
+    {
+      "type": "comic",
+      "id": "amazing-spider-man-129"
+    },
+    {
+      "type": "villain",
+      "id": "jackal"
+    }
+  ]
+}

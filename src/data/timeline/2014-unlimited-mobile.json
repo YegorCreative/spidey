@@ -1,0 +1,13 @@
+{
+  "id": "2014-unlimited-mobile",
+  "year": 2014,
+  "title": "Spider-Man Unlimited",
+  "summary": "Gameloft releases a mobile runner with a roster of spider-heroes.",
+  "kind": "game",
+  "refs": [
+    {
+      "type": "game",
+      "id": "spider-man-unlimited-2014"
+    }
+  ]
+}

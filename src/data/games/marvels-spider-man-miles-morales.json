@@ -1,0 +1,36 @@
+{
+  "id": "marvels-spider-man-miles-morales",
+  "title": "Marvel’s Spider-Man: Miles Morales",
+  "year": 2020,
+  "tagline": "Miles takes the mask for a winter in Harlem.",
+  "releaseLabel": "PlayStation 4 and PlayStation 5: November 12, 2020. A Windows version followed in 2022.",
+  "developerIds": [
+    "insomniac-games"
+  ],
+  "publisher": "Sony Interactive Entertainment",
+  "platforms": [
+    "PlayStation 4",
+    "PlayStation 5",
+    "Windows"
+  ],
+  "playableCharacterIds": [
+    "miles-morales"
+  ],
+  "characterIds": [
+    "peter-parker"
+  ],
+  "villainIds": [
+    "rhino"
+  ],
+  "universeId": "insomniac",
+  "summary": "Miles Morales covers Peter’s city during a winter story of his own. The Rhino appears. The central conflict is with Phin Mason, a Harlem inventor. She is not the comic-book Tinkerer, Phineas Mason, so this record does not file her under that villain.",
+  "gameplay": "The same open-world swinging as the 2018 game, with Miles’s venom blast and camouflage added to the combat.",
+  "relatedGameIds": [
+    "marvels-spider-man-2018",
+    "marvels-spider-man-2"
+  ],
+  "categories": [
+    "insomniac",
+    "open-world"
+  ]
+}

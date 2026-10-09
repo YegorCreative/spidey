@@ -17,6 +17,7 @@ export type RefType =
   | "movie"
   | "series"
   | "comic"
+  | "game"
   | "actor"
   | "character"
   | "villain"
@@ -24,6 +25,19 @@ export type RefType =
   | "universe"
   | "creator"
   | "timeline";
+
+export type GameCategory =
+  | "classic"
+  | "movie-tie-in"
+  | "open-world"
+  | "insomniac"
+  | "multiverse"
+  | "mobile";
+
+export interface SourceNote {
+  label: string;
+  url: string;
+}
 
 export interface Credit {
   actorId?: string;
@@ -67,6 +81,35 @@ export interface Movie {
   comicIds: string[];
   characterIds?: string[];
   runtimeMinutes?: number;
+  /** Released films have a public premiere. Upcoming films keep announced dates separate from rumors. */
+  status?: "released" | "upcoming";
+  medium?: "live-action" | "animated";
+  /** Use when a date is scheduled, partial, or should not be read as a premiere that already happened. */
+  releaseNote?: string;
+  sources?: SourceNote[];
+  image?: MediaImage;
+  media?: MediaSet;
+}
+
+export interface Game {
+  id: string;
+  title: string;
+  year: number;
+  tagline: string;
+  /** Human-readable date. Exact days are included only when a publisher date is known. */
+  releaseLabel: string;
+  developerIds: string[];
+  publisher: string;
+  platforms: string[];
+  playableCharacterIds: string[];
+  villainIds: string[];
+  universeId: string;
+  summary: string;
+  gameplay: string;
+  relatedGameIds: string[];
+  categories: GameCategory[];
+  characterIds?: string[];
+  sources?: SourceNote[];
   image?: MediaImage;
   media?: MediaSet;
 }
@@ -83,6 +126,12 @@ export interface Series {
   universeId?: string;
   characterIds: string[];
   cast: Credit[];
+  villainIds?: string[];
+  seasons?: number;
+  episodes?: number;
+  /** Explains a missing or disputed season or episode count. */
+  episodeNote?: string;
+  sources?: SourceNote[];
   image?: MediaImage;
   media?: MediaSet;
 }
@@ -127,9 +176,15 @@ export interface Character {
   name: string;
   aliases: string[];
   kind: "spider-person" | "supporting";
+  /** spider-person, symbiote-hero, or ally. Routing still uses kind. */
+  classification?: "spider-person" | "symbiote-hero" | "ally";
+  /** A short factual distinction, such as a clone or a separate Spider-Woman. */
+  distinction?: string;
   summary: string;
   universeIds: string[];
   firstAppearance?: string;
+  creators?: string;
+  sources?: SourceNote[];
   image?: MediaImage;
   media?: MediaSet;
 }
@@ -142,6 +197,13 @@ export interface Villain {
   universeIds: string[];
   accent: Accent;
   firstAppearance?: string;
+  creators?: string;
+  powers?: string;
+  origin?: string;
+  /** How this figure relates to Spider-Man. Not every name is a core rogue. */
+  relation?: string;
+  relatedCharacterIds?: string[];
+  sources?: SourceNote[];
   image?: MediaImage;
   media?: MediaSet;
 }
@@ -183,7 +245,7 @@ export interface TimelineEvent {
   year: number;
   title: string;
   summary: string;
-  kind: "comic" | "series" | "movie" | "milestone";
+  kind: "comic" | "series" | "animation" | "movie" | "game" | "character" | "creator" | "milestone" | "spider-verse";
   refs: { type: RefType; id: string }[];
 }
 
@@ -201,6 +263,7 @@ export interface ProfileModel {
   accent: Accent;
   facts: { label: string; value: string }[];
   groups: { title: string; links: LinkItem[] }[];
+  sources?: { label: string; href: string }[];
 }
 
 export interface SearchDoc {

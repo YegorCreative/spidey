@@ -1,0 +1,36 @@
+---
+import type { MediaImage } from "../../lib/types";
+import { href } from "../../lib/paths";
+import GameArtwork from "./GameArtwork.astro";
+
+interface Props {
+  href: string;
+  year: number;
+  title: string;
+  developer: string;
+  platform: string;
+  summary: string;
+  look: "classic" | "tie" | "insomniac" | "multi" | "mobile";
+  poster?: MediaImage;
+  delay?: string;
+}
+
+const { href: gameHref, year, title, developer, platform, summary, look, poster, delay = "0ms" } = Astro.props;
+---
+<a class:list={["film", "game", `game--${look}`]} href={gameHref} data-parallax data-parallax-pointer data-reveal style={`--delay: ${delay}`}>
+  <span class="film__window">
+    {poster ? (
+      <img class="film__poster" src={href(poster.src)} alt={poster.alt} width={poster.width} height={poster.height} loading="lazy" decoding="async" />
+    ) : (
+      <GameArtwork look={look} />
+    )}
+  </span>
+  <span class="film__body">
+    <span class="film__year">{year}</span>
+    <span class="film__title">{title}</span>
+    <span class="film__universe">{developer}</span>
+    <span class="film__summary">{platform}</span>
+    <span class="film__summary">{summary}</span>
+    <span class="film__go">Explore game</span>
+  </span>
+</a>

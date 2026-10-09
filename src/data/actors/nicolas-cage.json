@@ -1,0 +1,12 @@
+{
+  "id": "nicolas-cage",
+  "name": "Nicolas Cage",
+  "performance": "voice",
+  "summary": "Nicolas Cage voices Spider-Man Noir in Spider-Man: Into the Spider-Verse.",
+  "primary": {
+    "identity": "Spider-Man Noir",
+    "years": "2018",
+    "characterId": "spider-man-noir",
+    "universeId": "spider-verse-animated"
+  }
+}

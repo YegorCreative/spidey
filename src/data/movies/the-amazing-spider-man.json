@@ -18,7 +18,8 @@
   ],
   "antagonists": [
     {
-      "villainId": "lizard"
+      "villainId": "lizard",
+      "actorId": "rhys-ifans"
     }
   ],
   "suitIds": [
@@ -27,5 +28,7 @@
   "comicIds": [
     "amazing-fantasy-15"
   ],
-  "runtimeMinutes": 136
+  "runtimeMinutes": 136,
+  "status": "released",
+  "medium": "live-action"
 }

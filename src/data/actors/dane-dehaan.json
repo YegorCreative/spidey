@@ -1,0 +1,12 @@
+{
+  "id": "dane-dehaan",
+  "name": "Dane DeHaan",
+  "performance": "live-action",
+  "summary": "Dane DeHaan plays Harry Osborn, who becomes the Green Goblin in The Amazing Spider-Man 2. That film’s Goblin is Harry, not Norman Osborn.",
+  "primary": {
+    "identity": "Green Goblin",
+    "years": "2014",
+    "villainId": "green-goblin",
+    "universeId": "webb"
+  }
+}

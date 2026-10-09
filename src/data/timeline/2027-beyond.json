@@ -1,0 +1,17 @@
+{
+  "id": "2027-beyond",
+  "year": 2027,
+  "title": "Beyond the Spider-Verse",
+  "summary": "Sony schedules the third Spider-Verse film for June 18, 2027. It is not out yet.",
+  "kind": "movie",
+  "refs": [
+    {
+      "type": "movie",
+      "id": "spider-man-beyond-the-spider-verse"
+    },
+    {
+      "type": "character",
+      "id": "miles-morales"
+    }
+  ]
+}

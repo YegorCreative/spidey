@@ -1,0 +1,34 @@
+{
+  "id": "spider-man-2",
+  "title": "Spider-Man 2",
+  "year": 2004,
+  "releaseDate": "2004-06-30",
+  "tagline": "Peter tries to quit, and Doctor Octopus tears up the elevated tracks.",
+  "summary": "Sam Raimi’s second film lets Tobey Maguire’s Peter Parker lose the job, the girl, and the powers before he chooses them again. Alfred Molina’s Otto Octavius is the cost of an experiment that will not shut off.",
+  "universeId": "raimi",
+  "directorIds": [
+    "sam-raimi"
+  ],
+  "portrayals": [
+    {
+      "actorId": "tobey-maguire",
+      "characterId": "peter-parker",
+      "identity": "Spider-Man"
+    }
+  ],
+  "antagonists": [
+    {
+      "villainId": "doctor-octopus",
+      "actorId": "alfred-molina"
+    }
+  ],
+  "suitIds": [
+    "classic"
+  ],
+  "comicIds": [
+    "amazing-spider-man-3"
+  ],
+  "status": "released",
+  "medium": "live-action",
+  "runtimeMinutes": 127
+}

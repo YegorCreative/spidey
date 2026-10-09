@@ -1,0 +1,17 @@
+{
+  "id": "ben-reilly",
+  "name": "Ben Reilly",
+  "aliases": [
+    "Scarlet Spider",
+    "Spider-Man"
+  ],
+  "kind": "spider-person",
+  "classification": "spider-person",
+  "distinction": "A clone of Peter Parker, created by the Jackal. He is not a separate spider bite and not a symbiote.",
+  "summary": "Ben Reilly is a clone of Peter Parker. He later fights as the Scarlet Spider and, for a time, as Spider-Man. His history is tied to Miles Warren’s cloning experiments.",
+  "universeIds": [
+    "earth-616"
+  ],
+  "firstAppearance": "As a clone, The Amazing Spider-Man #149 (1975). The Scarlet Spider identity is a 1990s development in the Clone Saga.",
+  "creators": "Gerry Conway and Ross Andru introduced the clone."
+}
